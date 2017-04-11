@@ -33,7 +33,7 @@
 			  handleChange: function(event) {
           this.setState({name: event.target.value});
           var self = this;
-			  	$.get("http://www.tuling123.com/openapi/api?key=c75ba576f50ddaa5fd2a87615d144ecf&info="+event.target.value, function(data) {
+			  	$.get("https://www.tuling123.com/openapi/api?key=c75ba576f50ddaa5fd2a87615d144ecf&info="+event.target.value, function(data) {
 			    	console.log(data);
 			        self.setState({
 			          answer: data.text,
