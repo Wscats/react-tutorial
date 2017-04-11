@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <script src="../build/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+			var UserGist = React.createClass({
+			  getInitialState: function() {
+			    return {
+			      name: 'Wscats',
+			      id: 'wscats_test',
+			      age: '',
+			      color: 'red',
+			      answer: ''
+			    };
+			  },
+			  
+			  componentDidMount: function() {
+			    $.get(this.props.source, function(data) {
+			    	console.log(data);
+			      if (this.isMounted()) {
+			        this.setState({
+			          age: data.age,
+			        });
+			      }
+			    }.bind(this));
+			  },
+			  handleChange: function(event) {
+          this.setState({name: event.target.value});
+          var self = this;
+			  	$.get("http://www.tuling123.com/openapi/api?key=c75ba576f50ddaa5fd2a87615d144ecf&info="+event.target.value, function(data) {
+			    	console.log(data);
+			        self.setState({
+			          answer: data.text,
+			      })
+			    });
+        },
+			  render: function() {
+			    return (
+			      <div id={this.state.id} style={{color: this.state.color}}>
+			        <p>{this.state.age}:{this.state.name}</p>
+			        <input type="text" value={this.state.name} onChange={this.handleChange} />
+              <p>{this.state.answer}</p>
+			      </div>
+			    );
+			  }
+			});
+			
+			ReactDOM.render(
+			  <UserGist source="test.json" />,
+			  document.getElementById('example')
+			);
+    </script>
+  </body>
+</html>
