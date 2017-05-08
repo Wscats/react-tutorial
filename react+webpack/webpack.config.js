@@ -8,7 +8,7 @@ module.exports = { //注意这里是exports不是export
 	},
 	module: {
 		loaders: [{
-			test: /\.js[x]?$/,//匹配到js或jsx文件后 使用 babel-loader 来处理
+			test: /\.js[x]?$/, //匹配到js或jsx文件后 使用 babel-loader 来处理
 			exclude: /node_modules/, //屏蔽不需要处理的文件（文件夹）（可选）
 			loader: 'babel-loader'
 				//npm install babel-loader 
