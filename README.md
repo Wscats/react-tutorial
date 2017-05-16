@@ -2,7 +2,7 @@
 
 |DEMO|DEMO|
 |-|-|
-|[react实现图灵机器人](https://wscats.github.io/react-demo/demo1/index.html)||
+|[react实现图灵机器人](https://wscats.github.io/react-demo/demo1/index.html)|[react双向数据绑定](https://wscats.github.io/react-demo/双向数据绑定/demo.html)|
 
 
 ## Redux

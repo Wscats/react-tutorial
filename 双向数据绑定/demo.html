@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>菜鸟教程 React 实例</title>
+    <!--react.js是React的核心库-->
+    <script src="../build/react.js"></script>
+    <!--react-dom.js的作用是提供与DOM相关的功能-->
+    <script src="../build/react-dom.js"></script>
+    <!--browser.min.js的作用是JSX语法转换成JavaScript语法-->
+    <script src="../build/browser.min.js"></script>
+  </head>
+ <body>
+    <!--React渲染的模板内容会插入到这个DOM节点中，也可以理解为一个容器-->
+    <div id="example"></div>
+    <!--在React开发中，使用JSX,跟JavaScript不兼容，所以在使用JSX的地方需要设置type="text/babel"-->
+    <!--babel是一个转换编译器，可以将ES6转成可以在浏览器中运行的代码-->
+    <script type="text/babel">
+    var redStyle={
+      color:"red"
+    }
+    var Button = React.createClass({
+      getInitialState: function() {
+        return {
+          data:0,
+          name:"双向数据绑定",
+          selVal:"b",
+          text: "textarea",
+          male: true,
+          redStyle:{
+          	color:"blue"
+          }
+        };
+      },
+      setNewNumber: function() {
+        this.setState({data: this.state.data + 1})
+      },
+      handleChange: function(event) {
+          this.setState({name: event.target.value});
+      },
+      handleSelectChange: function(event) {
+      	console.log(event.target.value)
+          this.setState({selVal: event.target.value});
+      },
+      handleTextChange: function(event) {
+      	console.log(event.target.value)
+          this.setState({text: event.target.value});
+      },
+      handleGenderChange: function(e) {
+         var male = !!(e.target.value == 'MALE');
+         this.setState({
+             male: male
+         });
+      },
+      render: function () {
+          return (
+             <div>
+             	  <p style={redStyle}>button</p>
+             	  <p>state和视图层上的this.state和函数的state紧密相连，触发this.setState,state在视图层和数据层都会紧跟着变化</p>
+                <button onClick = {this.setNewNumber}>增</button>
+                <p>{this.state.data}</p>
+                <br />
+                
+                <p style={this.state.redStyle}>input</p>
+                <input value={this.state.name} onChange={this.handleChange} />
+                <p>{this.state.name}</p>
+                <br />
+                
+                <p style={{color:'#666'}}>select</p>
+                <select value={this.state.selVal} onChange={this.handleSelectChange}>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+                <p>{this.state.selVal}</p>
+                
+                <p style={{color:'#d55'}}>textarea</p>
+                <textarea value={this.state.text} onChange={this.handleTextChange}></textarea>
+                <p>{this.state.text}</p>
+                <br />
+                
+                <p style={{color:'#b55'}}>chekbox</p>
+                <input type='radio' name='gender' checked={this.state.male} onChange={this.handleGenderChange} value='MALE' />
+                <input type='radio' name='gender' checked={!this.state.male} onChange={this.handleGenderChange} value='FEMALE' />
+                <p>{this.state.male?"man":"lady"}</p>
+             </div>
+          );
+        }
+    })
+      ReactDOM.render(
+
+         <div>
+            <Button />
+         </div>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
