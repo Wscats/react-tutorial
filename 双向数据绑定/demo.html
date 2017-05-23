@@ -29,7 +29,8 @@
           male: true,
           redStyle:{
           	color:"blue"
-          }
+          },
+          chkbox:true
         };
       },
       setNewNumber: function() {
@@ -51,6 +52,9 @@
          this.setState({
              male: male
          });
+      },
+      handleCbChange: function(e){
+      	console.log(e.target.value)
       },
       render: function () {
           return (
@@ -79,10 +83,15 @@
                 <p>{this.state.text}</p>
                 <br />
                 
-                <p style={{color:'#b55'}}>chekbox</p>
+                <p style={{color:'#b55'}}>radio</p>
                 <input type='radio' name='gender' checked={this.state.male} onChange={this.handleGenderChange} value='MALE' />
                 <input type='radio' name='gender' checked={!this.state.male} onChange={this.handleGenderChange} value='FEMALE' />
                 <p>{this.state.male?"man":"lady"}</p>
+                
+                <p style={{color:'#4dc'}}>checkbox</p>
+                <input type='checkbox' name="cb" value="1" onChange={this.handleCbChange} />
+                <input type='checkbox' name="cb" defaultChecked="true" value="2" onChange={this.handleCbChange} />
+                <input type='checkbox' name="cb" value="3" onChange={this.handleCbChange} />
              </div>
           );
         }
