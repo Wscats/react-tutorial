@@ -7,21 +7,17 @@ import {
 	Link
 } from 'react-router-dom';
 import { matchRoutes, renderRoutes } from 'react-router-config';
-
-var IndexA = require('./index/indexA.jsx');
-var IndexB = require('./index/indexB.jsx');
-console.log(routes)
 //新版本的写法 推荐
 //class Wscats extends React.Component {
 class Wscats extends Component {
 	render() {
 		return( 
 			<div>
-				<div>Wscats</div>
-				<Link to="/index/childA">childA</Link> <Link to="/index/childB">childB</Link>
-				{renderRoutes(this.props.route.routes)}
-				{console.log(this.props.route.routes)}
-				{console.log(routes)}
+				<h1>Root</h1>
+					<Link to="/">home</Link> <Link to="/index">index</Link>
+					{/* child routes won't render without this */}
+					{renderRoutes(this.props.route.routes)}
+					{console.log(this)}
 			</div>
 		)
 	}

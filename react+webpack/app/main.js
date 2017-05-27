@@ -7,11 +7,14 @@ import {
 	Route,
 	Link
 } from 'react-router-dom'
+
+
 var routes = require("./routes.js");
+console.log(routes)
 //默认路由
 const branch = matchRoutes(routes, '/index')
 ReactDom.render((
-	<Router>
-    	{renderRoutes(routes)}
-	</Router>
+		<Router>
+			{renderRoutes(routes)}
+		</Router>
 ), document.getElementById('content'))

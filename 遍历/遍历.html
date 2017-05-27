@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="../build/react.js"></script>
+    <!--react-dom.js的作用是提供与DOM相关的功能-->
+    <script src="../build/react-dom.js"></script>
+    <!--browser.min.js的作用是JSX语法转换成JavaScript语法-->
+    <script src="../build/browser.min.js"></script>
+	<body>
+		<div id="demo"></div>
+	</body>
+	<!--把js代码交给babel去处理-->
+	<script type="text/babel">
+		var name = "yao";
+		var SecondCp = React.createClass({
+			//model
+			getInitialState:function(){
+				return {
+					name:"xie",
+					language:"English",
+					arr:['wscats','oaoafly','winds']
+				}
+			},
+			getDefaultProps:function(){
+				return {
+					skill:"初始化的值"
+				}
+			},
+			render:function(){
+				return (
+					<div>
+						<p>遍历DEMO</p>
+						<ul>  
+		                    {  
+		                        this.state.arr.map(function(username){  
+		                            return <li>{username}</li>  
+		                        })  
+		                    }  
+		               </ul>
+	              	</div>
+              	)
+			}
+		})
+		ReactDOM.render(
+			<div>
+				<SecondCp skill="ps" />
+			</div>
+			,document.getElementById("demo")
+		)
+	</script>
+</html>
