@@ -23,4 +23,4 @@
 ## Component
 |DEMO|DEMO|
 |-|-|
-|[组件Props传对象](https://wscats.github.io/react-tutorial/组件/props传对象.html)||
+|[组件Props传对象](https://wscats.github.io/react-tutorial/组件/props传对象.html)|[类式组件和函数组件组合](https://wscats.github.io/react-tutorial/组件/类式组件和函数组件组合.html)|
