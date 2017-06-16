@@ -6,7 +6,7 @@ const history = createHashHistory()
 import Home from "./home.jsx";
 import Topics from "./topics.jsx";
 import About from "./about.jsx";
-import {ButtonGroup, Button} from 'react-bootstrap';
+import {ButtonGroup, Button, Grid, Row, Col} from 'react-bootstrap';
 
 import {increaseAction, multiAction} from '../action.js';
 
@@ -63,7 +63,6 @@ class Basic extends React.Component {
               <Link to="/topics">主题列表</Link>
             </li>
           </ul>*/}
-          <hr/>
           <Route exact path="/" component={Home}/>
           <Route path="/about" component={About}/>
           <Route path="/topics" component={Topics}/>
