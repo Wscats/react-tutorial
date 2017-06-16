@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>组件添加状态</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    //类式组件
+    class Wscats extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {}
+        //解决方案一
+        this.handleClick = this.handleClick.bind(this)
+      }
+      handleClick(e) {
+        e.preventDefault();
+        console.log("解决方案一")
+      }
+      handleClick2(e) {
+        console.log("解决方案二")
+      }
+
+      handleClick3(e) {
+        console.log("解决方案三")
+      }
+      // 生命周期函数
+      componentDidMount() {}
+      render() {
+        return (
+          <div>
+            <h5>
+              {this.props.name}</h5>
+            {/*//解决方案一*/}
+            <p>
+              <code>
+                this.handleClick = this.handleClick.bind(this)//构造函数内
+              </code>
+            </p>
+
+            <button onClick={this.handleClick}>解决方案一</button>
+
+            {/*//解决方案二*/}
+            <p>
+              <code>
+                onClick={"{"}this.handleClick.bind(this){"}"}//注册事件内
+              </code>
+            </p>
+
+            <button onClick={this.handleClick2.bind(this)}>解决方案二</button>
+
+            {/*//解决方案三*/}
+            <p>
+              <code>
+                onClick={"{"}()=>this.handleClick3(){"}"}//注册事件内
+              </code>
+            </p>
+            <button onClick={() => this.handleClick3()}>解决方案三</button>
+          </div>
+        )
+      }
+    }
+    //组件的组合
+    function App() {
+      return (
+        <div>
+          <Wscats name="Oaoafly's React demo"/>
+        </div>
+      );
+    }
+    ReactDOM.render(
+      <App/>, //自闭合标签
+        document.getElementById('root'));
+
+    </script>
+  </body>
+</html>
