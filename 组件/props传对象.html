@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World</title>
-    <script src="../build/react.js"></script>
-    <script src="../build/react-dom.js"></script>
-    <script src="../build/browser.min.js"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="text/babel">
-      var obj = {
-        name: "Wscats",
-        age : 16
-      }
-      // welcome 函数式组件。
-      function Wscats(props) {
-        return (
-          <div>
-            <h1>{props.name}</h1>
-            <h1>{props.age}</h1>
-          </div>
-        )
-      }
-      // 渲染成真实的DOM
-      ReactDOM.render(
-        <Wscats {...obj} />,
-        document.getElementById('root')
-      );
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello World</title>
+  <script src="../build/react.js"></script>
+  <script src="../build/react-dom.js"></script>
+  <script src="../build/browser.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    var obj = { name: "Wscats", age : 16 }; {/*函数式组件*/};
+    function Wscats(props) { return (
+    <div>
+      <h1>{props.name}</h1>
+      <h1>{props.age}</h1>
+    </div>
+    )} //渲染成真实的DOM
+    ReactDOM.render(
+    <Wscats {...obj} />, document.getElementById('root') );
+  </script>
+</body>
+
 </html>

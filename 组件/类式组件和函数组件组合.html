@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      //类式组件
+      class Wscats extends React.Component {
+        render() {
+          return  <h1> {this.props.name}</h1>
+        }
+      }
+      //组件的组合
+      function App() {
+        return (
+          <div>
+            <Wscats name="Oaoafly" />
+            <Wscats name="Windiest" />
+          </div>
+        );
+      }
+      ReactDOM.render(
+        <App />,  //自闭合标签
+        document.getElementById('root')
+      );
+
+    </script>
+  </body>
+</html>
