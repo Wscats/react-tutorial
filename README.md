@@ -19,3 +19,8 @@
 |DEMO|DEMO|
 |-|-|
 |[遍历数组](https://wscats.github.io/react-tutorial/遍历/遍历.html)||
+
+## Component
+|DEMO|DEMO|
+|-|-|
+|[组件Props传对象](https://wscats.github.io/react-tutorial/组件/props传对象.html)||
