@@ -1,6 +1,5 @@
 //var React = require('react');
 import React, { Component } from 'react';
-var routes = require("../routes.js");
 import {
 	BrowserRouter as Router,
 	Route,

@@ -10,6 +10,7 @@ import {
 
 
 var routes = require("./routes.js");
+matchRoutes(routes, '/index');
 console.log(routes)
 //默认路由
 const branch = matchRoutes(routes, '/index')

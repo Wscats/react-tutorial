@@ -1,0 +1,7 @@
+//.babelrc
+{
+  "presets": [
+    "react",
+    "es2015"
+  ]
+}
