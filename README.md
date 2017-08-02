@@ -18,7 +18,7 @@
 ## DOM
 |DEMO|DEMO|
 |-|-|
-|[遍历数组](https://wscats.github.io/react-tutorial/遍历/遍历.html)||
+|[遍历数组](https://wscats.github.io/react-tutorial/遍历/遍历.html)|[类名切换](https://wscats.github.io/react-tutorial/DOM/类名切换.html)|
 
 ## Component
 |DEMO|DEMO|
