@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		header{
+			color: white;
+			background-color: red;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+		}
+	</style>
+	<link rel="stylesheet" href="../css/weui.css" />
+	<body>
+		<div id="demo"></div>
+	</body>
+	<script src="../build/react.js"></script>
+    <!--react-dom.js的作用是提供与DOM相关的功能-->
+    <script src="../build/react-dom.js"></script>
+    <!--browser.min.js的作用是JSX语法转换成JavaScript语法-->
+    <script src="../build/browser.min.js"></script>
+    <script src="../build/jquery.js"></script>
+	<script type="text/babel">
+		var Xheader = React.createClass({
+			getInitialState:function(){
+				return {
+					name:"laoyao",
+					ask:"",
+					answer:""
+				}
+			},
+			render:function(){
+				return (
+					<div>
+						<header>今日头条</header>
+					</div>
+				)
+			}
+		})
+		
+		var Xsearch = React.createClass({
+			getInitialState:function(){
+				return {
+					bool:false
+				}
+			},
+			showSearch:function(){
+				this.setState({
+					bool:true
+				})
+			},
+			hideSearch:function(){
+				this.setState({
+					bool:false
+				})
+			},
+			render:function(){
+				return (
+					<div className={this.state.bool?'weui-search-bar weui-search-bar_focusing':'weui-search-bar'} id="search_bar">
+						<form className="weui-search-bar__form">
+							<div className="weui-search-bar__box">
+								<i className="weui-icon-search"></i>
+								<input type="search" className="weui-search-bar__input" id="search_input" placeholder="搜索" />
+								<a href="javascript:" className="weui-icon-clear" id="search_clear"></a>
+							</div>
+							<label onClick={this.showSearch} htmlFor="search_input" className="weui-search-bar__label" id="search_text">
+					            <i className="weui-icon-search"></i>
+					            <span>搜索</span>
+					        </label>
+						</form>
+						<a href="javascript:" onClick={this.hideSearch} className="weui-search-bar__cancel-btn" id="search_cancel">取消</a>
+					</div>
+				)
+			}
+		})
+		ReactDOM.render(
+			<div>
+				<Xheader />
+				<Xsearch />
+			</div>
+			,
+			document.querySelector("#demo")
+		)
+	</script>
+</html>
