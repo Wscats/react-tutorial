@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  #cp1 {
+    border: 1px solid red;
+    margin: 10px;
+  }
+
+  #cp2 {
+    border: 1px solid green;
+    margin: 10px;
+  }
+</style>
+<body>
+  <div ng-controller="indexCtrl">
+    <cp1></cp1>
+    <cp2></cp2>
+  </div>
+</body>
+<script src="../../build/angular.js"></script>
+<script src="../../build/browser.min.js"></script>
+<script src="../js/redux.js"></script>
+<script type="text/babel">
+  var store = Redux.createStore(function(state, action) {
+    var state = {
+      count: 0
+    }
+    //action
+    switch (action.type) {
+      case 'CHANGENAME':
+        return {
+          ...state,
+          name: action.name
+        }
+      default:
+        return {
+          ...state,
+          name: "Wscats"
+        }
+    }
+  })
+  var app = angular.module("wscats", []);
+  app.controller("indexCtrl", function($scope) {
+    $scope.name = "Wscats"
+  })
+  app.directive("cp1", function() {
+    return {
+      template: `
+      <div id="cp1">
+        <p>这是第一个组件</p>
+        <input ng-model="name" />
+        <button ng-click="changeVal()">通信</button>
+      </div>
+    `,
+      scope: {},
+      link: function(scope, ele, attr) {
+        scope.name = "改变数据实现组件通信";
+        scope.changeVal = function() {
+          store.dispatch({
+            type: 'CHANGENAME',
+            //传递值到action中，并修改store
+            name: scope.name
+          })
+        }
+      }
+    }
+  })
+  app.directive("cp2", function() {
+    return {
+      template: `
+      <div id="cp2">
+        <p>这是第二个组件</p>
+        <p>{{name}}</p>
+      </div>
+    `,
+      scope: {},
+      link: function(scope, ele, attr) {
+        scope.name = "这是第二个组件";
+        store.subscribe(function() {
+          scope.name = store.getState().name
+        })
+      }
+    }
+  })
+  angular.bootstrap(document.body, ["wscats"])
+</script>
+</html>
