@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		header{
+			color: white;
+			background-color: red;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+		}
+	</style>
+	<link rel="stylesheet" href="../../css/weui.css" />
+	<body>
+		<div id="demo"></div>
+	</body>
+	<script src="../../build/react.js"></script>
+  <script src="../../build/react-dom.js"></script>
+  <script src="../../build/browser.min.js"></script>
+	<script src="../js/redux.js"></script>
+	<script type="text/babel">
+			console.log(Redux)
+			var store = Redux.createStore(function(state, action) {
+						// state
+						if(typeof state === 'undefined') {
+							return {
+								count:0
+							}
+						}
+						//action
+						switch(action.type) {
+							case 'SETNAME':
+								return {
+									...state,
+									name:action.name
+								}
+							default:
+								return {
+									...state,
+									name:"Wscats"
+								}
+						}
+					})
+		var Xheader = React.createClass({
+			getInitialState:function(){
+				return {
+					name:"oaoafly",
+					ask:"",
+					answer:""
+				}
+			},
+			componentDidMount:function(){
+				var self = this
+				store.subscribe(function() {
+					//var name = store.getState().name
+					self.setState({
+						name:store.getState().name
+					})
+				})
+			},
+			render:function(){
+				return (
+					<div>
+						<header>{this.state.name}</header>
+					</div>
+				)
+			}
+		})
+
+		var Xsearch = React.createClass({
+			getInitialState:function(){
+				return {
+					bool:false,
+					value:"头部组件和搜索框组件的数据通信"
+				}
+			},
+			showSearch:function(){
+				this.setState({
+					bool:true
+				})
+			},
+			hideSearch:function(){
+				this.setState({
+					bool:false
+				})
+			},
+			getVal:function(e){
+				store.dispatch({
+						type: 'SETNAME',
+						//传递值到action中，并修改store
+						name: e.target.value
+				})
+				this.setState({
+					value:e.target.value
+				})
+			},
+			render:function(){
+				return (
+					<div className={this.state.bool?'weui-search-bar weui-search-bar_focusing':'weui-search-bar'} id="search_bar">
+						<form className="weui-search-bar__form">
+							<div className="weui-search-bar__box">
+								<i className="weui-icon-search"></i>
+								<input type="search" value={this.state.value} onChange={this.getVal} className="weui-search-bar__input" id="search_input" placeholder="搜索" />
+								<a href="javascript:" className="weui-icon-clear" id="search_clear"></a>
+							</div>
+							<label onClick={this.showSearch} htmlFor="search_input" className="weui-search-bar__label" id="search_text">
+					            <i className="weui-icon-search"></i>
+					            <span>点击这里并输入数据</span>
+					        </label>
+						</form>
+						<a href="javascript:" onClick={this.hideSearch} className="weui-search-bar__cancel-btn" id="search_cancel">取消</a>
+					</div>
+				)
+			}
+		})
+		ReactDOM.render(
+			<div>
+				<Xheader />
+				<Xsearch />
+			</div>
+			,
+			document.querySelector("#demo")
+		)
+	</script>
+</html>
