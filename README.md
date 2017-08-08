@@ -8,8 +8,8 @@
 ## Redux
 |DEMO|DEMO|
 |-|-|
-|[原生rudux实例](https://wscats.github.io/react-tutorial/redux/demo1/index.html)|[rudux+vue实例](https://wscats.github.io/react-tutorial/redux/demo2/index.html)|
-|[react+redux组件通信](https://wscats.github.io/react-tutorial/redux/demo1/react+redux.html)||
+|[原生rudux实例](https://wscats.github.io/react-tutorial/redux/demo1/index.html)|[vue+rudux实例](https://wscats.github.io/react-tutorial/redux/demo2/index.html)|
+|[react+redux组件通信](https://wscats.github.io/react-tutorial/redux/demo1/react+redux.html)|[angular+redux组件通信](https://wscats.github.io/react-tutorial/redux/demo1/angular+redux.html)|
 
 ## Route
 |DEMO|DEMO|
