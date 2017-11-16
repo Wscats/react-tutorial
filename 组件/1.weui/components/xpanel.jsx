@@ -20,7 +20,7 @@ let Xpanel = React.createClass({
         }, 2000)
       }
     }
-    xmlhttp.open("GET", "http://localhost/qd1704/react/day2/1.weui/qqnews.json", true);
+    xmlhttp.open("GET", "https://wscats.github.io/react-tutorial/%E7%BB%84%E4%BB%B6/1.weui/qqnews.json", true);
     xmlhttp.send();
   },
   render() {
