@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/weui.css" />
+		<link rel="stylesheet" href="./css/base.css" />
+	</head>
+	<body>
+		<div id="demo"></div>
+		<!--react-核心文件-->
+		<script src="../../build/react.js"></script>
+		<!--react操作虚拟DOM的文件-->
+		<script src="../../build/react-dom.js"></script>
+		<!--把JSX/ES6+转为ES5-->
+		<script src="../../build/babel.js"></script>
+		<!-- 头部组件 -->
+		<script type="text/babel" src="./components/xheader.jsx"></script>
+		<!-- 搜索框组件 -->
+		<script type="text/babel" src="./components/xsearch.jsx"></script>
+		<!-- 列表组件 -->
+		<script type="text/babel" src="./components/xpanel.jsx"></script>
+		<script type="text/babel">
+			ReactDOM.render(
+				<div>
+					<Xheader />
+					<Xsearch />
+					<Xpanel />
+				</div>,
+				document.getElementById("demo")
+			)
+		</script>
+	</body>
+</html>
