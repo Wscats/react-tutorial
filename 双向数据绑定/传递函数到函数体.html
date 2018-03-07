@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React Demo By Wscats</title>
+    <!--react.js是React的核心库-->
+    <script src="../build/react.js"></script>
+    <!--react-dom.js的作用是提供与DOM相关的功能-->
+    <script src="../build/react-dom.js"></script>
+    <!--browser.min.js的作用是JSX语法转换成JavaScript语法-->
+    <script src="../build/browser.min.js"></script>
+  </head>
+ <body>
+    <!--React渲染的模板内容会插入到这个DOM节点中，也可以理解为一个容器-->
+    <div id="example"></div>
+    <!--在React开发中，使用JSX,跟JavaScript不兼容，所以在使用JSX的地方需要设置type="text/babel"-->
+    <!--babel是一个转换编译器，可以将ES6转成可以在浏览器中运行的代码-->
+    <script type="text/babel">
+    var redStyle={
+      color:"red"
+    }
+    var Button = React.createClass({
+      getInitialState: function() {
+        return {
+          data:"函数传递值到state",
+          redStyle:{
+          	color:"blue"
+          },
+        };
+      },
+      handleChange: function(num,event) {
+      		console.log(arguments)
+          this.setState({data: arguments[0] + arguments[1] + arguments[2]});
+      },
+      render: function () {
+          return (
+             <div>
+             	  <p>通过<span style={redStyle}>this.handleChange.bind(this,xxx,xxx,xxx)</span>形式传递值到函数体内，右键查看源代码和打开控制台观察arguments</p>
+                <button onClick = {this.handleChange.bind(this,"wscats 'age is ",16," , oh")}>函数传递值到state</button>
+                <p>{this.state.data}</p>
+                <br />
+             </div>
+          );
+        }
+    })
+      ReactDOM.render(
+
+         <div>
+            <Button />
+         </div>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
