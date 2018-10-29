@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React Demo By Wscats</title>
+    <!--react.js是React的核心库-->
+    <script src="../build/react.js"></script>
+    <!--react-dom.js的作用是提供与DOM相关的功能-->
+    <script src="../build/react-dom.js"></script>
+    <!--browser.min.js的作用是JSX语法转换成JavaScript语法-->
+    <script src="../build/browser.min.js"></script>
+  </head>
+<body>
+  <div id="demo"></div>
+  <script type="text/babel">
+        var data = {
+            // 注意参数要反着写index是传过来的index，而e是传过来的e也就是当前节点的对象
+            testClick:function(index,e){
+                console.log("index",index)
+                console.log("e",e)
+                console.log(arguments)
+            },
+            arr:[1,2,3,4,5],
+        }
+        ReactDOM.render(
+            <div>{data.arr}
+                <ul>
+                    {data.arr2}
+                </ul>
+                <ul>
+                        {(function(arr){
+                            var list = arr.map(function(item,index){
+                                return <li onClick={data.testClick.bind(this,index)} key={index}>{item}</li>
+                            })
+                            return list
+                        })(data.arr)}
+                </ul>
+            </div>
+            ,
+            document.querySelector("#demo")
+        )
+    </script>
+  </body>
+</html>
