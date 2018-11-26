@@ -28,3 +28,4 @@
 |[组件Props传对象](https://wscats.github.io/react-tutorial/组件/props传对象.html)|[类式组件和函数组件组合](https://wscats.github.io/react-tutorial/组件/类式组件和函数组件组合.html)|
 |[组件添加状态](https://wscats.github.io/react-tutorial/组件/组件添加状态.html)|[组件的this指向](https://wscats.github.io/react-tutorial/组件/组件的this指向.html)|
 |[setState更改状态](https://wscats.github.io/react-tutorial/组件/setState更改状态.html)|[组件化开发案例](https://wscats.github.io/react-tutorial/组件/1.weui/index.html)|
+|[选项卡](https://wscats.github.io/react-tutorial/组件/选项卡.html)||
