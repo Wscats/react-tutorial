@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style type="text/css">
+        .active {
+            background: #efefef;
+        }
+
+        #tab>div:first-child {
+            display: flex;
+        }
+
+        #tab>div>div {
+            /*width: 100%;*/
+            height: 200px;
+            line-height: 200px;
+            background: #f90;
+            text-align: center;
+        }
+
+        #tab h3 {
+            height: 50px;
+            line-height: 50px;
+            flex: 1;
+            text-align: center;
+            cursor: pointer;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            margin: 0;
+        }
+    </style>
+    <div id="demo">
+
+    </div>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <!-- ES6 JSX -->
+    <script type="text/babel">
+        //类式组件
+        class Wscats extends React.Component {
+            constructor(props){
+                super(props);
+            }
+            render() {
+                return (
+                    <div>
+                        <h1> {this.props.name}</h1>
+                    </div>
+                )
+            }
+        }
+        //组件的组合
+        class App extends React.Component {
+            constructor(props){
+                super(props);
+                this.state = {
+                    arr: [{
+                        name:"oaoafly"
+                    },{
+                        name: "wscats"
+                    },{
+                        name:"windiest"
+                    }],
+                    idx: 0,
+                    history:[0]
+                }  // 给组件添加状态
+            }
+            select(idx){
+                console.log(idx);
+                let history = this.state.history;
+                history.push(idx);
+                this.setState({
+                    idx,
+                    history
+                })
+            }
+            render() {
+                return (
+                    <div id="tab">
+                        <div>
+                            {
+                                (()=> {
+                                    return this.state.arr.map((item,index)=>{
+                                        return <h3 key={index} onClick={this.select.bind(this,index)} className={this.state.idx === index? "active":""}>{item.name}</h3>
+                                    })
+                                })()
+                            }
+                        </div>
+                        <div>
+                                {
+                                (()=> {
+                                    return this.state.arr.map((item,index)=>{
+                                        if(this.state.idx === index){
+                                            return <Wscats key={index} name={item.name} />
+                                        }
+                                    })
+                                })()
+                            }
+                        </div>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(
+            <App />,
+            document.querySelector("#demo")
+        )
+    </script>
+</body>
+
+</html>
