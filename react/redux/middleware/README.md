@@ -25,7 +25,7 @@
 ## 实现
 该案例是以中间件调用 nodejs 的公共接口，实现一个数据列表。
 
-源码下载：https://github.com/wscats/react-tutorial/tree/master/reactreact/redux/middleware  
+源码下载：https://github.com/wscats/react-tutorial/tree/master/react/redux/middleware  
 
 [效果预览](https://wscats.github.io/react-tutorial/react/redux/middleware/index.html)
 
