@@ -96,7 +96,10 @@ ReactDOM.render(
     document.getElementById('app')
 )
 ```
-[效果预览](https://wscats.github.io/react-tutorial/react/router/index.html)
+
+### 效果预览
+
+- [路由DEMO](https://wscats.github.io/react-tutorial/react/router/index.html)
 
 # 路由参数
 * 路由的参数传递是通过 Route 组件的 path 属性来指定的。
@@ -178,7 +181,10 @@ ReactDOM.render(
     * `this.props.params` 获取的参数为一个固定的对象： `{splat: [**, *]}`。
     * 匹配 URL：/all3/a/001.jpg，参数为 `{splat: ['a', '001']}`。
     * 匹配 URL：/all3/a/b/001.jpg，参数为 `{splat: ['a/b', '001']}`。
-[效果预览](https://wscats.github.io/react-tutorial/react/router/params.html)
+
+### 效果预览
+
+- [路由传参](https://wscats.github.io/react-tutorial/react/router/params.html)
 
 # IndexRoute
 当访问一个嵌套路由时，指定默认显示的组件
