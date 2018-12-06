@@ -14,20 +14,12 @@ webpack 其实也是一套自动化构建工具，在打包代码的时候也是
 
 
 1. 在根目录下新建`webpack.config.js`
-```js
-gulp gulpfile.js
-webpack webpack.config.js
-```
+
 2. 用npm安装`webpack`的依赖包,全局安装一次，本地也安装一次
 
 ```bash
-npm install gulp -g //全局
-npm install gulp    //本地
-
-
 npm install webpack -g
 npm install webpack-cli -g
-npm install webpack
 ```
 
 3. 往配置文件里面写对应的配置
@@ -313,8 +305,8 @@ package.json是一个标准的npm说明文件，里面蕴含了丰富的信息�
 ```
 
 ## 执行打包
+
 在命令行执行`webpack`命令
-![这里写图片描述](http://img.blog.csdn.net/20170422171745796?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjcwODAyNDc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 ## 安装并启用webpack-dev-server
 
@@ -358,7 +350,6 @@ module.exports = { //注意这里是exports不是export
 	}
 };
 ```
-![这里写图片描述](http://img.blog.csdn.net/20170422175523108?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjcwODAyNDc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 在命令行执行`webpack-dev-server`命令就会运行服务器
 ```
 webpack-dev-server
