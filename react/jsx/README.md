@@ -230,7 +230,7 @@ html: '<p>123<span style="color:red">456</span>789</p>'
 - [渲染HTML](https://wscats.github.io/react-tutorial/react/jsx/8.v-html.html)
 
 
-## v-if
+## v-if
 
 于`v-if`指令相似
 ```js
