@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>React-Component-define</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--React 核心库-->
+        <script src="../../../js/react.js"></script>
+        <!--React 跟 Dom 相关的功能库-->
+        <script src="../../../js/react-dom.js"></script>
+        <!--jsx 转换 js 的框架 babel-->
+        <script src="../../../js/browser.min.js"></script>
+    </head>
+    <body>
+        <div id="div1"></div>
+
+        <!--jsx 语法-->
+        <script type="text/babel">
+            //定义
+            var Component1 = React.createClass({
+                getInitialState: function(){
+                    return {
+                        text: 'Hello React'
+                    }
+                },
+                change: function(e){
+                    this.setState({text: e.target.value})
+                },            
+                render: function(){
+                    return (
+                        <div>
+                            <p><label>写死value-锁定状态</label><input type="text" value="hello react"/></p>
+                            <p><label>动态value-锁定状态</label><input type="text" value={this.state.text}/></p>
+                            <p><label>不指定value-没锁状态</label><input type="text"/></p>
+                            <p>============================= 我是华丽的分割线 =============================</p>
+                            <p><label>defaultValue-没锁状态</label><input type="text" defaultValue="hello react"/></p>
+                            <p><label>动态value-没锁状态</label><input type="text" value={this.state.text} onChange={this.change}/></p>
+                            <p><label>不指定value-没锁状态</label><input type="text"/></p>
+                        </div>
+                    )
+                }
+            }) 
+            //使用
+            ReactDOM.render(<Component1 />, document.getElementById('div1'));
+        </script>
+    </body>
+</html>

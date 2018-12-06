@@ -1,0 +1,9 @@
+{
+  "presets": [
+    ["es2015", { "modules": false }],
+    "react",
+    "latest",
+    "stage-2"
+  ]
+}
+

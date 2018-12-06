@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>React-Component-props</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--React 核心库-->
+        <script src="../../../js/react.js"></script>
+        <!--React 跟 Dom 相关的功能库-->
+        <script src="../../../js/react-dom.js"></script>
+        <!--jsx 转换 js 的框架 babel-->
+        <script src="../../../js/browser.min.js"></script>
+    </head>
+    <body>
+        <fieldset>
+            <legend><h3>属性(props)</h3></legend>
+            <div id="div1"></div>
+        </fieldset>
+        <fieldset>
+            <legend><h3>默认属性(DefaultProps)</h3></legend>
+            <div id="div2"></div>
+        </fieldset> 
+        <fieldset>
+            <legend><h3>属性的类型规则(propTypes)</h3></legend>
+            <div id="div3"></div>
+        </fieldset> 
+        <fieldset>
+            <legend><h3>组件子节点</h3></legend>
+            <div id="div4"></div>
+        </fieldset>                         
+
+        <script type="text/babel">
+            //属性(props)
+            var PropsComponent = React.createClass({
+                render: function(){
+                    return (
+                        <div>
+                            <p>姓名：{this.props.name}</p>
+                            <p>年龄：{this.props.age}</p>
+                        </div>
+                    )
+                }
+            }) 
+            ReactDOM.render(<PropsComponent  name="Tom" age="18"/>, document.getElementById('div1'));
+
+            //默认属性(DefaultProps)
+            var DefaultPropsComponent = React.createClass({
+                getDefalutProps: function(){
+                    return {
+                        name: 'Tom',
+                        age: 20
+                    }
+                },
+                render: function(){
+                    return (
+                        <div>
+                            <p>姓名：{this.props.name}</p>
+                            <p>年龄：{this.props.age}</p>
+                        </div>
+                    )            
+                }    
+            })
+            ReactDOM.render(<DefaultPropsComponent/>, document.getElementById('div2'));
+            
+            //属性的类型规则(propTypes)
+            var PropTypesComponent = React.createClass({
+                propTypes: {
+                    name: React.PropTypes.string.isRequired, //属性 name 的值必须为字符串且不能为空
+                    age: React.PropTypes.number.isRequired, //属性 age 的值必须为数字且不能为空
+                    subjects: React.PropTypes.array.isRequired //属性 name 的值必须为数组且不能为空
+                },
+                render: function(){
+                    return (
+                        <div>
+                            <p>姓名：{this.props.name}</p>
+                            <p>年龄：{this.props.age}</p>
+                            <p>学科：</p>
+                            <ul>
+                            {
+                                this.props.subjects.map(function(_item, _i){
+                                    return <li key={_i}>{_item}</li>
+                                })
+                            }
+                            </ul>
+                        </div>
+                    )            
+                }    
+            })   
+            var _subjects = ['语文', '数学', '物理', '化学'];
+            ReactDOM.render(<PropTypesComponent subjects={_subjects} name="Sam" age={22}/>, document.getElementById('div3'));                     
+
+            //组件子节点
+            var ChildrenComponent = React.createClass({
+                render: function(){
+                    return (
+                        <div>                        
+                            {
+                                React.Children.map(this.props.children, function(childNode){
+                                    return <li>{childNode}</li>
+                                })
+                            }
+                        </div>
+                    );
+                }
+            })
+
+            ReactDOM.render(
+                <ChildrenComponent>
+                    <span>Tom</span>
+                    <span>Sam</span>
+                </ChildrenComponent>, document.getElementById('div4'));            
+        </script>
+    </body>
+</html>

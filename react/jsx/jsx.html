@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>React-JSX</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--React 核心库-->
+        <script src="../js/react.js"></script>
+        <!--React 跟 Dom 相关的功能库-->
+        <script src="../js/react-dom.js"></script>
+        <!--jsx 转换 js 的框架 babel-->
+        <script src="../js/browser.min.js"></script>
+    </head>
+    <body>
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+
+        <!--jsx 语法-->
+        <script type="text/babel">
+
+            ReactDOM.render(<h1>DK</h1>, document.getElementById('div1'));
+
+            var _style = {fontSize: '12px', color: 'red'};
+            var _name = "Tom";
+            var _obj = {name: "DK", age: 18};
+            ReactDOM.render(<h1 style={_style}>{_obj.age + (1 + 2)}</h1>, document.getElementById('div2'));
+
+            var array = ["Tom", "Lucy", "Lily"];
+            ReactDOM.render(
+                <div>
+                    <ul>
+                        {
+                            array.map(function(arg1, arg2){
+                                return <li key={arg2}>{arg1}</li>;
+                            })
+                        }
+                    </ul>
+                    <ul><li>Sam</li></ul>
+                    <ul><li><input type="text" /></li></ul>
+                </div>,
+                document.getElementById('div3')
+            );
+        </script>
+    </body>
+</html>

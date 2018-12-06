@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>React-Component-define</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--React 核心库-->
+        <script src="../../../js/react.js"></script>
+        <!--React 跟 Dom 相关的功能库-->
+        <script src="../../../js/react-dom.js"></script>
+        <!--jsx 转换 js 的框架 babel-->
+        <script src="../../../js/browser.min.js"></script>
+    </head>
+    <body>
+        <div id="div1"></div>
+
+        <!--jsx 语法-->
+        <script type="text/babel">
+            //定义
+            function Login(props){
+                return <input type="button" value="login" onClick={props.click}/>;
+            }
+
+            function Logout(props){
+                return <input type="button" value="logout" onClick={props.click}/>;
+            }            
+            var Component1 = React.createClass({
+                getInitialState: function(){
+                    return {
+                        status: 0
+                    }
+                },
+                login: function(){
+                    this.setState({status: 1})
+                },
+                logout: function(){
+                    this.setState({status: 0})
+                },
+                render: function(){
+                    var button = null;
+                    if(this.state.status == 1){
+                        button = <Logout click={this.logout}/>
+                    } else {
+                        button = <Login click={this.login} />
+                    }
+                    return (
+                        <div>
+                            {button}
+                        </div>
+                    )
+                }
+            }) 
+            //使用
+            ReactDOM.render(<Component1 />, document.getElementById('div1'));
+        </script>
+    </body>
+</html>

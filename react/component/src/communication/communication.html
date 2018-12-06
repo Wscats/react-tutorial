@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>React-Component-communication</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--React 核心库-->
+        <script src="../../../js/react.js"></script>
+        <!--React 跟 Dom 相关的功能库-->
+        <script src="../../../js/react-dom.js"></script>
+        <!--jsx 转换 js 的框架 babel-->
+        <script src="../../../js/browser.min.js"></script>
+    </head>
+    <body>
+        <fieldset>
+            <legend><h3>父组件向子组件通信</h3></legend>
+            <div id="div1"></div>
+        </fieldset>   
+        <fieldset>
+            <legend><h3>子组件向父组件通信</h3></legend>
+            <div id="div2"></div>
+        </fieldset>
+        <fieldset>
+            <legend><h3>兄弟组间通信-通过共同的父组件通信</h3></legend>
+            <div id="div3">
+
+            </div>
+        </fieldset>   
+        <fieldset>
+            <legend><h3>兄弟组间通信-通过 context 通信</h3></legend>
+            <div id="div4"></div>
+        </fieldset>                 
+
+        <script type="text/babel">
+            //父组件向子组件通信
+            //父组件
+            var ParentComponent1 = React.createClass({
+                getInitialState: function(){
+                    return {
+                        text: ''
+                    }
+                },
+                //输入事件
+                change: function(event){
+                    this.setState({text: event.target.value});
+                    //调用子组件的方法
+                    this.refs.c1.changeChildren1(event.target.value);
+                },
+                render: function(){
+                    return (
+                        <div>
+                            <p><label>父组件</label><input type="text" onChange={this.change}/></p>
+                            <ChildrenComponent1 ref="c1" text={this.state.text}/>
+                        </div>                        
+                    )
+                }
+            }) 
+
+            //子组件
+            var ChildrenComponent1 = React.createClass({
+                getInitialState: function(){
+                    return {
+                        text: ''
+                    }
+                },
+                //被父组件调用执行
+                changeChildren1: function(text){
+                    this.setState({text: text});
+                },
+                render: function(){
+                    
+                    return (
+                        <div>
+                            <p>子组件-来自父组件的调用：{this.state.text}</p>
+                            <p>子组件-来自父组件的传参：{this.props.text}</p>
+                        </div>                        
+                    )
+                }
+            })  
+            ReactDOM.render(<ParentComponent1/>, document.getElementById('div1'));
+
+            //子组件向父组件通信
+            //父组件
+            var ParentComponent2 = React.createClass({
+                getInitialState: function(){
+                    return {
+                        text: ''
+                    }
+                },
+                childContextTypes: {
+                    text: React.PropTypes.string.isRequired
+                },
+                getChildContext: function(){
+                    return {
+                        text: '11'
+                    }
+                },
+                //被子组件调用执行
+                changeParent: function(text){
+                    this.setState({text: text});
+                },
+                render: function(){
+                    return (
+                        <div>
+                            <p>父组件-来自子组件的调用：{this.state.text}</p>                     
+                            <ChildrenComponent2 change={this.changeParent}/>
+                        </div>                        
+                    )
+                }
+            }) 
+
+            //子组件
+            var ChildrenComponent2 = React.createClass({
+                getInitialState: function(){
+                    return {
+                        text: ''
+                    }
+                },
+                //输入事件
+                change: function(event){
+                    //调用子组件的方法
+                    this.props.change(event.target.value);
+                },
+                render: function(){
+                    return (
+                        <div>
+                            <p><label>子组件</label><input type="text" onChange={this.change}/></p>
+                        </div>                        
+                    )
+                }
+            })  
+            ReactDOM.render(<ParentComponent2/>, document.getElementById('div2'));
+
+            //兄弟组间通信-通过共同的父组件通信
+            //父组件
+            var ParentComponent3 = React.createClass({
+                getInitialState: function(){
+                    return {
+                        text: ''
+                    }
+                },
+                //被子组件2调用，向子组件1通信
+                changeChildren1: function(text){
+                    //调用子组件1的方法
+                    this.refs.cp1.changeState(text);
+                },
+                //被子组件1调用，向子组件2通信
+                changeChildren2: function(text){
+                    //调用子组件2的方法
+                    this.refs.cp2.changeState(text);
+                },                
+                render: function(){
+                    return (
+                        <div>
+                            <p>父组件-来自子组件的调用：{this.state.text}</p>                     
+                            <ChildrenComponent3_1 change={this.changeChildren2} ref="cp1"/>
+                            <ChildrenComponent3_2 change={this.changeChildren1} ref="cp2"/>
+                        </div>                        
+                    )
+                }
+            }) 
+
+            //子组件1
+            var ChildrenComponent3_1 = React.createClass({
+                getInitialState: function(){
+                    return {
+                        text: ''
+                    }
+                },
+                changeState: function(text){
+                    this.setState({text: text});
+                },                  
+                //输入事件
+                change: function(event){
+                    //调用子组件的方法
+                    this.props.change(event.target.value);
+                },
+                render: function(){
+                    return (
+                        <div>
+                            <p><label>子组件1</label><input type="text" onChange={this.change}/></p>
+                            <p>来自子组件2的调用-{this.state.text}</p>
+                        </div>                        
+                    )
+                }
+            })  
+            //子组件2
+            var ChildrenComponent3_2 = React.createClass({
+                getInitialState: function(){
+                    return {
+                        text: ''
+                    }
+                },              
+                changeState: function(text){
+                    this.setState({text: text});
+                },  
+                //输入事件
+                change: function(event){
+                    //调用子组件的方法
+                    this.props.change(event.target.value);
+                },
+                render: function(){
+                    return (
+                        <div>
+                            <p><label>子组件2</label><input type="text" onChange={this.change}/></p>
+                            <p>来自子组件1的调用-{this.state.text}</p>
+                        </div>                        
+                    )
+                }
+            })              
+            ReactDOM.render(<ParentComponent3/>, document.getElementById('div3'));    
+
+            //兄弟组间通信-通过 context 通信
+            //父组件
+            var ParentComponent4 = React.createClass({
+                getChildContext: function(){
+                    return {
+                        changeChildren1: function(text){
+                            this.refs.cp1.changeState(text)
+                        }.bind(this),
+                        changeChildren2: function(text){
+                            this.refs.cp2.changeState(text)
+                        }.bind(this)
+                    }
+                },
+                childContextTypes: {
+                    changeChildren1: React.PropTypes.func.isRequired,
+                    changeChildren2: React.PropTypes.func.isRequired
+                },                
+                render: function(){
+                    return (
+                        <div>
+                            <ChildrenComponent4_1 ref="cp1"/>
+                            <ChildrenComponent4_2 ref="cp2"/>
+                        </div>                        
+                    )                    
+                }
+            }) 
+
+            //子组件1
+            var ChildrenComponent4_1 = React.createClass({
+                getInitialState: function(){
+                    return {
+                        text: ''
+                    }
+                },
+                contextTypes: {
+                    changeChildren2: React.PropTypes.func.isRequired
+                },                         
+                changeState: function(text){
+                    this.setState({text: text});
+                },                  
+                //输入事件
+                change: function(event){
+                    //调用子组件的方法
+                    this.context.changeChildren2(event.target.value);
+                },
+                render: function(){
+                    return (
+                        <div>
+                            <p><label>子组件1</label><input type="text" onChange={this.change}/></p>
+                            <p>来自子组件2的调用-{this.state.text}</p>
+                        </div>                        
+                    )
+                }
+            })  
+            //子组件2
+            var ChildrenComponent4_2 = React.createClass({
+                getInitialState: function(){
+                    return {
+                        text: ''
+                    }
+                },   
+                contextTypes: {
+                    changeChildren1: React.PropTypes.func.isRequired
+                },                            
+                changeState: function(text){
+                    this.setState({text: text});
+                },  
+                //输入事件
+                change: function(event){
+                    //调用子组件的方法
+                    this.context.changeChildren1(event.target.value);
+                    
+                },
+                render: function(){
+                    return (
+                        <div>
+                            <p><label>子组件2</label><input type="text" onChange={this.change}/></p>
+                            <p>来自子组件1的调用-{this.state.text}</p>
+                        </div>                        
+                    )
+                }
+            });                
+            ReactDOM.render(<ParentComponent4/>, document.getElementById('div4'));                     
+        </script>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>路由-参数传递</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../js/react.js"></script>
+        <script src="../js/react-dom.js"></script>
+        <script src="../js/browser.min.js"></script>
+        <script src="../js/ReactRouter.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/babel">
+
+            var html = (
+                <ul>
+                    <li><ReactRouter.Link to="/">Root</ReactRouter.Link></li>
+                    <li><ReactRouter.Link to="/user/sam">单个参数：user</ReactRouter.Link></li>
+                    <li><ReactRouter.Link to="/product/001/ipone10/100.99">多个参数：product </ReactRouter.Link></li>
+                    <li><ReactRouter.Link to="/order/001">可选参数-有参数：order</ReactRouter.Link></li>
+                    <li><ReactRouter.Link to="/order">可选参数-无参数：order</ReactRouter.Link></li>
+                    <li><ReactRouter.Link to="/all1/001.jpg">任意字符 *.*：001.jpg</ReactRouter.Link></li>
+                    <li><ReactRouter.Link to="/all1/001.html">任意字符 *.*：001.html</ReactRouter.Link></li>
+                    <li><ReactRouter.Link to="/all2/a">任意字符 *：a</ReactRouter.Link></li>
+                    <li><ReactRouter.Link to="/all2/a/b">任意字符 *：a/b</ReactRouter.Link></li>
+                    <li><ReactRouter.Link to="/all3/a/001.jpg">任意字符 **：a/001.jpg</ReactRouter.Link></li>
+                    <li><ReactRouter.Link to="/all3/a/b/001.jpg">任意字符 **：a/b/001.jpg</ReactRouter.Link></li>                    
+                </ul>
+            )
+
+            //根组件
+            var RootComponent = React.createClass({
+                render: function(){
+                    return (
+                        <div>
+                            <h3>RootComponent</h3>
+                            {html}
+                        </div>
+                    )
+                }
+            })
+
+            //单个参数
+            var UserComponent = React.createClass({
+                render: function(){
+                    return (
+                        <div>
+                            <h3>UserComponent 单个参数 </h3>
+                            <p>路由规则：path='/user/:username'</p>
+                            <p>URL 映射：{this.props.location.pathname}</p>
+                            <p>username：{this.props.params.username}</p>
+                            {html}                            
+                        </div>
+                    )
+                }
+            })
+
+            //多个参数
+            var ProductComponent = React.createClass({
+                render: function(){
+                    return (
+                        <div>
+                            <h3>ProductComponent 多个参数</h3>
+                            <p>路由规则：path='/product/:proid/:proname/:price'</p>
+                            <p>URL 映射：{this.props.location.pathname}</p>                          
+                            <p>proid：{this.props.params.proid}</p>
+                            <p>proname：{this.props.params.proname}</p>
+                            <p>price：{this.props.params.price}</p>
+                            {html}                       
+                        </div>
+                    )
+                }
+            })
+
+            //可选参数
+            var OrderComponent = React.createClass({
+                render: function(){
+                    return (
+                        <div>
+                            <h3>OrderComponent 可选参数 </h3>
+                            <p>路由规则：path='/order(/:orderid)'</p>
+                            <p>URL 映射：{this.props.location.pathname}</p>
+                            <p>orderid：{this.props.params.orderid}</p>
+                            {html}                            
+                        </div>
+                    )
+                }
+            })
+
+            //*.*
+            var AllComponent1 = React.createClass({
+                render: function(){
+                    return (
+                        <div>
+                            <h3>AllComponent1 任意字符 </h3>
+                            <p>路由规则：path='/all1/*.*'</p>
+                            <p>URL 映射：{this.props.location.pathname}</p>
+                            <p>参数1：{this.props.params.splat[0]}</p>
+                            <p>参数2：{this.props.params.splat[1]}</p>
+                            {html}                            
+                        </div>
+                    )
+                }
+            }) 
+
+            //*
+            var AllComponent2 = React.createClass({
+                render: function(){
+                    return (
+                        <div>
+                            <h3>AllComponent2 任意字符 </h3>
+                            <p>路由规则：path='/all2/*'</p>
+                            <p>URL 映射：{this.props.location.pathname}</p>
+                            <p>参数：{this.props.params.splat}</p>
+                            {html}                            
+                        </div>
+                    )
+                }
+            })   
+            
+            //**
+            var AllComponent3 = React.createClass({
+                render: function(){
+                    return (
+                        <div>
+                            <h3>AllComponent3 任意字符 </h3>
+                            <p>路由规则：path='/all3/**/*.jpg'</p>
+                            <p>URL 映射：{this.props.location.pathname}</p>
+                            <p>参数1：{this.props.params.splat[0]}</p>
+                            <p>参数2：{this.props.params.splat[1]}</p>
+                            {html}                            
+                        </div>
+                    )
+                }
+            })              
+
+            ReactDOM.render(
+                <ReactRouter.Router history={ReactRouter.hashHistory}>
+                    <ReactRouter.Route path='/' component={RootComponent}/>
+                    <ReactRouter.Route path='/user/:username' component={UserComponent}/>
+                    <ReactRouter.Route path='/product/:proid/:proname/:price' component={ProductComponent}/>
+                    <ReactRouter.Route path='/order(/:orderid)' component={OrderComponent}/>
+                    <ReactRouter.Route path='/all1/*.*' component={AllComponent1}/>
+                    <ReactRouter.Route path='/all2/*' component={AllComponent2}/>
+                    <ReactRouter.Route path='/all3/**/*.jpg' component={AllComponent3}/>
+                </ReactRouter.Router>,
+                document.getElementById('app')
+            )
+        </script>
+    </body>
+</html>

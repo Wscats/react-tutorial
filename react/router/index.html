@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>路由-基本用法</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../js/react.js"></script>
+        <script src="../js/react-dom.js"></script>
+        <script src="../js/browser.min.js"></script>
+        <script src="../js/ReactRouter.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/babel">
+            var RootComponent = React.createClass({
+                componentDidMount: function(){
+                    this.timer = window.setInterval(function(){
+                        console.log(1)
+                    }, 1000)
+                },
+                componentWillUnmount: function(){
+                    window.clearInterval(this.timer)
+                },
+                render: function(){
+                    return (
+                        <div>
+                            <h1>RootComponent</h1>
+                            <ul>
+                                <li><ReactRouter.Link to="/">Root</ReactRouter.Link></li>
+                                <li><ReactRouter.Link to="/page">Page</ReactRouter.Link></li>
+                            </ul>
+                        </div>
+                    )
+                }
+            })
+
+            var PageComponent = React.createClass({          
+                render: function(){
+                    return (
+                        <div>
+                            <h1>PageComponent</h1>
+                            <ul>
+                                <li><ReactRouter.Link to="/">Root</ReactRouter.Link></li>
+                                <li><ReactRouter.Link to="/page">Page</ReactRouter.Link></li>
+                            </ul>                            
+                        </div>
+                    )
+                }
+            })
+
+            ReactDOM.render(
+                <ReactRouter.Router history={ReactRouter.hashHistory}>
+                    <ReactRouter.Route path='/' component={RootComponent}/>
+                    <ReactRouter.Route path='/page' component={PageComponent}/>
+                </ReactRouter.Router>,
+                document.getElementById('app')
+            )
+        </script>
+    </body>
+</html>

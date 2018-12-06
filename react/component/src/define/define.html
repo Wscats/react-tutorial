@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>React-Component-define</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--React 核心库-->
+        <script src="../../../js/react.js"></script>
+        <!--React 跟 Dom 相关的功能库-->
+        <script src="../../../js/react-dom.js"></script>
+        <!--jsx 转换 js 的框架 babel-->
+        <script src="../../../js/browser.min.js"></script>
+    </head>
+    <body>
+        <div id="div1"></div>
+
+        <!--jsx 语法-->
+        <script type="text/babel">
+            //定义
+            var Component1 = React.createClass({
+                getInitialState: function(){
+                    return {
+                        text: 'hello'
+                    }
+                },
+                change: function(e){
+                    this.setState({
+                        text: e.event.target.value
+                    })
+                },
+                render: function(){
+                    return (
+                        <div>
+                            <h1>Tom</h1>
+                            <h1>Sam</h1>
+                        </div>
+                    )
+                }
+            }) 
+            //使用
+            ReactDOM.render(<Component1 />, document.getElementById('div1'));
+        </script>
+    </body>
+</html>

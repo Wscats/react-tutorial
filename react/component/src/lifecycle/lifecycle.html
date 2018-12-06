@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>React-Component-生命周期</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--React 核心库-->
+        <script src="../../../js/react.js"></script>
+        <!--React 跟 Dom 相关的功能库-->
+        <script src="../../../js/react-dom.js"></script>
+        <!--jsx 转换 js 的框架 babel-->
+        <script src="../../../js/browser.min.js"></script>
+    </head>
+    <body>
+        <fieldset>
+            <legend><h3>Mounting</h3></legend>
+            <div id="div1"></div>
+        </fieldset>
+        <fieldset>
+            <legend><h3>Updating</h3></legend>
+            <div id="div2"></div>
+        </fieldset>
+        <fieldset>
+            <legend><h3>Unmounting</h3></legend>
+            <div id="div3"></div>
+        </fieldset>        
+        
+        <script type="text/babel">
+            //Mounting
+            var MountingComponent = React.createClass({
+                componentWillMount: function(){
+                    console.log(this.refs.h1) // undefined
+                },
+                componentDidMount: function(){
+                    console.log(this.refs.h1) // h1 对象
+                },
+                render: function(){
+                    return <h1 ref="h1">Lifecycle-Mounting</h1>;
+                }                
+            })
+            ReactDOM.render(<MountingComponent />, document.getElementById('div1'));
+
+            //Updating
+            var UpdatingComponent = React.createClass({
+                getInitialState: function() {
+                    return {
+                        data:0
+                    };
+                },           
+                setNewNumber: function() {
+                    //当 state 发生改变的时候，state 对应的组件会重新挂载
+                    //会触发 componentWillUpdate、componentDidUpdate
+                    this.setState({data: this.state.data + 1})
+                },
+                //参数 newProps：已更新的 props
+                componentWillReceiveProps:function(newProps) {
+                    console.log('Component WILL RECEIVE PROPS!', newProps)
+                },        
+                //参数 newProps：已更新的 props
+                //参数 newState：已更新的 state  
+                //必须要返回 boolen，true 则执行componentWillUpdate、render、componentDidUpdate。反之则不执行。
+                shouldComponentUpdate: function(newProps, newState){
+                    console.log('shouldComponentUpdate',newProps, newState);
+                    return (newState.data > 0 && newState.data % 2 == 0);
+                },                          
+                //参数 nextProps：将要更新的 props
+                //参数 nextState：将要更新的 state
+                componentWillUpdate: function(nextProps, nextState){
+                    console.log(nextProps, nextState, this.refs.p1)
+                },
+                //参数 prevProps：更新前的 props
+                //参数 nextState：更新前的 state                
+                componentDidUpdate: function(prevProps, prevState){
+                    console.log(prevProps, prevState) 
+                },
+                render: function(){
+                    return (
+                        <div>
+                            <button onClick={this.setNewNumber}>INCREMENT</button>
+                            <h3>{this.state.data}</h3>
+                        </div>
+                    );
+                }                
+            })
+            ReactDOM.render(<UpdatingComponent/>, document.getElementById('div2'));
+
+            //Unmounting
+            var ChildrenComponent = React.createClass({
+                componentWillUnmount: function(){
+                    console.log('componentWillUnmount');
+                },
+                render: function(){
+                    return <h3>{this.props.myNumber}</h3>
+                }
+            })
+
+            var UnmountingComponent = React.createClass({
+                getInitialState: function() {
+                    return {
+                        data:0
+                    };
+                },
+                setNewNumber: function() {
+                    this.setState({data: this.state.data + 1})
+                },
+                render: function () {
+                    var content;
+                    //当条件不符合时 ChildrenComponent 会被移除，然后会触发方组件的 componentWillUnmount 方法
+                    //当条件重新符合时，会重新渲染组件 ChildrenComponent
+                    if(this.state.data % 2 == 0){
+                        content = <ChildrenComponent myNumber = {this.state.data}></ChildrenComponent>;
+                    } else {
+                        content = <h3>{this.state.data}</h3>;
+                    }
+                    return (
+                        <div>
+                            <button onClick = {this.setNewNumber}>INCREMENT</button>
+                            {content}
+                        </div>
+                    );
+                }
+            })
+
+            ReactDOM.render(<UnmountingComponent/>, document.getElementById('div3'));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>React-Component-event</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--React 核心库-->
+        <script src="../../../js/react.js"></script>
+        <!--React 跟 Dom 相关的功能库-->
+        <script src="../../../js/react-dom.js"></script>
+        <!--jsx 转换 js 的框架 babel-->
+        <script src="../../../js/browser.min.js"></script>
+        
+    </head>
+    <body>
+        <div id="div1"></div>                     
+
+        <script type="text/babel">
+            var Component1 = React.createClass({
+                focusHandler: function(){
+                    this.refs.name.focus();
+                },
+                render: function(){
+                    return (
+                        <div>
+                            <input type="text" name="name" placeholder="" ref="name"/>
+                            <input type="button" name="" value="focus" onClick={this.focusHandler} />
+                        </div>
+                    );
+                }
+            });
+            ReactDOM.render(<Component1/>, document.getElementById('div1'));
+        </script>
+    </body>
+</html>
