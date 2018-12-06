@@ -1,6 +1,6 @@
 # react-devtool
 
-与 Vue 的 vue-devtool 类似 react 也有一个非常有用的调试工具叫 react-devtool，下面展示 Vue 的调试工具怎么安装，React 同理，如果能访问 Chrome 的扩展商店，则更方便，直接在商场搜索安装即可。
+与 Vue 的 vue-devtool 类似 react 也有一个非常有用的调试工具叫 react-devtool，下面展示 Vue 的调试工具怎么安装，React 同理，如果能访问 Chrome 的扩展商店，则更方便，直接在商场搜索安装即可。
 
 1. 在命令行中执行下面命令，用 git 克隆该仓库到本地，并进入 vue-devtool 
 ```bash
