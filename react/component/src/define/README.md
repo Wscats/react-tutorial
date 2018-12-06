@@ -1,9 +1,26 @@
 # 组件
+
 组件使你可以将 UI 划分为一个一个独立，可复用的小部件，并可以对每个部件进行单独的设计。
 
-在单页面应用(SPA)中扮演着重要角色
+在单页面应用(SPA)中扮演着重要角色，有以下优点分治，方便管理，减少耦合，复用，提高效率和性能
 
 ## 组件简单实现 —— 函数式组件
+
+组件的本质其实是函数,**最简单的组件**可以使用函数来定义,组件首字母必须是大写
+
+```js
+var Xheader =  (props) => {
+    return <header>微博</header>
+}
+ReactDOM.render(
+    <div>
+        <Xheader />
+        <Xheader />
+    </div>,
+    document.querySelector("#demo")
+)
+```
+webpack 模块化下的编写方式
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -19,6 +36,7 @@ ReactDOM.render(
 ```
 
 ## 类组件 —— ES5 语法
+
 ```javascript
 var React = require('react');
 var ReactDOM = require('react-dom')
@@ -27,8 +45,8 @@ var Component1 = React.createClass({
     render: function(){
         return (
             <div>
-                <h1>Tom</h1>
-                <h1>Sam</h1>
+                <h1>DK</h1>
+                <h1>Eno Yao</h1>
             </div>
         )
     }
@@ -41,38 +59,41 @@ ReactDOM.render(
 ```
 
 ## 类组件 —— ES6 语法
-```javascript
-import React from 'react'
-import ReactDOM from 'react-dom'
 
-class Component1 extends React.Component{
-    render(){
-        return (
-            <div>
-                <h1>Tom</h1>
-                <h1>Sam</h1>
-            </div>
-        ) 
+以 ES6 定义类的方式去生命组件是最常用的，也是比较建议用的方法
+```javascript
+class Xheader extends React.Component {
+    constructor(props){
+        super(props)
+    }
+    render() {
+        return <header>Eno Yao</header>;
     }
 }
-
 ReactDOM.render(
-    <Component1 />,
-    document.getElementById('app')
+    <div>
+        <Xheader />
+        <Xheader />
+    </div>,
+    document.querySelector("#demo")
 )
 ```
 [效果预览](https://wscats.github.io/react-tutorial/react/component/src/define/define.html)
 
-#### 组件小结
+### 组件小结
+
 - 组件名首字母必须为大写
 - 函数返回一个虚拟 DOM 节点
 - 类组件必须要有 render 方法
 - render 必须返回一个虚拟 DOM 节点
 - 实际工作中，类组件是常用的方式
 
-## 组件属性(Props)
+# 组件属性(Props)
 因为组件的调用是 html 标签的形式，而 html 标签是可以添加属性，所以在 React 的组件当中也是可以添加自定义的属性，而属性的获取则用 `this.props`
-### 函数式组件
+
+`props`可以理解为是继承父一辈的东西，父子组件通信的话，首选`props`，但我个人不推荐把它用在隔代遗传（父传孙子）
+
+## 函数式组件
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -86,7 +107,7 @@ ReactDOM.render(
     document.getElementById('app')
 )
 ```
-### 类组件
+## 类组件
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -102,7 +123,8 @@ ReactDOM.render(
     document.getElementById('app')
 )
 ```
-### 默认属性(DefaultProps)
+
+## 默认属性(DefaultProps)
 组件的属性除了可以通过调用的时候以 DOM 节点属性的方式传值，也可以设置默认的属性值，如果调用的时候没有传对应的属性值，则会用默认的属性值。
 `getDefalutProps` 这个方法只会被调用一次。
 ```javascript
@@ -112,7 +134,7 @@ var ReactDOM = require('react-dom');
 var Component1 = React.createClass({
     getDefaultProps: function(){
         return {
-            name: 'Tom',
+            name: 'Eno Yao',
             age: 20
         }
     },
@@ -131,7 +153,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 class Component1 extends React.Component{
     static defaultProps = {
-        name: 'Tom',
+        name: 'DK',
         age: 20
     }
     render(){
@@ -154,7 +176,7 @@ Component1.defaultProps = {
 ReactDOM.render(<Component1/>, document.getElementById('div1'));
 ```
    
-### 属性的类型规则(propTypes)
+## 属性的类型规则(propTypes)
 通常情况下，在定义一个组件的时候把属性定义好，会加上一些使用的条件限制，比如某些属性值的数据类型必须是数组，或者某些属性不能为空，在这个时候，可以通过 `propTypes` 来设置。
 ```javascript
 import React from 'react';
@@ -185,7 +207,7 @@ Component1.propTypes = {
     name: PropTypes.string
 }
 
-ReactDOM.render(<Component1 name="Tom"/>, document.getElementById('div1'));
+ReactDOM.render(<Component1 name="DK"/>, document.getElementById('div1'));
 ```
 
 prop 默认情况下是可选，常用的类型：
@@ -197,3 +219,27 @@ prop 默认情况下是可选，常用的类型：
 - `PropTypes.string`
 - `PropTypes.symbol`
 - `PropTypes.any.isRequired`
+
+# 多态组件
+
+如果需要让同一个组件呈现不同的状态，可以考虑用`props`来解决，父组件往子组件的属性值上面定义一个值，然后该子组件就可以接受该值呈现对应的状态
+```js
+class Xheader extends React.Component {
+    constructor(props){
+        super(props)
+        console.log(props);
+        this.props = props;
+    }
+    render() {
+        return <header>{this.props.title}</header>;
+    }
+}
+ReactDOM.render(
+    <div>
+        <Xheader title="微信" />
+        <Xheader title="支付宝" />
+    </div>,
+    document.querySelector("#demo")
+)
+```
+`ReactDOM.render`这个老爸，把`微信`和`支付宝`分别传给两个不同的儿子`<Xheader>`,这两个儿子通过自身的`props`来吸收，然后转化自己的属性值显示
