@@ -54,6 +54,7 @@ class Component1 extends React.Component{
 
 - [input表单输入](https://wscats.github.io/react-tutorial/react/component/src/form/input.html)
 
+
 ## textarea 元素
 在普通 HTML 中，`textarea` 元素是节点文本值
 ```html
@@ -139,3 +140,7 @@ class Component1 extends React.Component{
     }
 }
 ```
+
+### 效果预览
+
+- [select,input,textarea表单输入](https://wscats.github.io/react-tutorial/react/component/src/form/表单.html)

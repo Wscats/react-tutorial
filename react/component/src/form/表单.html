@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .red{
+            color:red
+        }
+    </style>
+    <div id="demo">
+
+    </div>
+    <!--React 核心库-->
+    <script src="../../../js/react.js"></script>
+    <!--React 跟 Dom 相关的功能库-->
+    <script src="../../../js/react-dom.js"></script>
+    <!--jsx 转换 js 的框架 babel-->
+    <script src="../../../js/browser.min.js"></script>
+    <!-- ES6 JSX -->
+    <script type="text/babel">
+        class Xform extends React.Component {
+            constructor(props){
+                super(props)
+                this.props = props;
+                this.state = {
+                    inputValue:"",
+                    selectValue:"1",
+                    textareaValue:""
+                };
+            }
+            getInputValue(e){
+                console.log(e.target.value)
+                this.setState({
+                    inputValue:e.target.value
+                })
+            }
+            getSelectValue(e){
+                console.log(e.target.value)
+                this.setState({
+                    selectValue:e.target.value
+                })
+            }
+            getTextareaValue(e){
+                console.log(e.target.value)
+                this.setState({
+                    textareaValue:e.target.value
+                })
+            }
+            // V->M
+            // 视图驱动模型
+            render() {
+                return (
+                    <div>
+                        <p className="red">1.获取input输入的值</p>
+                        <input onChange={this.getInputValue.bind(this)} />
+
+                        <p className="red">2.获取select输入的值</p>
+                        <select onChange={this.getSelectValue.bind(this)}>
+                            <option value="1">电脑</option>
+                            <option value="2">手机</option>
+                            <option value="3">平板</option>
+                        </select>
+                        
+                        <p className="red">3.获取textarea输入的值</p>
+                        <p>{this.state.textareaValue}</p>
+                        <textarea onChange={this.getTextareaValue.bind(this)}></textarea>
+                    </div>
+                );
+            }
+        }
+        ReactDOM.render(
+            <div>
+                <Xform />
+            </div>,
+            document.querySelector("#demo")
+        )
+
+    </script>
+</body>
+
+</html>
