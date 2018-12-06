@@ -29,4 +29,4 @@ React 是 facebook 开源的一套框架，可总结为以下几个特点：
 
 # 题外话
 
-这份教程是综合了[Y.Pig](https://github.com/Wscats/react-tutorial)和[DK](https://github.com/dk-lan/react)的内容，因为代码和文档比较多，整理中如有疏漏或者错误，可以在issues中提出，多多谅解，希望对你们有帮助，如果你喜欢可以点个Star或者Fork，谢谢~
+这份教程是综合了[Y.Pig](https://github.com/Wscats/react-tutorial)和[DK](https://github.com/dk-lan/react)的内容，因为代码和文档比较多，整理中如有疏漏或者错误，可以在 Issues 中提出，多多谅解，希望对你们有帮助，如果你喜欢可以点个 Star 或者 Fork ，谢谢~
