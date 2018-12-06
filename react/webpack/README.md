@@ -79,7 +79,7 @@ webpack
 
 既做打包合并也做模块化，相对于`gulp`，它就是更偏重于模块化
 
-`vue-cli`基于`webpack`,它就的模块化就是基于webpack的
+`vue-cli`基于`webpack`,它就的模块化就是基于webpack的
 
 
 ## loader
