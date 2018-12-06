@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: red;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            height: 50px;
+            width: 100%;
+        }
+    </style>
+    <div id="demo">
+        
+    </div>
+    <script src="../js/react.js"></script>
+    <script src="../js/react-dom.js"></script>
+    <script src="../js/babel.js"></script>
+    <!-- ES6 JSX -->
+    <script type="text/babel">
+        class Xheader extends React.Component {
+            constructor(props){
+                super(props)
+                console.log(props);
+                this.props = props;
+            }
+            render() {
+                return <header>{this.props.title}</header>;
+            }
+        }
+        ReactDOM.render(
+            <div>
+                <Xheader title="微信" />
+                <Xheader title="支付宝" />
+            </div>,
+            document.querySelector("#demo")
+        )
+    </script>
+</body>
+</html>

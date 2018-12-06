@@ -78,7 +78,11 @@ ReactDOM.render(
     document.querySelector("#demo")
 )
 ```
-[效果预览](https://wscats.github.io/react-tutorial/react/component/src/define/define.html)
+### 效果预览
+
+- [定义组件](https://wscats.github.io/react-tutorial/react/component/src/define/define.html)
+- [函数组件](https://wscats.github.io/react-tutorial/react/component/src/define/12.函数组件.html)
+- [类组件和props](https://wscats.github.io/react-tutorial/react/component/src/define/13.类组件和props.html)
 
 ### 组件小结
 
