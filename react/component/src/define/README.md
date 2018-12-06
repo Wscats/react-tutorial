@@ -246,4 +246,4 @@ ReactDOM.render(
     document.querySelector("#demo")
 )
 ```
-`ReactDOM.render`这个老爸，把`微信`和`支付宝`分别传给两个不同的儿子`<Xheader>`,这两个儿子通过自身的`props`来吸收，然后转化自己的属性值显示
+`ReactDOM.render`这个老爸，把`微信`和`支付宝`分别传给两个不同的儿子`<Xheader>`,这两个儿子通过自身的`props`来吸收，然后转化自己的属性值显示
