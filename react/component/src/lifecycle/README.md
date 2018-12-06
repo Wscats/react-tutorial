@@ -1,4 +1,5 @@
 # 生命周期
+
 React 是一个由虚拟 DOM 渲染成真实 DOM 的过程，这个过程称为组件的生命周期。React 把这个周期划分为三个阶段，每个阶段都提供了 will 和 did 两种处理方式，will 是指发生前，did 是指发生后。
 - Mounting：组件渲染过程
     - componentWillMount()
@@ -13,6 +14,7 @@ React 是一个由虚拟 DOM 渲染成真实 DOM 的过程，这个过程称为�
     - 这个阶段没有对应的 did 方法
 
 ## Mounting
+
 指首次渲染或者组件从 DOM 中移除后再次重新渲染，后者场景不会执行 getDefaultProps
 ### 执行顺序
 1. getDefaultProps
@@ -161,4 +163,7 @@ var UnmountingComponent = React.createClass({
 
 ReactDOM.render(<UnmountingComponent/>, document.getElementById('div3'));
 ```
-[效果预览](https://wscats.github.io/react-tutorial/react/component/src/lifecycle/lifecycle.html)
+
+### 效果预览
+
+- [组件的生命周期](https://wscats.github.io/react-tutorial/react/component/src/lifecycle/lifecycle.html)
