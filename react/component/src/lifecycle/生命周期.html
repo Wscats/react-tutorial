@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo">
+
+    </div>
+    <!--React 核心库-->
+    <script src="../../../js/react.js"></script>
+    <!--React 跟 Dom 相关的功能库-->
+    <script src="../../../js/react-dom.js"></script>
+    <!--jsx 转换 js 的框架 babel-->
+    <script src="../../../js/browser.min.js"></script>
+    <!-- ES6 JSX -->
+    <script type="text/babel">
+        class Xpeople extends React.Component {
+            // 构造函数，组件初始化的时候获取props,state
+            // 第一个生命周期
+            constructor(props){
+                super(props)
+                // 父传子 老爸给我的
+                this.props = props;
+                // 自己拥有的 就是vue组件里面data  Model
+                this.state = {
+                    "title":"微信",
+                    "inputValue":""
+                };
+            }
+            // 登场前
+            componentWillMount(){
+                this.setState({
+                    "title":"支付宝"
+                })
+            }
+            // render
+            // 排练
+
+            // 正式登场
+            componentDidMount(){
+               
+            }
+            // 只要props和state变化，该生命周期必定触发
+            shouldComponentUpdate(){
+                if(this.state.inputValue.length>5){
+                    return true
+                }else{
+                    return false
+                }
+            }
+            changeValue(){
+                console.log(this);
+                this.setState({
+                    "title":"支付宝"
+                })
+            }
+            getInputValue(e){
+                console.log(e.target.value)
+                this.setState({
+                    "inputValue":e.target.value
+                })
+
+            }
+            // view
+            render() {
+                return (
+                <div>
+                    <p>
+                        <input onChange={this.getInputValue.bind(this)} />
+                        {this.state.title}
+                    </p>
+                </div>);
+            }
+        }
+        ReactDOM.render(
+            <div>
+                <Xpeople name="btn" />
+            </div>,
+            document.querySelector("#demo")
+        )
+
+    </script>
+</body>
+
+</html>
