@@ -279,7 +279,7 @@ let methods = {
 
 ## this的指向
 
-`onClick={this.test}`这里是不能用加括号的这种方式来传参`onClick={this.test(params)}`，并且这样写之后`this.test`里面的this会是`undefined`，所以在react，函数带参数是要配合`bind`方法，通过`bind`获取`this`和参数
+`onClick={this.test}`这里是不能用加括号的这种方式来传参`onClick={this.test(params)}`，并且这样写之后`this.test`里面的this会是`undefined`，所以在react，函数带参数是要配合`bind`方法，通过`bind`获取`this`和参数，深入了解请看[事件 —— this 指针](https://github.com/wscats/react-tutorial/tree/master/react/component/src/event#%E4%BA%8B%E4%BB%B6--this-%E6%8C%87%E9%92%88)
 ```html
 <button @click="test()">ok</button>
 <button onClick={this.test}>ok</button>

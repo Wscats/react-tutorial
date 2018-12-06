@@ -214,4 +214,4 @@ ReactDOM.render(
 
 ### 效果预览
 
--[组件子节点](https://wscats.github.io/react-tutorial/react/component/src/props/props.html)
+- [组件子节点](https://wscats.github.io/react-tutorial/react/component/src/props/props.html)
