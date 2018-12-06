@@ -27,7 +27,7 @@
 
 源码下载：https://github.com/wscats/react-tutorial/tree/master/reactreact/redux/middleware  
 
-[效果预览](https://wscats.github.io/react/redux/middleware/index.html)
+[效果预览](https://wscats.github.io/react-tutorial/react/redux/middleware/index.html)
 
 源码下载后执行下面步骤例可查看效果
 - `npm install`

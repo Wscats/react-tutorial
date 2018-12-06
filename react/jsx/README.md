@@ -103,4 +103,4 @@ jsx 正确写法应该是这样的
         </script>
     </body>    
 ```
-[效果预览](https://wscats.github.io/react/jsx/jsx.html)
+[效果预览](https://wscats.github.io/react-tutorial/react/jsx/jsx.html)

@@ -37,7 +37,7 @@ export default class CP extends React.Component{
     }
 }
 ```
-[效果预览](https://wscats.github.io/react/component/src/render/condition-rendering.html)
+[效果预览](https://wscats.github.io/react-tutorial/react/component/src/render/condition-rendering.html)
 
 ## 组件渲染 —— 列表渲染
 React 没有指令，所以在列表渲染时得借助数组来完成。
@@ -214,4 +214,4 @@ ReactDOM.render(
         <span>Sam</span>
     </Component1>, document.getElementById('div1'));
 ```
-[效果预览](https://wscats.github.io/react/component/src/props/props.html)
+[效果预览](https://wscats.github.io/react-tutorial/react/component/src/props/props.html)

@@ -276,4 +276,4 @@ var ChildrenComponent4_2 = React.createClass({
 });                
 ReactDOM.render(<ParentComponent4/>, document.getElementById('div4'));       
 ```
-[效果预览](https://wscats.github.io/react/component/src/communication/communication.html)
+[效果预览](https://wscats.github.io/react-tutorial/react/component/src/communication/communication.html)

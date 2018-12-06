@@ -21,4 +21,4 @@ React 是 facebook 开源的一套框架，可总结为以下几个特点：
     - [Redux 跨组件通信之入门篇 —— combineReducers](https://github.com/wscats/react-tutorial/tree/master/react/redux/combineReducers)
     - [Redux 跨组件通信之进阶篇 —— Provider 和 connect](https://github.com/wscats/react-tutorial/tree/master/react/redux/connetProvider)
     - [Redux 跨组件通信之高级篇 —— 中间件](https://github.com/wscats/react-tutorial/tree/master/react/redux/middleware)
-- [项目应用](https://wscats.github.io/react/reactERP/index.html#/login)
+- [项目应用](https://wscats.github.io/react-tutorial/react/reactERP/index.html#/login)

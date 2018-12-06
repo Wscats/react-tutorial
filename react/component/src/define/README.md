@@ -61,7 +61,7 @@ ReactDOM.render(
     document.getElementById('app')
 )
 ```
-[效果预览](https://wscats.github.io/react/component/src/define/define.html)
+[效果预览](https://wscats.github.io/react-tutorial/react/component/src/define/define.html)
 
 #### 组件小结
 - 组件名首字母必须为大写

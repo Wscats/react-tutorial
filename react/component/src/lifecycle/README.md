@@ -161,4 +161,4 @@ var UnmountingComponent = React.createClass({
 
 ReactDOM.render(<UnmountingComponent/>, document.getElementById('div3'));
 ```
-[效果预览](https://wscats.github.io/react/component/src/lifecycle/lifecycle.html)
+[效果预览](https://wscats.github.io/react-tutorial/react/component/src/lifecycle/lifecycle.html)
