@@ -96,7 +96,6 @@ React 里面
 所以我们要更新视图，就必须把关注点放在更改 state 上，而更改 state 就要通过`setState`方法来实现
 
 ```html
-<!-- html -->
 <button onClick={this.changeValue.bind(this)}>{this.state.title</button>
 ```
 上面的`<button>`值会因为点击而改变，原因就是因为用户触发了点击事件，而事件动用了`setState`方法更改`state`的状态，从而更新按钮的值

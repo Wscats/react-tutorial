@@ -1,5 +1,5 @@
 # 表单
-React 是个单向数据流的框架，所以在表单元素与其它 DOM 元素有所不同，而且和双向绑定的框架在操作上也有很大不一样。所以在这里单独拿出来说。
+React 是个单向数据流的框架，所以在表单元素与其它 DOM 元素有所不同，而且和双向绑定的框架在操作上也有很大不一样。所以在这里单独拿出来说。在 Vue 和 Angular 框架上分别有对应的 `v-model` 和 `ng-model` 指令在 `<select>`，`<input>`和`<textarea>`实现数据绑定。
 
 ## 输入受控
 ```javascript
@@ -49,7 +49,10 @@ class Component1 extends React.Component{
     }
 }
 ```
-[效果预览](https://wscats.github.io/react-tutorial/react/component/src/form/input.html)
+
+### 效果预览
+
+- [input表单输入](https://wscats.github.io/react-tutorial/react/component/src/form/input.html)
 
 ## textarea 元素
 在普通 HTML 中，`textarea` 元素是节点文本值
@@ -81,6 +84,7 @@ class Component1 extends React.Component{
 ```
 
 ## select 元素
+
 在普通 HTML 中， `select`元素要指定默认选中值，就得在对应的`option`中加上属性`selected`
 ```html
 <select>
@@ -118,6 +122,7 @@ class Component1 extends React.Component{
 ```
 
 ## input file 元素
+
 因为`<input type="file">`是特殊的元素，它是只读的，所以在 React 中需要用`ref`来进行特殊处理
 ```javascript
 class Component1 extends React.Component{
