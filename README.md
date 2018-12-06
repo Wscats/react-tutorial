@@ -16,7 +16,7 @@ React 是 facebook 开源的一套框架，可总结为以下几个特点：
 - [组件通信](https://github.com/wscats/react-tutorial/tree/master/react/component/src/communication)
 - [生命周期](https://github.com/wscats/react-tutorial/tree/master/react/component/src/lifecycle)
 - [模块化（webpack）](https://github.com/wscats/react-tutorial/tree/master/react/webpack)
-- [脚手架](https://github.com/wscats/react-tutorial/tree/master/react/create-react-app)
+- [脚手架（create-react-app）](https://github.com/wscats/react-tutorial/tree/master/react/create-react-app)
 - [路由（3.0）](https://github.com/wscats/react-tutorial/tree/master/react/router)
 - Redux
     - [Redux 简介和简单实现](https://github.com/wscats/react-tutorial/tree/master/react/redux)
