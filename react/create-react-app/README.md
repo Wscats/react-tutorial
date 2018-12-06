@@ -1,6 +1,6 @@
 # 脚手架
 
-以系统管理员的身份，安装该脚手架全局命令
+以系统管理员的身份，安装该脚手架全局命令
 ```bash
 npm install create-react-app -g
 ```
@@ -28,7 +28,7 @@ http://localhost:3000/
 ```
 
 ```bash
-public 单页面应用的主页（ico，index.html）
+public 单页面应用的主页（ico，index.html）
 src 开发文件夹(组件，自定义模块，样式，模板)
 ```
 
