@@ -26,3 +26,7 @@ React 是 facebook 开源的一套框架，可总结为以下几个特点：
     - [Redux 跨组件通信之高级篇 —— 中间件](https://github.com/wscats/react-tutorial/tree/master/react/redux/middleware)
 - [项目应用](https://wscats.github.io/react-tutorial/react/reactERP/index.html#/login)
 - [其他案例](https://github.com/Wscats/react-tutorial/blob/master/CASE.md)
+
+# 题外话
+
+这份教程是综合了[Y.Pig](https://github.com/Wscats/react-tutorial)和[DK](https://github.com/dk-lan/react)的内容，希望对你们有帮助~
