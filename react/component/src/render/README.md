@@ -1,30 +1,24 @@
 ## 组件渲染 —— 条件渲染（动态组件）
+
 很多情况下组件是动态渲染的，比如登录状态，如果已登录则显示退出登录，否则显示登录
 ```javascript
 import React from 'react'
-
 let Login = (props) => {
     return <input type="button" value="login" onClick={props.click}/>;
 }
-
-
 let Logout = (props) => {
     return <input type="button" value="logout" onClick={props.click}/>;
 }
-
 export default class CP extends React.Component{
     state = {
         status: 0
     }
-
     login(){
         this.setState({status: 1})
     }
-
     logout(){
         this.setState({status: 0})
     }
-
     render(){
         let button = null;
         if(this.state.status == 0){
@@ -37,10 +31,13 @@ export default class CP extends React.Component{
     }
 }
 ```
-[效果预览](https://wscats.github.io/react-tutorial/react/component/src/render/condition-rendering.html)
+### 效果预览
+
+- [渲染组件](https://wscats.github.io/react-tutorial/react/component/src/render/condition-rendering.html)
 
 ## 组件渲染 —— 列表渲染
-React 没有指令，所以在列表渲染时得借助数组来完成。
+
+React 没有指令，所以在列表渲染时得借助数组来完成。具体可以参考[JSX中渲染数组](https://github.com/wscats/react-tutorial/tree/master/react/jsx#%E6%B8%B2%E6%9F%93%E6%95%B0%E7%BB%84)
 
 ### 列表渲染 —— 简单实现
 ```javascript
@@ -214,4 +211,7 @@ ReactDOM.render(
         <span>Sam</span>
     </Component1>, document.getElementById('div1'));
 ```
-[效果预览](https://wscats.github.io/react-tutorial/react/component/src/props/props.html)
+
+### 效果预览
+
+-[组件子节点](https://wscats.github.io/react-tutorial/react/component/src/props/props.html)
