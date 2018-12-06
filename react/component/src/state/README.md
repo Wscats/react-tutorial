@@ -77,10 +77,43 @@ ReactDOM.render(
 )
 ```
 
+# setState
+
+React 的语法是`{}`，单向数据绑定，Vue 的语法是`{{}}`，双向数据绑定
+
+Vue 里面
+
+1. data变了，view层通过`v-xxx`或者`{{}}`指令，来渲染数据   M->V
+
+2. view变了，你通过`v-on`或者`v-model`来把数据从视图层带回数据层  V-M
+
+React 里面
+
+1. State变了，是通过函数式编程和`{}`，来渲染数据   S->V
+
+2. view变了，通过事件触发`setState`来更改数据层   V->S
+
+所以我们要更新视图，就必须把关注点放在更改 state 上，而更改 state 就要通过`setState`方法来实现
+
+```html
+<!-- html -->
+<button onClick={this.changeValue.bind(this)}>{this.state.title</button>
+```
+上面的`<button>`值会因为点击而改变，原因就是因为用户触发了点击事件，而事件动用了`setState`方法更改`state`的状态，从而更新按钮的值
+```js
+changeValue(){
+    console.log(this);
+    this.setState({
+        "title":"支付宝"
+    })
+}
+```
+
 ### 效果预览
 
 - [ES5中的state](https://wscats.github.io/react-tutorial/react/component/src/state/es5-state.html)
 - [ES6中的state](https://wscats.github.io/react-tutorial/react/component/src/state/es6-state.html)
+- [setState的用法](https://wscats.github.io/react-tutorial/react/component/src/state/setState.html)
 
 #  思考
 

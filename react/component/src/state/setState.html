@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo">
+
+    </div>
+    <script src="../js/react.js"></script>
+    <script src="../js/react-dom.js"></script>
+    <script src="../js/babel.js"></script>
+    <!-- ES6 JSX -->
+    <script type="text/babel">
+        class Xbtn extends React.Component {
+            constructor(props){
+                super(props)
+                // 父传子 老爸给我的
+                this.props = props;
+                // 自己拥有的 就是vue组件里面data  Model
+                this.state = {
+                    "title":"微信"
+                };
+            }
+            changeValue(){
+                console.log(this);
+                this.setState({
+                    "title":"支付宝"
+                })
+            }
+            // view
+            render() {
+                return <button onClick={
+                    this.changeValue.bind(this)
+                }>{this.state.title}</button>;
+            }
+        }
+        ReactDOM.render(
+            <div>
+                <input type="password" />
+                <Xbtn name="btn" />
+            </div>,
+            document.querySelector("#demo")
+        )
+
+    </script>
+</body>
+
+</html>
