@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+            .red{
+                color: red;
+            }
+    </style>
+    <div id="demo">
+        
+    </div>
+    <script src="../js/react.js"></script>
+    <script src="../js/react-dom.js"></script>
+    <script src="../js/babel.js"></script>
+    <!-- ES6 JSX -->
+    <script type="text/babel">
+        let data = {
+            name:"ly",
+            src:"../img/handsome.jpeg",
+            bool:!true
+        }
+        ReactDOM.render(
+            <div name={data.name}>
+                hello world
+                <img src={data.src} />
+                <p className={
+                    data.bool?"red":""
+                }>red</p>
+            </div>,
+            document.querySelector("#demo")
+        )
+    </script>
+</body>
+</html>

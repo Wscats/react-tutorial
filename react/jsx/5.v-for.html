@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo">
+        
+    </div>
+    <script src="../js/react.js"></script>
+    <script src="../js/react-dom.js"></script>
+    <script src="../js/babel.js"></script>
+    <!-- ES6 JSX -->
+    <script type="text/babel">
+        let data = {
+            arr:[
+                <p key='1'>a</p>,
+                <p key='2'>b</p>,
+                <p key='3'>c</p>
+            ],
+            arr2:[{
+                name:"lt",
+                age:20
+            },{
+                name:"ly",
+                age:18
+            },{
+                name:"lh",
+                age:24
+            }]
+        }
+        let directive = {
+            vFor(arr){
+                let arrHtml = arr.map((item,index)=>{
+                    console.log(item)
+                    return <li key={index}>{item.name}</li>
+                })
+                //console.log(arrHtml)
+                return arrHtml;
+            }
+        }
+        ReactDOM.render(
+            <div>
+                <ul>
+                    {
+                        directive.vFor(data.arr2)
+                    }
+                </ul>
+                <p style={
+                    display:'none'
+                }>显示或者隐藏</p>
+            </div>,
+            document.querySelector("#demo")
+        )
+    </script>
+</body>
+</html>

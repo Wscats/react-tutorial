@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script src="../js/react.js"></script>
+    <script src="../js/react-dom.js"></script>
+    <script src="../js/babel.js"></script>
+    <!-- ES6 JSX -->
+    <script type="text/babel">
+        let data = {
+            html: '<p>123<span style="color:red">456</span>789</p>'
+        }
+        ReactDOM.render(
+            <div dangerouslySetInnerHTML={{__html:data.html}}></div>,
+            document.querySelector("#demo")
+        )
+    </script>
+</body>
+</html>
