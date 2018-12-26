@@ -13,7 +13,7 @@
     - 这是一个第三方模块，它的作用就是本来没有半毛钱关系的 Redux 和 React 关联在一起
     - 它有组件`Provier`和方法`connect`
     - `connect`将 React 的`state`和 Redux 的`actions`合并成一个对象`props`，再将这个对象和`component`生成一个新的组件
-    - `Provider`负责将 Redux 的`store`当属性传`connect`的新组件，从面将 React 和 Redux 关联到了一起
+    - `Provider`负责将 Redux 的`store`当属性传`connect`的新组件，从而将 React 和 Redux 关联到了一起
     - 当新组件调用`action`的时候，`Provider.store`就会映射调用`reducer`从而改变`state`，当`state`发生改变，就会触发新组件的`render`，重新更新组件。
 
 ## 中间件
