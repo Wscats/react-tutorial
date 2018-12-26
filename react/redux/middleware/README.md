@@ -2,10 +2,10 @@
 在前面三篇 Redux 的教程中已详细提到 Redux 的实现，大概可可以总结以下几点
 - Redux 
     - 有`Actions`、`Reducer`、`Store`这三层
-    - 通过`createStore(reducer)`得到`store`，换名话说`store`包含了`reducer`的逻辑实现
+    - 通过`createStore(reducer)`得到`store`，换句话说`store`包含了`reducer`的逻辑实现
     - 通过`store.dispath(action)`去调用`reducer`，从而改变`state`
     - 通过`store.getState()`获取在`reducer`改变的`state`
-    - Redux 本身与 React 没有并没有半毛线关系
+    - Redux 本身与 React 没有并没有半毛钱关系
 - React
     - 有 `Component`、`state`、`props`三大关键要素
     - 本身通过`setState()`改变`state`从而触发`render`，更新`component`
