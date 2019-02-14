@@ -9,7 +9,7 @@
     - reducer.js
     - component.js
 - redux
-    - tore.js
+    - store.js
 - app.js
 
 ### 组件 Component1
