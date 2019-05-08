@@ -874,11 +874,11 @@ React组件的数据渲染是否被调用者传递的`props`完全控制，控�
 
 - 条件渲染
 
-  ```jsx
-  {
-    condition ? '❤️取消' : '🖤收藏'
-  }
-  ```
+```jsx
+{
+  condition ? '❤️取消' : '🖤收藏'
+}
+```
 
 - 列表渲染
 
@@ -1056,9 +1056,9 @@ React中组件也有生命周期，也就是说也有很多钩子函数供我们
 
 1. componentDidCatch()
 
-##各生命周期详解
+## 各生命周期详解
 
-#####1.constructor(props)
+##### 1.constructor(props)
 
 React组件的构造函数在挂载之前被调用。在实现`React.Component`构造函数时，需要先在添加其他内容前，调用`super(props)`，用来将父组件传来的`props`绑定到这个类中，使用`this.props`将会得到。
 
@@ -1123,7 +1123,7 @@ render()方法是必需的。当他被调用时，他将计算`this.props`和`th
 
 React不会在组件初始化props时调用这个方法。调用`this.setState`也不会触发。
 
-#####7.shouldComponentUpdate(nextProps, nextState)
+##### 7.shouldComponentUpdate(nextProps, nextState)
 
 调用`shouldComponentUpdate`使React知道，组件的输出是否受`state`和`props`的影响。默认每个状态的更改都会重新渲染，大多数情况下应该保持这个默认行为。
 
