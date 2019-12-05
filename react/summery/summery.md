@@ -6,7 +6,7 @@
 
 
 
-按照[webpack的指南](<https://www.webpackjs.com/guides/>)**(注意是指南不是概念不是api)**进行针对性的讲解即可，需要被充一下工程化的知识
+按照[webpack的指南](<https://www.webpackjs.com/guides/>) **(注意是指南不是概念不是api)** 进行针对性的讲解即可，需要被充一下工程化的知识
 
 
 
