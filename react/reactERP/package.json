@@ -19,7 +19,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.9.0",
     "image-webpack-loader": "^3.3.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.13.1",
     "progress-bar-webpack-plugin": "^1.9.3",
     "react": "^15.5.4",
     "react-addons-update": "^15.6.0",
