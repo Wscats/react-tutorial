@@ -13,7 +13,7 @@ function getUrl(path) {
 }
 
 const errorHandler = (err) => {
-    var str = err.response.status
+    const str = err.response.status
     str += ' - '
     str += err.response.statusText
     str += '<br/>请求路径：<br/>'
@@ -27,7 +27,7 @@ const HttpClient = {
         //     router.push({name: 'login'});
         //     return false;
         // }
-        var req = request
+        const req = request
             .get(getUrl(path))
             .query(query)
             .set('Authorization',  window.localStorage.getItem('access_token'))

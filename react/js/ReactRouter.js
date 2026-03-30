@@ -10,7 +10,7 @@
 })(this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/ 	const installedModules = {};
 
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -20,7 +20,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 			return installedModules[moduleId].exports;
 
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
+/******/ 		const module = installedModules[moduleId] = {
 /******/ 			exports: {},
 /******/ 			id: moduleId,
 /******/ 			loaded: false
@@ -59,7 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.createMemoryHistory = exports.hashHistory = exports.browserHistory = exports.applyRouterMiddleware = exports.formatPattern = exports.useRouterHistory = exports.match = exports.routerShape = exports.locationShape = exports.RouterContext = exports.createRoutes = exports.Route = exports.Redirect = exports.IndexRoute = exports.IndexRedirect = exports.withRouter = exports.IndexLink = exports.Link = exports.Router = undefined;
 
-	var _RouteUtils = __webpack_require__(3);
+	let _RouteUtils = __webpack_require__(3);
 
 	Object.defineProperty(exports, 'createRoutes', {
 	  enumerable: true,
@@ -68,7 +68,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	});
 
-	var _PropTypes = __webpack_require__(14);
+	let _PropTypes = __webpack_require__(14);
 
 	Object.defineProperty(exports, 'locationShape', {
 	  enumerable: true,
@@ -83,7 +83,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	});
 
-	var _PatternUtils = __webpack_require__(6);
+	let _PatternUtils = __webpack_require__(6);
 
 	Object.defineProperty(exports, 'formatPattern', {
 	  enumerable: true,
@@ -92,65 +92,65 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	});
 
-	var _Router2 = __webpack_require__(35);
+	const _Router2 = __webpack_require__(35);
 
-	var _Router3 = _interopRequireDefault(_Router2);
+	const _Router3 = _interopRequireDefault(_Router2);
 
-	var _Link2 = __webpack_require__(20);
+	let _Link2 = __webpack_require__(20);
 
-	var _Link3 = _interopRequireDefault(_Link2);
+	const _Link3 = _interopRequireDefault(_Link2);
 
-	var _IndexLink2 = __webpack_require__(31);
+	const _IndexLink2 = __webpack_require__(31);
 
-	var _IndexLink3 = _interopRequireDefault(_IndexLink2);
+	const _IndexLink3 = _interopRequireDefault(_IndexLink2);
 
-	var _withRouter2 = __webpack_require__(46);
+	const _withRouter2 = __webpack_require__(46);
 
-	var _withRouter3 = _interopRequireDefault(_withRouter2);
+	const _withRouter3 = _interopRequireDefault(_withRouter2);
 
-	var _IndexRedirect2 = __webpack_require__(32);
+	const _IndexRedirect2 = __webpack_require__(32);
 
-	var _IndexRedirect3 = _interopRequireDefault(_IndexRedirect2);
+	const _IndexRedirect3 = _interopRequireDefault(_IndexRedirect2);
 
-	var _IndexRoute2 = __webpack_require__(33);
+	const _IndexRoute2 = __webpack_require__(33);
 
-	var _IndexRoute3 = _interopRequireDefault(_IndexRoute2);
+	const _IndexRoute3 = _interopRequireDefault(_IndexRoute2);
 
-	var _Redirect2 = __webpack_require__(22);
+	let _Redirect2 = __webpack_require__(22);
 
-	var _Redirect3 = _interopRequireDefault(_Redirect2);
+	const _Redirect3 = _interopRequireDefault(_Redirect2);
 
-	var _Route2 = __webpack_require__(34);
+	const _Route2 = __webpack_require__(34);
 
-	var _Route3 = _interopRequireDefault(_Route2);
+	const _Route3 = _interopRequireDefault(_Route2);
 
-	var _RouterContext2 = __webpack_require__(15);
+	let _RouterContext2 = __webpack_require__(15);
 
-	var _RouterContext3 = _interopRequireDefault(_RouterContext2);
+	const _RouterContext3 = _interopRequireDefault(_RouterContext2);
 
-	var _match2 = __webpack_require__(44);
+	const _match2 = __webpack_require__(44);
 
-	var _match3 = _interopRequireDefault(_match2);
+	const _match3 = _interopRequireDefault(_match2);
 
-	var _useRouterHistory2 = __webpack_require__(27);
+	let _useRouterHistory2 = __webpack_require__(27);
 
-	var _useRouterHistory3 = _interopRequireDefault(_useRouterHistory2);
+	const _useRouterHistory3 = _interopRequireDefault(_useRouterHistory2);
 
-	var _applyRouterMiddleware2 = __webpack_require__(37);
+	const _applyRouterMiddleware2 = __webpack_require__(37);
 
-	var _applyRouterMiddleware3 = _interopRequireDefault(_applyRouterMiddleware2);
+	const _applyRouterMiddleware3 = _interopRequireDefault(_applyRouterMiddleware2);
 
-	var _browserHistory2 = __webpack_require__(38);
+	const _browserHistory2 = __webpack_require__(38);
 
-	var _browserHistory3 = _interopRequireDefault(_browserHistory2);
+	const _browserHistory3 = _interopRequireDefault(_browserHistory2);
 
-	var _hashHistory2 = __webpack_require__(42);
+	const _hashHistory2 = __webpack_require__(42);
 
-	var _hashHistory3 = _interopRequireDefault(_hashHistory2);
+	const _hashHistory3 = _interopRequireDefault(_hashHistory2);
 
-	var _createMemoryHistory2 = __webpack_require__(24);
+	let _createMemoryHistory2 = __webpack_require__(24);
 
-	var _createMemoryHistory3 = _interopRequireDefault(_createMemoryHistory2);
+	const _createMemoryHistory3 = _interopRequireDefault(_createMemoryHistory2);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -206,7 +206,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * will remain to ensure logic does not differ in production.
 	 */
 
-	var invariant = function(condition, format, a, b, c, d, e, f) {
+	const invariant = function(condition, format, a, b, c, d, e, f) {
 	  if (true) {
 	    if (format === undefined) {
 	      throw new Error('invariant requires an error message argument');
@@ -221,8 +221,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        'for the full error message and additional helpful warnings.'
 	      );
 	    } else {
-	      var args = [a, b, c, d, e, f];
-	      var argIndex = 0;
+	      let args = [a, b, c, d, e, f];
+	      let argIndex = 0;
 	      error = new Error(
 	        format.replace(/%s/g, function() { return args[argIndex++]; })
 	      );
@@ -251,21 +251,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	exports.isReactChildren = isReactChildren;
 	exports.createRouteFromReactElement = createRouteFromReactElement;
 	exports.createRoutesFromReactChildren = createRoutesFromReactChildren;
 	exports.createRoutes = createRoutes;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function isValidChild(object) {
-	  return object == null || _react2.default.isValidElement(object);
+	  return object === null || _react2.default.isValidElement(object);
 	}
 
 	function isReactChildren(object) {
@@ -277,11 +277,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function createRouteFromReactElement(element) {
-	  var type = element.type;
-	  var route = createRoute(type.defaultProps, element.props);
+	  const type = element.type;
+	  let route = createRoute(type.defaultProps, element.props);
 
 	  if (route.children) {
-	    var childRoutes = createRoutesFromReactChildren(route.children, route);
+	    let childRoutes = createRoutesFromReactChildren(route.children, route);
 
 	    if (childRoutes.length) route.childRoutes = childRoutes;
 
@@ -309,13 +309,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * to a <Router> component.
 	 */
 	function createRoutesFromReactChildren(children, parentRoute) {
-	  var routes = [];
+	  let routes = [];
 
 	  _react2.default.Children.forEach(children, function (element) {
 	    if (_react2.default.isValidElement(element)) {
 	      // Component classes may have a static create* method.
 	      if (element.type.createRouteFromReactElement) {
-	        var route = element.type.createRouteFromReactElement(element, parentRoute);
+	        let route = element.type.createRouteFromReactElement(element, parentRoute);
 
 	        if (route) routes.push(route);
 	      } else {
@@ -350,18 +350,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.createPath = exports.parsePath = exports.getQueryStringValueFromPath = exports.stripQueryStringValueFromPath = exports.addQueryStringValueToPath = undefined;
 
-	var _warning = __webpack_require__(5);
+	let _warning = __webpack_require__(5);
 
-	var _warning2 = _interopRequireDefault(_warning);
+	let _warning2 = _interopRequireDefault(_warning);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var addQueryStringValueToPath = exports.addQueryStringValueToPath = function addQueryStringValueToPath(path, key, value) {
-	  var _parsePath = parsePath(path);
+	let addQueryStringValueToPath = exports.addQueryStringValueToPath = function addQueryStringValueToPath(path, key, value) {
+	  const _parsePath = parsePath(path);
 
-	  var pathname = _parsePath.pathname;
-	  var search = _parsePath.search;
-	  var hash = _parsePath.hash;
+	  let pathname = _parsePath.pathname;
+	  let search = _parsePath.search;
+	  let hash = _parsePath.hash;
 
 
 	  return createPath({
@@ -371,12 +371,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  });
 	};
 
-	var stripQueryStringValueFromPath = exports.stripQueryStringValueFromPath = function stripQueryStringValueFromPath(path, key) {
-	  var _parsePath2 = parsePath(path);
+	let stripQueryStringValueFromPath = exports.stripQueryStringValueFromPath = function stripQueryStringValueFromPath(path, key) {
+	  const _parsePath2 = parsePath(path);
 
-	  var pathname = _parsePath2.pathname;
-	  var search = _parsePath2.search;
-	  var hash = _parsePath2.hash;
+	  let pathname = _parsePath2.pathname;
+	  let search = _parsePath2.search;
+	  let hash = _parsePath2.hash;
 
 
 	  return createPath({
@@ -388,34 +388,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	  });
 	};
 
-	var getQueryStringValueFromPath = exports.getQueryStringValueFromPath = function getQueryStringValueFromPath(path, key) {
-	  var _parsePath3 = parsePath(path);
+	let getQueryStringValueFromPath = exports.getQueryStringValueFromPath = function getQueryStringValueFromPath(path, key) {
+	  const _parsePath3 = parsePath(path);
 
-	  var search = _parsePath3.search;
+	  let search = _parsePath3.search;
 
-	  var match = search.match(new RegExp('[?&]' + key + '=([a-zA-Z0-9]+)'));
+	  let match = search.match(new RegExp('[?&]' + key + '=([a-zA-Z0-9]+)'));
 	  return match && match[1];
 	};
 
-	var extractPath = function extractPath(string) {
-	  var match = string.match(/^(https?:)?\/\/[^\/]*/);
-	  return match == null ? string : string.substring(match[0].length);
+	const extractPath = function extractPath(string) {
+	  let match = string.match(/^(https?:)?\/\/[^\/]*/);
+	  return match === null ? string : string.substring(match[0].length);
 	};
 
-	var parsePath = exports.parsePath = function parsePath(path) {
-	  var pathname = extractPath(path);
-	  var search = '';
-	  var hash = '';
+	let parsePath = exports.parsePath = function parsePath(path) {
+	  let pathname = extractPath(path);
+	  let search = '';
+	  let hash = '';
 
 	   true ? (0, _warning2.default)(path === pathname, 'A path must be pathname + search + hash only, not a full URL like "%s"', path) : void 0;
 
-	  var hashIndex = pathname.indexOf('#');
+	  let hashIndex = pathname.indexOf('#');
 	  if (hashIndex !== -1) {
 	    hash = pathname.substring(hashIndex);
 	    pathname = pathname.substring(0, hashIndex);
 	  }
 
-	  var searchIndex = pathname.indexOf('?');
+	  const searchIndex = pathname.indexOf('?');
 	  if (searchIndex !== -1) {
 	    search = pathname.substring(searchIndex);
 	    pathname = pathname.substring(0, searchIndex);
@@ -430,15 +430,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	};
 
-	var createPath = exports.createPath = function createPath(location) {
-	  if (location == null || typeof location === 'string') return location;
+	let createPath = exports.createPath = function createPath(location) {
+	  if (location === null || typeof location === 'string') return location;
 
-	  var basename = location.basename;
-	  var pathname = location.pathname;
-	  var search = location.search;
-	  var hash = location.hash;
+	  let basename = location.basename;
+	  let pathname = location.pathname;
+	  let search = location.search;
+	  let hash = location.hash;
 
-	  var path = (basename || '') + pathname;
+	  let path = (basename || '') + pathname;
 
 	  if (search && search !== '?') path += search;
 
@@ -469,13 +469,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * same logic and follow the same code paths.
 	 */
 
-	var warning = function() {};
+	let warning = function() {};
 
 	if (true) {
 	  warning = function(condition, format, args) {
-	    var len = arguments.length;
+	    let len = arguments.length;
 	    args = new Array(len > 2 ? len - 2 : 0);
-	    for (var key = 2; key < len; key++) {
+	    for (let key = 2; key < len; key++) {
 	      args[key - 2] = arguments[key];
 	    }
 	    if (format === undefined) {
@@ -493,8 +493,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    if (!condition) {
-	      var argIndex = 0;
-	      var message = 'Warning: ' +
+	      let argIndex = 0;
+	      let message = 'Warning: ' +
 	        format.replace(/%s/g, function() {
 	          return args[argIndex++];
 	        });
@@ -526,9 +526,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.getParams = getParams;
 	exports.formatPattern = formatPattern;
 
-	var _invariant = __webpack_require__(1);
+	let _invariant = __webpack_require__(1);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -537,11 +537,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function _compilePattern(pattern) {
-	  var regexpSource = '';
-	  var paramNames = [];
-	  var tokens = [];
+	  let regexpSource = '';
+	  let paramNames = [];
+	  let tokens = [];
 
-	  var match = void 0,
+	  let match = void 0,
 	      lastIndex = 0,
 	      matcher = /:([a-zA-Z_$][a-zA-Z0-9_$]*)|\*\*|\*|\(|\)|\\\(|\\\)/g;
 	  while (match = matcher.exec(pattern)) {
@@ -587,7 +587,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	}
 
-	var CompiledPatternsCache = Object.create(null);
+	const CompiledPatternsCache = Object.create(null);
 
 	function compilePattern(pattern) {
 	  if (!CompiledPatternsCache[pattern]) CompiledPatternsCache[pattern] = _compilePattern(pattern);
@@ -621,7 +621,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    pattern = '/' + pattern;
 	  }
 
-	  var _compilePattern2 = compilePattern(pattern),
+	  const _compilePattern2 = compilePattern(pattern),
 	      regexpSource = _compilePattern2.regexpSource,
 	      paramNames = _compilePattern2.paramNames,
 	      tokens = _compilePattern2.tokens;
@@ -635,13 +635,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    regexpSource += '$';
 	  }
 
-	  var match = pathname.match(new RegExp('^' + regexpSource, 'i'));
-	  if (match == null) {
+	  let match = pathname.match(new RegExp('^' + regexpSource, 'i'));
+	  if (match === null) {
 	    return null;
 	  }
 
-	  var matchedPath = match[0];
-	  var remainingPathname = pathname.substr(matchedPath.length);
+	  const matchedPath = match[0];
+	  let remainingPathname = pathname.substr(matchedPath.length);
 
 	  if (remainingPathname) {
 	    // Require that the match ends at a path separator, if we didn't match
@@ -669,15 +669,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function getParams(pattern, pathname) {
-	  var match = matchPattern(pattern, pathname);
+	  let match = matchPattern(pattern, pathname);
 	  if (!match) {
 	    return null;
 	  }
 
-	  var paramNames = match.paramNames,
+	  let paramNames = match.paramNames,
 	      paramValues = match.paramValues;
 
-	  var params = {};
+	  let params = {};
 
 	  paramNames.forEach(function (paramName, index) {
 	    params[paramName] = paramValues[index];
@@ -693,31 +693,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	function formatPattern(pattern, params) {
 	  params = params || {};
 
-	  var _compilePattern3 = compilePattern(pattern),
+	  const _compilePattern3 = compilePattern(pattern),
 	      tokens = _compilePattern3.tokens;
 
-	  var parenCount = 0,
+	  const parenCount = 0,
 	      pathname = '',
 	      splatIndex = 0,
 	      parenHistory = [];
 
-	  var token = void 0,
+	  let token = void 0,
 	      paramName = void 0,
 	      paramValue = void 0;
-	  for (var i = 0, len = tokens.length; i < len; ++i) {
+	  for (let i = 0, len = tokens.length; i < len; ++i) {
 	    token = tokens[i];
 
 	    if (token === '*' || token === '**') {
 	      paramValue = Array.isArray(params.splat) ? params.splat[splatIndex++] : params.splat;
 
-	      !(paramValue != null || parenCount > 0) ?  true ? (0, _invariant2.default)(false, 'Missing splat #%s for path "%s"', splatIndex, pattern) : (0, _invariant2.default)(false) : void 0;
+	      !(paramValue !== null || parenCount > 0) ?  true ? (0, _invariant2.default)(false, 'Missing splat #%s for path "%s"', splatIndex, pattern) : (0, _invariant2.default)(false) : void 0;
 
-	      if (paramValue != null) pathname += encodeURI(paramValue);
+	      if (paramValue !== null) pathname += encodeURI(paramValue);
 	    } else if (token === '(') {
 	      parenHistory[parenCount] = '';
 	      parenCount += 1;
 	    } else if (token === ')') {
-	      var parenText = parenHistory.pop();
+	      const parenText = parenHistory.pop();
 	      parenCount -= 1;
 
 	      if (parenCount) parenHistory[parenCount - 1] += parenText;else pathname += parenText;
@@ -729,18 +729,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	      paramName = token.substring(1);
 	      paramValue = params[paramName];
 
-	      !(paramValue != null || parenCount > 0) ?  true ? (0, _invariant2.default)(false, 'Missing "%s" parameter for path "%s"', paramName, pattern) : (0, _invariant2.default)(false) : void 0;
+	      !(paramValue !== null || parenCount > 0) ?  true ? (0, _invariant2.default)(false, 'Missing "%s" parameter for path "%s"', paramName, pattern) : (0, _invariant2.default)(false) : void 0;
 
-	      if (paramValue == null) {
+	      if (paramValue === null) {
 	        if (parenCount) {
 	          parenHistory[parenCount - 1] = '';
 
-	          var curTokenIdx = tokens.indexOf(token);
-	          var tokensSubset = tokens.slice(curTokenIdx, tokens.length);
-	          var nextParenIdx = -1;
+	          const curTokenIdx = tokens.indexOf(token);
+	          const tokensSubset = tokens.slice(curTokenIdx, tokens.length);
+	          let nextParenIdx = -1;
 
-	          for (var _i = 0; _i < tokensSubset.length; _i++) {
-	            if (tokensSubset[_i] == ')') {
+	          for (let _i = 0; _i < tokensSubset.length; _i++) {
+	            if (tokensSubset[_i] === ')') {
 	              nextParenIdx = _i;
 	              break;
 	            }
@@ -772,13 +772,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = routerWarning;
 	exports._resetWarned = _resetWarned;
 
-	var _warning = __webpack_require__(5);
+	let _warning = __webpack_require__(5);
 
-	var _warning2 = _interopRequireDefault(_warning);
+	let _warning2 = _interopRequireDefault(_warning);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var warned = {};
+	let warned = {};
 
 	function routerWarning(falseToWarn, message) {
 	  // Only issue deprecation warnings once.
@@ -792,7 +792,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  message = '[react-router] ' + message;
 
-	  for (var _len = arguments.length, args = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+	  for (let _len = arguments.length, args = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
 	    args[_key - 2] = arguments[_key];
 	  }
 
@@ -812,41 +812,41 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.locationsAreEqual = exports.statesAreEqual = exports.createLocation = exports.createQuery = undefined;
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+	let _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _invariant = __webpack_require__(1);
+	let _invariant = __webpack_require__(1);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _warning = __webpack_require__(5);
+	let _warning = __webpack_require__(5);
 
-	var _warning2 = _interopRequireDefault(_warning);
+	let _warning2 = _interopRequireDefault(_warning);
 
-	var _PathUtils = __webpack_require__(4);
+	let _PathUtils = __webpack_require__(4);
 
-	var _Actions = __webpack_require__(10);
+	let _Actions = __webpack_require__(10);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var createQuery = exports.createQuery = function createQuery(props) {
+	let createQuery = exports.createQuery = function createQuery(props) {
 	  return _extends(Object.create(null), props);
 	};
 
-	var createLocation = exports.createLocation = function createLocation() {
-	  var input = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
-	  var action = arguments.length <= 1 || arguments[1] === undefined ? _Actions.POP : arguments[1];
-	  var key = arguments.length <= 2 || arguments[2] === undefined ? null : arguments[2];
+	let createLocation = exports.createLocation = function createLocation() {
+	  const input = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
+	  let action = arguments.length <= 1 || arguments[1] === undefined ? _Actions.POP : arguments[1];
+	  let key = arguments.length <= 2 || arguments[2] === undefined ? null : arguments[2];
 
-	  var object = typeof input === 'string' ? (0, _PathUtils.parsePath)(input) : input;
+	  let object = typeof input === 'string' ? (0, _PathUtils.parsePath)(input) : input;
 
 	   true ? (0, _warning2.default)(!object.path, 'Location descriptor objects should have a `pathname`, not a `path`.') : void 0;
 
-	  var pathname = object.pathname || '/';
-	  var search = object.search || '';
-	  var hash = object.hash || '';
-	  var state = object.state;
+	  let pathname = object.pathname || '/';
+	  let search = object.search || '';
+	  let hash = object.hash || '';
+	  let state = object.state;
 
 	  return {
 	    pathname: pathname,
@@ -858,15 +858,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	};
 
-	var isDate = function isDate(object) {
+	const isDate = function isDate(object) {
 	  return Object.prototype.toString.call(object) === '[object Date]';
 	};
 
-	var statesAreEqual = exports.statesAreEqual = function statesAreEqual(a, b) {
+	let statesAreEqual = exports.statesAreEqual = function statesAreEqual(a, b) {
 	  if (a === b) return true;
 
-	  var typeofA = typeof a === 'undefined' ? 'undefined' : _typeof(a);
-	  var typeofB = typeof b === 'undefined' ? 'undefined' : _typeof(b);
+	  const typeofA = typeof a === 'undefined' ? 'undefined' : _typeof(a);
+	  const typeofB = typeof b === 'undefined' ? 'undefined' : _typeof(b);
 
 	  if (typeofA !== typeofB) return false;
 
@@ -877,8 +877,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    !!(isDate(a) && isDate(b)) ?  true ? (0, _invariant2.default)(false, 'You must not store Date objects in location state') : (0, _invariant2.default)(false) : void 0;
 
 	    if (!Array.isArray(a)) {
-	      var keysofA = Object.keys(a);
-	      var keysofB = Object.keys(b);
+	      const keysofA = Object.keys(a);
+	      const keysofB = Object.keys(b);
 	      return keysofA.length === keysofB.length && keysofA.every(function (key) {
 	        return statesAreEqual(a[key], b[key]);
 	      });
@@ -894,7 +894,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return false;
 	};
 
-	var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a, b) {
+	let locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a, b) {
 	  return a.key === b.key &&
 	  // a.action === b.action && // Different action !== location change.
 	  a.pathname === b.pathname && a.search === b.search && a.hash === b.hash && statesAreEqual(a.state, b.state);
@@ -910,9 +910,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.routes = exports.route = exports.components = exports.component = exports.history = undefined;
 	exports.falsy = falsy;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var func = _react.PropTypes.func,
+	let func = _react.PropTypes.func,
 	    object = _react.PropTypes.object,
 	    arrayOf = _react.PropTypes.arrayOf,
 	    oneOfType = _react.PropTypes.oneOfType,
@@ -923,7 +923,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (props[propName]) return new Error('<' + componentName + '> should not have a "' + propName + '" prop');
 	}
 
-	var history = exports.history = shape({
+	let history = exports.history = shape({
 	  listen: func.isRequired,
 	  push: func.isRequired,
 	  replace: func.isRequired,
@@ -932,10 +932,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  goForward: func.isRequired
 	});
 
-	var component = exports.component = oneOfType([func, string]);
-	var components = exports.components = oneOfType([component, object]);
-	var route = exports.route = oneOfType([object, element]);
-	var routes = exports.routes = oneOfType([route, arrayOf(route)]);
+	let component = exports.component = oneOfType([func, string]);
+	let components = exports.components = oneOfType([component, object]);
+	let route = exports.route = oneOfType([object, element]);
+	let routes = exports.routes = oneOfType([route, arrayOf(route)]);
 
 /***/ },
 /* 10 */
@@ -947,12 +947,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * Indicates that navigation was caused by a call to history.push.
 	 */
-	var PUSH = exports.PUSH = 'PUSH';
+	let PUSH = exports.PUSH = 'PUSH';
 
 	/**
 	 * Indicates that navigation was caused by a call to history.replace.
 	 */
-	var REPLACE = exports.REPLACE = 'REPLACE';
+	let REPLACE = exports.REPLACE = 'REPLACE';
 
 	/**
 	 * Indicates that navigation was caused by some other action such
@@ -962,7 +962,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * See https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate
 	 * for more information.
 	 */
-	var POP = exports.POP = 'POP';
+	let POP = exports.POP = 'POP';
 
 /***/ },
 /* 11 */
@@ -971,11 +971,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	exports.__esModule = true;
-	var addEventListener = exports.addEventListener = function addEventListener(node, event, listener) {
+	let addEventListener = exports.addEventListener = function addEventListener(node, event, listener) {
 	  return node.addEventListener ? node.addEventListener(event, listener, false) : node.attachEvent('on' + event, listener);
 	};
 
-	var removeEventListener = exports.removeEventListener = function removeEventListener(node, event, listener) {
+	let removeEventListener = exports.removeEventListener = function removeEventListener(node, event, listener) {
 	  return node.removeEventListener ? node.removeEventListener(event, listener, false) : node.detachEvent('on' + event, listener);
 	};
 
@@ -986,8 +986,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * https://github.com/Modernizr/Modernizr/blob/master/feature-detects/history.js
 	 * changed to avoid false negatives for Windows Phones: https://github.com/reactjs/react-router/issues/586
 	 */
-	var supportsHistory = exports.supportsHistory = function supportsHistory() {
-	  var ua = window.navigator.userAgent;
+	let supportsHistory = exports.supportsHistory = function supportsHistory() {
+	  const ua = window.navigator.userAgent;
 
 	  if ((ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) && ua.indexOf('Mobile Safari') !== -1 && ua.indexOf('Chrome') === -1 && ua.indexOf('Windows Phone') === -1) return false;
 
@@ -997,7 +997,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * Returns false if using go(n) with hash history causes a full page reload.
 	 */
-	var supportsGoWithoutReloadUsingHash = exports.supportsGoWithoutReloadUsingHash = function supportsGoWithoutReloadUsingHash() {
+	let supportsGoWithoutReloadUsingHash = exports.supportsGoWithoutReloadUsingHash = function supportsGoWithoutReloadUsingHash() {
 	  return window.navigator.userAgent.indexOf('Firefox') === -1;
 	};
 
@@ -1005,7 +1005,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Returns true if browser fires popstate on hash change.
 	 * IE10 and IE11 do not.
 	 */
-	var supportsPopstateOnHashchange = exports.supportsPopstateOnHashchange = function supportsPopstateOnHashchange() {
+	let supportsPopstateOnHashchange = exports.supportsPopstateOnHashchange = function supportsPopstateOnHashchange() {
 	  return window.navigator.userAgent.indexOf('Trident') === -1;
 	};
 
@@ -1019,9 +1019,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.loopAsync = loopAsync;
 	exports.mapAsync = mapAsync;
 	function loopAsync(turns, work, callback) {
-	  var currentTurn = 0,
+	  let currentTurn = 0,
 	      isDone = false;
-	  var sync = false,
+	  let sync = false,
 	      hasNext = false,
 	      doneArgs = void 0;
 
@@ -1072,12 +1072,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function mapAsync(array, work, callback) {
-	  var length = array.length;
-	  var values = [];
+	  const length = array.length;
+	  const values = [];
 
 	  if (length === 0) return callback(null, values);
 
-	  var isDone = false,
+	  let isDone = false,
 	      doneCount = 0;
 
 	  function done(index, error, value) {
@@ -1112,14 +1112,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.ContextProvider = ContextProvider;
 	exports.ContextSubscriber = ContextSubscriber;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
 	// Works around issues with context updates failing to propagate.
 	// Caveat: the context value is expected to never change its identity.
 	// https://github.com/facebook/react/issues/2517
 	// https://github.com/reactjs/react-router/issues/470
 
-	var contextProviderShape = _react.PropTypes.shape({
+	const contextProviderShape = _react.PropTypes.shape({
 	  subscribe: _react.PropTypes.func.isRequired,
 	  eventIndex: _react.PropTypes.number.isRequired
 	});
@@ -1131,10 +1131,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	function ContextProvider(name) {
 	  var _childContextTypes, _ref2;
 
-	  var contextName = makeContextName(name);
-	  var listenersKey = contextName + '/listeners';
-	  var eventIndexKey = contextName + '/eventIndex';
-	  var subscribeKey = contextName + '/subscribe';
+	  let contextName = makeContextName(name);
+	  const listenersKey = contextName + '/listeners';
+	  const eventIndexKey = contextName + '/eventIndex';
+	  const subscribeKey = contextName + '/subscribe';
 
 	  return _ref2 = {
 	    childContextTypes: (_childContextTypes = {}, _childContextTypes[contextName] = contextProviderShape.isRequired, _childContextTypes),
@@ -1155,14 +1155,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this[eventIndexKey]++;
 	    },
 	    componentDidUpdate: function componentDidUpdate() {
-	      var _this = this;
+	      let _this = this;
 
 	      this[listenersKey].forEach(function (listener) {
 	        return listener(_this[eventIndexKey]);
 	      });
 	    }
 	  }, _ref2[subscribeKey] = function (listener) {
-	    var _this2 = this;
+	    const _this2 = this;
 
 	    // No need to immediately call listener here.
 	    this[listenersKey].push(listener);
@@ -1178,10 +1178,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	function ContextSubscriber(name) {
 	  var _contextTypes, _ref4;
 
-	  var contextName = makeContextName(name);
-	  var lastRenderedEventIndexKey = contextName + '/lastRenderedEventIndex';
-	  var handleContextUpdateKey = contextName + '/handleContextUpdate';
-	  var unsubscribeKey = contextName + '/unsubscribe';
+	  const contextName = makeContextName(name);
+	  const lastRenderedEventIndexKey = contextName + '/lastRenderedEventIndex';
+	  const handleContextUpdateKey = contextName + '/handleContextUpdate';
+	  const unsubscribeKey = contextName + '/unsubscribe';
 
 	  return _ref4 = {
 	    contextTypes: (_contextTypes = {}, _contextTypes[contextName] = contextProviderShape, _contextTypes),
@@ -1237,13 +1237,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.locationShape = exports.routerShape = undefined;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var func = _react.PropTypes.func,
+	let func = _react.PropTypes.func,
 	    object = _react.PropTypes.object,
 	    shape = _react.PropTypes.shape,
 	    string = _react.PropTypes.string;
-	var routerShape = exports.routerShape = shape({
+	let routerShape = exports.routerShape = shape({
 	  push: func.isRequired,
 	  replace: func.isRequired,
 	  go: func.isRequired,
@@ -1253,7 +1253,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  isActive: func.isRequired
 	});
 
-	var locationShape = exports.locationShape = shape({
+	let locationShape = exports.locationShape = shape({
 	  pathname: string.isRequired,
 	  search: string.isRequired,
 	  state: object,
@@ -1269,25 +1269,25 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+	let _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _invariant = __webpack_require__(1);
+	let _invariant = __webpack_require__(1);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _getRouteParams = __webpack_require__(41);
+	const _getRouteParams = __webpack_require__(41);
 
-	var _getRouteParams2 = _interopRequireDefault(_getRouteParams);
+	const _getRouteParams2 = _interopRequireDefault(_getRouteParams);
 
-	var _ContextUtils = __webpack_require__(13);
+	let _ContextUtils = __webpack_require__(13);
 
-	var _RouteUtils = __webpack_require__(3);
+	let _RouteUtils = __webpack_require__(3);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1301,7 +1301,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * and sets the history object and the current location in context.
 	 */
 
-	var RouterContext = _react2.default.createClass({
+	const RouterContext = _react2.default.createClass({
 	  displayName: 'RouterContext',
 
 
@@ -1333,27 +1333,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  },
 	  createElement: function createElement(component, props) {
-	    return component == null ? null : this.props.createElement(component, props);
+	    return component === null ? null : this.props.createElement(component, props);
 	  },
 	  render: function render() {
-	    var _this = this;
+	    let _this = this;
 
-	    var _props = this.props,
+	    let _props = this.props,
 	        location = _props.location,
 	        routes = _props.routes,
 	        params = _props.params,
 	        components = _props.components,
 	        router = _props.router;
 
-	    var element = null;
+	    let element = null;
 
 	    if (components) {
 	      element = components.reduceRight(function (element, components, index) {
-	        if (components == null) return element; // Don't create new children; use the grandchildren.
+	        if (components === null) return element; // Don't create new children; use the grandchildren.
 
-	        var route = routes[index];
-	        var routeParams = (0, _getRouteParams2.default)(route, params);
-	        var props = {
+	        let route = routes[index];
+	        let routeParams = (0, _getRouteParams2.default)(route, params);
+	        let props = {
 	          location: location,
 	          params: params,
 	          route: route,
@@ -1371,7 +1371,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 
 	        if ((typeof components === 'undefined' ? 'undefined' : _typeof(components)) === 'object') {
-	          var elements = {};
+	          const elements = {};
 
 	          for (var key in components) {
 	            if (Object.prototype.hasOwnProperty.call(components, key)) {
@@ -1407,23 +1407,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.go = exports.replaceLocation = exports.pushLocation = exports.startListener = exports.getUserConfirmation = exports.getCurrentLocation = undefined;
 
-	var _LocationUtils = __webpack_require__(8);
+	let _LocationUtils = __webpack_require__(8);
 
-	var _DOMUtils = __webpack_require__(11);
+	let _DOMUtils = __webpack_require__(11);
 
-	var _DOMStateStorage = __webpack_require__(28);
+	let _DOMStateStorage = __webpack_require__(28);
 
-	var _PathUtils = __webpack_require__(4);
+	let _PathUtils = __webpack_require__(4);
 
-	var _ExecutionEnvironment = __webpack_require__(17);
+	let _ExecutionEnvironment = __webpack_require__(17);
 
-	var PopStateEvent = 'popstate';
-	var HashChangeEvent = 'hashchange';
+	const PopStateEvent = 'popstate';
+	let HashChangeEvent = 'hashchange';
 
-	var needsHashchangeListener = _ExecutionEnvironment.canUseDOM && !(0, _DOMUtils.supportsPopstateOnHashchange)();
+	const needsHashchangeListener = _ExecutionEnvironment.canUseDOM && !(0, _DOMUtils.supportsPopstateOnHashchange)();
 
-	var _createLocation = function _createLocation(historyState) {
-	  var key = historyState && historyState.key;
+	const _createLocation = function _createLocation(historyState) {
+	  let key = historyState && historyState.key;
 
 	  return (0, _LocationUtils.createLocation)({
 	    pathname: window.location.pathname,
@@ -1433,8 +1433,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, undefined, key);
 	};
 
-	var getCurrentLocation = exports.getCurrentLocation = function getCurrentLocation() {
-	  var historyState = void 0;
+	let getCurrentLocation = exports.getCurrentLocation = function getCurrentLocation() {
+	  let historyState = void 0;
 	  try {
 	    historyState = window.history.state || {};
 	  } catch (error) {
@@ -1446,19 +1446,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return _createLocation(historyState);
 	};
 
-	var getUserConfirmation = exports.getUserConfirmation = function getUserConfirmation(message, callback) {
+	let getUserConfirmation = exports.getUserConfirmation = function getUserConfirmation(message, callback) {
 	  return callback(window.confirm(message));
 	}; // eslint-disable-line no-alert
 
-	var startListener = exports.startListener = function startListener(listener) {
-	  var handlePopState = function handlePopState(event) {
+	let startListener = exports.startListener = function startListener(listener) {
+	  const handlePopState = function handlePopState(event) {
 	    if (event.state !== undefined) // Ignore extraneous popstate events in WebKit
 	      listener(_createLocation(event.state));
 	  };
 
 	  (0, _DOMUtils.addEventListener)(window, PopStateEvent, handlePopState);
 
-	  var handleUnpoppedHashChange = function handleUnpoppedHashChange() {
+	  const handleUnpoppedHashChange = function handleUnpoppedHashChange() {
 	    return listener(getCurrentLocation());
 	  };
 
@@ -1475,9 +1475,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	};
 
-	var updateLocation = function updateLocation(location, updateState) {
-	  var state = location.state;
-	  var key = location.key;
+	let updateLocation = function updateLocation(location, updateState) {
+	  let state = location.state;
+	  let key = location.key;
 
 
 	  if (state !== undefined) (0, _DOMStateStorage.saveState)(key, state);
@@ -1485,19 +1485,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	  updateState({ key: key }, (0, _PathUtils.createPath)(location));
 	};
 
-	var pushLocation = exports.pushLocation = function pushLocation(location) {
+	let pushLocation = exports.pushLocation = function pushLocation(location) {
 	  return updateLocation(location, function (state, path) {
 	    return window.history.pushState(state, null, path);
 	  });
 	};
 
-	var replaceLocation = exports.replaceLocation = function replaceLocation(location) {
+	let replaceLocation = exports.replaceLocation = function replaceLocation(location) {
 	  return updateLocation(location, function (state, path) {
 	    return window.history.replaceState(state, null, path);
 	  });
 	};
 
-	var go = exports.go = function go(n) {
+	let go = exports.go = function go(n) {
 	  if (n) window.history.go(n);
 	};
 
@@ -1508,7 +1508,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	exports.__esModule = true;
-	var canUseDOM = exports.canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+	let canUseDOM = exports.canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 
 /***/ },
 /* 18 */
@@ -1518,37 +1518,37 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _AsyncUtils = __webpack_require__(47);
+	let _AsyncUtils = __webpack_require__(47);
 
-	var _PathUtils = __webpack_require__(4);
+	let _PathUtils = __webpack_require__(4);
 
-	var _runTransitionHook = __webpack_require__(19);
+	let _runTransitionHook = __webpack_require__(19);
 
-	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
+	let _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
-	var _Actions = __webpack_require__(10);
+	let _Actions = __webpack_require__(10);
 
-	var _LocationUtils = __webpack_require__(8);
+	let _LocationUtils = __webpack_require__(8);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var createHistory = function createHistory() {
-	  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-	  var getCurrentLocation = options.getCurrentLocation;
-	  var getUserConfirmation = options.getUserConfirmation;
-	  var pushLocation = options.pushLocation;
-	  var replaceLocation = options.replaceLocation;
-	  var go = options.go;
-	  var keyLength = options.keyLength;
+	let createHistory = function createHistory() {
+	  let options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	  let getCurrentLocation = options.getCurrentLocation;
+	  let getUserConfirmation = options.getUserConfirmation;
+	  let pushLocation = options.pushLocation;
+	  let replaceLocation = options.replaceLocation;
+	  let go = options.go;
+	  const keyLength = options.keyLength;
 
 
-	  var currentLocation = void 0;
-	  var pendingLocation = void 0;
-	  var beforeListeners = [];
-	  var listeners = [];
-	  var allKeys = [];
+	  let currentLocation = void 0;
+	  let pendingLocation = void 0;
+	  let beforeListeners = [];
+	  let listeners = [];
+	  let allKeys = [];
 
-	  var getCurrentIndex = function getCurrentIndex() {
+	  const getCurrentIndex = function getCurrentIndex() {
 	    if (pendingLocation && pendingLocation.action === _Actions.POP) return allKeys.indexOf(pendingLocation.key);
 
 	    if (currentLocation) return allKeys.indexOf(currentLocation.key);
@@ -1556,8 +1556,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return -1;
 	  };
 
-	  var updateLocation = function updateLocation(nextLocation) {
-	    var currentIndex = getCurrentIndex();
+	  let updateLocation = function updateLocation(nextLocation) {
+	    const currentIndex = getCurrentIndex();
 
 	    currentLocation = nextLocation;
 
@@ -1572,7 +1572,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  };
 
-	  var listenBefore = function listenBefore(listener) {
+	  let listenBefore = function listenBefore(listener) {
 	    beforeListeners.push(listener);
 
 	    return function () {
@@ -1582,7 +1582,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  };
 
-	  var listen = function listen(listener) {
+	  let listen = function listen(listener) {
 	    listeners.push(listener);
 
 	    return function () {
@@ -1592,10 +1592,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  };
 
-	  var confirmTransitionTo = function confirmTransitionTo(location, callback) {
+	  const confirmTransitionTo = function confirmTransitionTo(location, callback) {
 	    (0, _AsyncUtils.loopAsync)(beforeListeners.length, function (index, next, done) {
 	      (0, _runTransitionHook2.default)(beforeListeners[index], location, function (result) {
-	        return result != null ? done(result) : next();
+	        return result !== null ? done(result) : next();
 	      });
 	    }, function (message) {
 	      if (getUserConfirmation && typeof message === 'string') {
@@ -1608,7 +1608,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  };
 
-	  var transitionTo = function transitionTo(nextLocation) {
+	  const transitionTo = function transitionTo(nextLocation) {
 	    if (currentLocation && (0, _LocationUtils.locationsAreEqual)(currentLocation, nextLocation) || pendingLocation && (0, _LocationUtils.locationsAreEqual)(pendingLocation, nextLocation)) return; // Nothing to do
 
 	    pendingLocation = nextLocation;
@@ -1621,8 +1621,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (ok) {
 	        // Treat PUSH to same path like REPLACE to be consistent with browsers
 	        if (nextLocation.action === _Actions.PUSH) {
-	          var prevPath = (0, _PathUtils.createPath)(currentLocation);
-	          var nextPath = (0, _PathUtils.createPath)(nextLocation);
+	          const prevPath = (0, _PathUtils.createPath)(currentLocation);
+	          const nextPath = (0, _PathUtils.createPath)(nextLocation);
 
 	          if (nextPath === prevPath && (0, _LocationUtils.statesAreEqual)(currentLocation.state, nextLocation.state)) nextLocation.action = _Actions.REPLACE;
 	        }
@@ -1635,40 +1635,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	          if (replaceLocation(nextLocation) !== false) updateLocation(nextLocation);
 	        }
 	      } else if (currentLocation && nextLocation.action === _Actions.POP) {
-	        var prevIndex = allKeys.indexOf(currentLocation.key);
-	        var nextIndex = allKeys.indexOf(nextLocation.key);
+	        const prevIndex = allKeys.indexOf(currentLocation.key);
+	        const nextIndex = allKeys.indexOf(nextLocation.key);
 
 	        if (prevIndex !== -1 && nextIndex !== -1) go(prevIndex - nextIndex); // Restore the URL
 	      }
 	    });
 	  };
 
-	  var push = function push(input) {
+	  let push = function push(input) {
 	    return transitionTo(createLocation(input, _Actions.PUSH));
 	  };
 
-	  var replace = function replace(input) {
+	  let replace = function replace(input) {
 	    return transitionTo(createLocation(input, _Actions.REPLACE));
 	  };
 
-	  var goBack = function goBack() {
+	  const goBack = function goBack() {
 	    return go(-1);
 	  };
 
-	  var goForward = function goForward() {
+	  const goForward = function goForward() {
 	    return go(1);
 	  };
 
-	  var createKey = function createKey() {
+	  let createKey = function createKey() {
 	    return Math.random().toString(36).substr(2, keyLength || 6);
 	  };
 
-	  var createHref = function createHref(location) {
+	  let createHref = function createHref(location) {
 	    return (0, _PathUtils.createPath)(location);
 	  };
 
-	  var createLocation = function createLocation(location, action) {
-	    var key = arguments.length <= 2 || arguments[2] === undefined ? createKey() : arguments[2];
+	  let createLocation = function createLocation(location, action) {
+	    let key = arguments.length <= 2 || arguments[2] === undefined ? createKey() : arguments[2];
 	    return (0, _LocationUtils.createLocation)(location, action, key);
 	  };
 
@@ -1699,14 +1699,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _warning = __webpack_require__(5);
+	let _warning = __webpack_require__(5);
 
-	var _warning2 = _interopRequireDefault(_warning);
+	let _warning2 = _interopRequireDefault(_warning);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var runTransitionHook = function runTransitionHook(hook, location, callback) {
-	  var result = hook(location, callback);
+	const runTransitionHook = function runTransitionHook(hook, location, callback) {
+	  let result = hook(location, callback);
 
 	  if (hook.length < 2) {
 	    // Assume the hook runs synchronously and automatically
@@ -1727,23 +1727,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _invariant = __webpack_require__(1);
+	let _invariant = __webpack_require__(1);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _PropTypes = __webpack_require__(14);
+	let _PropTypes = __webpack_require__(14);
 
-	var _ContextUtils = __webpack_require__(13);
+	let _ContextUtils = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	function _objectWithoutProperties(obj, keys) { let target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 	var _React$PropTypes = _react2.default.PropTypes,
 	    bool = _React$PropTypes.bool,
@@ -1790,7 +1790,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 *   <Link ... query={{ show: true }} state={{ the: 'state' }} />
 	 */
-	var Link = _react2.default.createClass({
+	const Link = _react2.default.createClass({
 	  displayName: 'Link',
 
 
@@ -1823,7 +1823,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    if (event.defaultPrevented) return;
 
-	    var router = this.context.router;
+	    let router = this.context.router;
 
 	    !router ?  true ? (0, _invariant2.default)(false, '<Link>s rendered outside of a router context cannot navigate.') : (0, _invariant2.default)(false) : void 0;
 
@@ -1838,7 +1838,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    router.push(resolveToLocation(this.props.to, router));
 	  },
 	  render: function render() {
-	    var _props = this.props,
+	    let _props = this.props,
 	        to = _props.to,
 	        activeClassName = _props.activeClassName,
 	        activeStyle = _props.activeStyle,
@@ -1848,7 +1848,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // Ignore if rendered outside the context of router to simplify unit testing.
 
 
-	    var router = this.context.router;
+	    let router = this.context.router;
 
 
 	    if (router) {
@@ -1857,10 +1857,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return _react2.default.createElement('a', props);
 	      }
 
-	      var toLocation = resolveToLocation(to, router);
+	      const toLocation = resolveToLocation(to, router);
 	      props.href = router.createHref(toLocation);
 
-	      if (activeClassName || activeStyle != null && !isEmptyObject(activeStyle)) {
+	      if (activeClassName || activeStyle !== null && !isEmptyObject(activeStyle)) {
 	        if (router.isActive(toLocation, onlyActiveOnIndex)) {
 	          if (activeClassName) {
 	            if (props.className) {
@@ -1901,19 +1901,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _invariant = __webpack_require__(1);
+	let _invariant = __webpack_require__(1);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _RouteUtils = __webpack_require__(3);
+	let _RouteUtils = __webpack_require__(3);
 
-	var _PatternUtils = __webpack_require__(6);
+	let _PatternUtils = __webpack_require__(6);
 
-	var _InternalPropTypes = __webpack_require__(9);
+	let _InternalPropTypes = __webpack_require__(9);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1930,30 +1930,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	/* eslint-disable react/require-render-return */
 
-	var Redirect = _react2.default.createClass({
+	const Redirect = _react2.default.createClass({
 	  displayName: 'Redirect',
 
 
 	  statics: {
 	    createRouteFromReactElement: function createRouteFromReactElement(element) {
-	      var route = (0, _RouteUtils.createRouteFromReactElement)(element);
+	      let route = (0, _RouteUtils.createRouteFromReactElement)(element);
 
 	      if (route.from) route.path = route.from;
 
 	      route.onEnter = function (nextState, replace) {
-	        var location = nextState.location,
+	        let location = nextState.location,
 	            params = nextState.params;
 
 
-	        var pathname = void 0;
+	        let pathname = void 0;
 	        if (route.to.charAt(0) === '/') {
 	          pathname = (0, _PatternUtils.formatPattern)(route.to, params);
 	        } else if (!route.to) {
 	          pathname = location.pathname;
 	        } else {
-	          var routeIndex = nextState.routes.indexOf(route);
-	          var parentPattern = Redirect.getRoutePattern(nextState.routes, routeIndex - 1);
-	          var pattern = parentPattern.replace(/\/*$/, '/') + route.to;
+	          const routeIndex = nextState.routes.indexOf(route);
+	          let parentPattern = Redirect.getRoutePattern(nextState.routes, routeIndex - 1);
+	          let pattern = parentPattern.replace(/\/*$/, '/') + route.to;
 	          pathname = (0, _PatternUtils.formatPattern)(pattern, params);
 	        }
 
@@ -1967,11 +1967,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return route;
 	    },
 	    getRoutePattern: function getRoutePattern(routes, routeIndex) {
-	      var parentPattern = '';
+	      let parentPattern = '';
 
-	      for (var i = routeIndex; i >= 0; i--) {
-	        var route = routes[i];
-	        var pattern = route.path || '';
+	      for (let i = routeIndex; i >= 0; i--) {
+	        let route = routes[i];
+	        let pattern = route.path || '';
 
 	        parentPattern = pattern.replace(/\/*$/, '/') + parentPattern;
 
@@ -2008,12 +2008,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	exports.createRouterObject = createRouterObject;
 	exports.assignRouterState = assignRouterState;
 	function createRouterObject(history, transitionManager, state) {
-	  var router = _extends({}, history, {
+	  let router = _extends({}, history, {
 	    setRouteLeaveHook: transitionManager.listenBeforeLeavingRoute,
 	    isActive: transitionManager.isActive
 	  });
@@ -2022,7 +2022,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function assignRouterState(router, _ref) {
-	  var location = _ref.location,
+	  let location = _ref.location,
 	      params = _ref.params,
 	      routes = _ref.routes;
 
@@ -2042,17 +2042,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.default = createMemoryHistory;
 
-	var _useQueries = __webpack_require__(30);
+	let _useQueries = __webpack_require__(30);
 
-	var _useQueries2 = _interopRequireDefault(_useQueries);
+	let _useQueries2 = _interopRequireDefault(_useQueries);
 
-	var _useBasename = __webpack_require__(29);
+	let _useBasename = __webpack_require__(29);
 
-	var _useBasename2 = _interopRequireDefault(_useBasename);
+	let _useBasename2 = _interopRequireDefault(_useBasename);
 
-	var _createMemoryHistory = __webpack_require__(52);
+	let _createMemoryHistory = __webpack_require__(52);
 
-	var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
+	let _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2060,11 +2060,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // signatures and type checking differ between `useQueries` and
 	  // `createMemoryHistory`, have to create `memoryHistory` first because
 	  // `useQueries` doesn't understand the signature
-	  var memoryHistory = (0, _createMemoryHistory2.default)(options);
-	  var createHistory = function createHistory() {
+	  const memoryHistory = (0, _createMemoryHistory2.default)(options);
+	  const createHistory = function createHistory() {
 	    return memoryHistory;
 	  };
-	  var history = (0, _useQueries2.default)((0, _useBasename2.default)(createHistory))(options);
+	  let history = (0, _useQueries2.default)((0, _useBasename2.default)(createHistory))(options);
 	  return history;
 	}
 
@@ -2077,18 +2077,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 
 	exports.default = function (createHistory) {
-	  var history = void 0;
+	  let history = void 0;
 	  if (canUseDOM) history = (0, _useRouterHistory2.default)(createHistory)();
 	  return history;
 	};
 
-	var _useRouterHistory = __webpack_require__(27);
+	const _useRouterHistory = __webpack_require__(27);
 
-	var _useRouterHistory2 = _interopRequireDefault(_useRouterHistory);
+	const _useRouterHistory2 = _interopRequireDefault(_useRouterHistory);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+	const canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 
 /***/ },
 /* 26 */
@@ -2098,31 +2098,31 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	exports.default = createTransitionManager;
 
-	var _routerWarning = __webpack_require__(7);
+	let _routerWarning = __webpack_require__(7);
 
-	var _routerWarning2 = _interopRequireDefault(_routerWarning);
+	let _routerWarning2 = _interopRequireDefault(_routerWarning);
 
-	var _computeChangedRoutes2 = __webpack_require__(39);
+	const _computeChangedRoutes2 = __webpack_require__(39);
 
-	var _computeChangedRoutes3 = _interopRequireDefault(_computeChangedRoutes2);
+	const _computeChangedRoutes3 = _interopRequireDefault(_computeChangedRoutes2);
 
-	var _TransitionUtils = __webpack_require__(36);
+	const _TransitionUtils = __webpack_require__(36);
 
-	var _isActive2 = __webpack_require__(43);
+	const _isActive2 = __webpack_require__(43);
 
-	var _isActive3 = _interopRequireDefault(_isActive2);
+	const _isActive3 = _interopRequireDefault(_isActive2);
 
-	var _getComponents = __webpack_require__(40);
+	const _getComponents = __webpack_require__(40);
 
-	var _getComponents2 = _interopRequireDefault(_getComponents);
+	const _getComponents2 = _interopRequireDefault(_getComponents);
 
-	var _matchRoutes = __webpack_require__(45);
+	const _matchRoutes = __webpack_require__(45);
 
-	var _matchRoutes2 = _interopRequireDefault(_matchRoutes);
+	const _matchRoutes2 = _interopRequireDefault(_matchRoutes);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2133,7 +2133,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function createTransitionManager(history, routes) {
-	  var state = {};
+	  let state = {};
 
 	  // Signature should be (location, indexOnly), but needs to support (path,
 	  // query, indexOnly)
@@ -2143,7 +2143,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return (0, _isActive3.default)(location, indexOnly, state.location, state.routes, state.params);
 	  }
 
-	  var partialNextState = void 0;
+	  let partialNextState = void 0;
 
 	  function match(location, callback) {
 	    if (partialNextState && partialNextState.location === location) {
@@ -2163,7 +2163,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  function finishMatch(nextState, callback) {
-	    var _computeChangedRoutes = (0, _computeChangedRoutes3.default)(state, nextState),
+	    const _computeChangedRoutes = (0, _computeChangedRoutes3.default)(state, nextState),
 	        leaveRoutes = _computeChangedRoutes.leaveRoutes,
 	        changeRoutes = _computeChangedRoutes.changeRoutes,
 	        enterRoutes = _computeChangedRoutes.enterRoutes;
@@ -2202,15 +2202,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }
 
-	  var RouteGuid = 1;
+	  let RouteGuid = 1;
 
 	  function getRouteID(route) {
-	    var create = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+	    const create = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
 	    return route.__id__ || create && (route.__id__ = RouteGuid++);
 	  }
 
-	  var RouteHooks = Object.create(null);
+	  const RouteHooks = Object.create(null);
 
 	  function getRouteHooksForRoutes(routes) {
 	    return routes.map(function (route) {
@@ -2222,7 +2222,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  function transitionHook(location, callback) {
 	    (0, _matchRoutes2.default)(routes, location, function (error, nextState) {
-	      if (nextState == null) {
+	      if (nextState === null) {
 	        // TODO: We didn't actually match anything, but hang
 	        // onto error/nextState so we don't have to matchRoutes
 	        // again in the listen callback.
@@ -2234,10 +2234,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      // matchRoutes() again in the listen callback.
 	      partialNextState = _extends({}, nextState, { location: location });
 
-	      var hooks = getRouteHooksForRoutes((0, _computeChangedRoutes3.default)(state, partialNextState).leaveRoutes);
+	      let hooks = getRouteHooksForRoutes((0, _computeChangedRoutes3.default)(state, partialNextState).leaveRoutes);
 
-	      var result = void 0;
-	      for (var i = 0, len = hooks.length; result == null && i < len; ++i) {
+	      let result = void 0;
+	      for (let i = 0, len = hooks.length; result === null && i < len; ++i) {
 	        // Passing the location arg here indicates to
 	        // the user that this is a transition hook.
 	        result = hooks[i](location);
@@ -2252,10 +2252,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // Synchronously check to see if any route hooks want
 	    // to prevent the current window/tab from closing.
 	    if (state.routes) {
-	      var hooks = getRouteHooksForRoutes(state.routes);
+	      let hooks = getRouteHooksForRoutes(state.routes);
 
-	      var message = void 0;
-	      for (var i = 0, len = hooks.length; typeof message !== 'string' && i < len; ++i) {
+	      let message = void 0;
+	      for (let i = 0, len = hooks.length; typeof message !== 'string' && i < len; ++i) {
 	        // Passing no args indicates to the user that this is a
 	        // beforeunload hook. We don't know the next location.
 	        message = hooks[i]();
@@ -2265,11 +2265,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }
 
-	  var unlistenBefore = void 0,
+	  let unlistenBefore = void 0,
 	      unlistenBeforeUnload = void 0;
 
 	  function removeListenBeforeHooksForRoute(route) {
-	    var routeID = getRouteID(route);
+	    let routeID = getRouteID(route);
 	    if (!routeID) {
 	      return;
 	    }
@@ -2304,8 +2304,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * Returns a function that may be used to unbind the listener.
 	   */
 	  function listenBeforeLeavingRoute(route, hook) {
-	    var thereWereNoRouteHooks = !hasAnyProperties(RouteHooks);
-	    var routeID = getRouteID(route, true);
+	    const thereWereNoRouteHooks = !hasAnyProperties(RouteHooks);
+	    const routeID = getRouteID(route, true);
 
 	    RouteHooks[routeID] = hook;
 
@@ -2349,7 +2349,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // multiple concurrent calls to match.
 
 	    // Set up the history listener first in case the initial match redirects.
-	    var unsubscribe = history.listen(historyListener);
+	    const unsubscribe = history.listen(historyListener);
 
 	    if (state.location) {
 	      // Picking up on a matchContext.
@@ -2378,19 +2378,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.default = useRouterHistory;
 
-	var _useQueries = __webpack_require__(30);
+	const _useQueries = __webpack_require__(30);
 
-	var _useQueries2 = _interopRequireDefault(_useQueries);
+	const _useQueries2 = _interopRequireDefault(_useQueries);
 
-	var _useBasename = __webpack_require__(29);
+	const _useBasename = __webpack_require__(29);
 
-	var _useBasename2 = _interopRequireDefault(_useBasename);
+	const _useBasename2 = _interopRequireDefault(_useBasename);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function useRouterHistory(createHistory) {
 	  return function (options) {
-	    var history = (0, _useQueries2.default)((0, _useBasename2.default)(createHistory))(options);
+	    let history = (0, _useQueries2.default)((0, _useBasename2.default)(createHistory))(options);
 	    return history;
 	  };
 	}
@@ -2404,28 +2404,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.readState = exports.saveState = undefined;
 
-	var _warning = __webpack_require__(5);
+	let _warning = __webpack_require__(5);
 
-	var _warning2 = _interopRequireDefault(_warning);
+	let _warning2 = _interopRequireDefault(_warning);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var QuotaExceededErrors = {
+	const QuotaExceededErrors = {
 	  QuotaExceededError: true,
 	  QUOTA_EXCEEDED_ERR: true
 	};
 
-	var SecurityErrors = {
+	const SecurityErrors = {
 	  SecurityError: true
 	};
 
-	var KeyPrefix = '@@History/';
+	const KeyPrefix = '@@History/';
 
-	var createKey = function createKey(key) {
+	const createKey = function createKey(key) {
 	  return KeyPrefix + key;
 	};
 
-	var saveState = exports.saveState = function saveState(key, state) {
+	let saveState = exports.saveState = function saveState(key, state) {
 	  if (!window.sessionStorage) {
 	    // Session storage is not available or hidden.
 	    // sessionStorage is undefined in Internet Explorer when served via file protocol.
@@ -2435,7 +2435,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  try {
-	    if (state == null) {
+	    if (state === null) {
 	      window.sessionStorage.removeItem(createKey(key));
 	    } else {
 	      window.sessionStorage.setItem(createKey(key), JSON.stringify(state));
@@ -2460,8 +2460,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 
-	var readState = exports.readState = function readState(key) {
-	  var json = void 0;
+	let readState = exports.readState = function readState(key) {
+	  let json = void 0;
 	  try {
 	    json = window.sessionStorage.getItem(createKey(key));
 	  } catch (error) {
@@ -2493,28 +2493,28 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _runTransitionHook = __webpack_require__(19);
+	let _runTransitionHook = __webpack_require__(19);
 
-	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
+	let _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
-	var _PathUtils = __webpack_require__(4);
+	let _PathUtils = __webpack_require__(4);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var useBasename = function useBasename(createHistory) {
+	const useBasename = function useBasename(createHistory) {
 	  return function () {
-	    var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	    let options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
-	    var history = createHistory(options);
-	    var basename = options.basename;
+	    let history = createHistory(options);
+	    let basename = options.basename;
 
 
-	    var addBasename = function addBasename(location) {
+	    const addBasename = function addBasename(location) {
 	      if (!location) return location;
 
-	      if (basename && location.basename == null) {
+	      if (basename && location.basename === null) {
 	        if (location.pathname.indexOf(basename) === 0) {
 	          location.pathname = location.pathname.substring(basename.length);
 	          location.basename = basename;
@@ -2528,14 +2528,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return location;
 	    };
 
-	    var prependBasename = function prependBasename(location) {
+	    const prependBasename = function prependBasename(location) {
 	      if (!basename) return location;
 
-	      var object = typeof location === 'string' ? (0, _PathUtils.parsePath)(location) : location;
-	      var pname = object.pathname;
-	      var normalizedBasename = basename.slice(-1) === '/' ? basename : basename + '/';
-	      var normalizedPathname = pname.charAt(0) === '/' ? pname.slice(1) : pname;
-	      var pathname = normalizedBasename + normalizedPathname;
+	      let object = typeof location === 'string' ? (0, _PathUtils.parsePath)(location) : location;
+	      const pname = object.pathname;
+	      const normalizedBasename = basename.slice(-1) === '/' ? basename : basename + '/';
+	      const normalizedPathname = pname.charAt(0) === '/' ? pname.slice(1) : pname;
+	      let pathname = normalizedBasename + normalizedPathname;
 
 	      return _extends({}, object, {
 	        pathname: pathname
@@ -2543,41 +2543,41 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    // Override all read methods with basename-aware versions.
-	    var getCurrentLocation = function getCurrentLocation() {
+	    let getCurrentLocation = function getCurrentLocation() {
 	      return addBasename(history.getCurrentLocation());
 	    };
 
-	    var listenBefore = function listenBefore(hook) {
+	    let listenBefore = function listenBefore(hook) {
 	      return history.listenBefore(function (location, callback) {
 	        return (0, _runTransitionHook2.default)(hook, addBasename(location), callback);
 	      });
 	    };
 
-	    var listen = function listen(listener) {
+	    let listen = function listen(listener) {
 	      return history.listen(function (location) {
 	        return listener(addBasename(location));
 	      });
 	    };
 
 	    // Override all write methods with basename-aware versions.
-	    var push = function push(location) {
+	    let push = function push(location) {
 	      return history.push(prependBasename(location));
 	    };
 
-	    var replace = function replace(location) {
+	    let replace = function replace(location) {
 	      return history.replace(prependBasename(location));
 	    };
 
-	    var createPath = function createPath(location) {
+	    let createPath = function createPath(location) {
 	      return history.createPath(prependBasename(location));
 	    };
 
-	    var createHref = function createHref(location) {
+	    let createHref = function createHref(location) {
 	      return history.createHref(prependBasename(location));
 	    };
 
-	    var createLocation = function createLocation(location) {
-	      for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+	    let createLocation = function createLocation(location) {
+	      for (let _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
 	        args[_key - 1] = arguments[_key];
 	      }
 
@@ -2607,57 +2607,57 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _queryString = __webpack_require__(55);
+	const _queryString = __webpack_require__(55);
 
-	var _runTransitionHook = __webpack_require__(19);
+	const _runTransitionHook = __webpack_require__(19);
 
-	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
+	const _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
-	var _LocationUtils = __webpack_require__(8);
+	let _LocationUtils = __webpack_require__(8);
 
-	var _PathUtils = __webpack_require__(4);
+	let _PathUtils = __webpack_require__(4);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var defaultStringifyQuery = function defaultStringifyQuery(query) {
+	const defaultStringifyQuery = function defaultStringifyQuery(query) {
 	  return (0, _queryString.stringify)(query).replace(/%20/g, '+');
 	};
 
-	var defaultParseQueryString = _queryString.parse;
+	const defaultParseQueryString = _queryString.parse;
 
 	/**
 	 * Returns a new createHistory function that may be used to create
 	 * history objects that know how to handle URL queries.
 	 */
-	var useQueries = function useQueries(createHistory) {
+	const useQueries = function useQueries(createHistory) {
 	  return function () {
-	    var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	    let options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
-	    var history = createHistory(options);
-	    var stringifyQuery = options.stringifyQuery;
-	    var parseQueryString = options.parseQueryString;
+	    let history = createHistory(options);
+	    let stringifyQuery = options.stringifyQuery;
+	    let parseQueryString = options.parseQueryString;
 
 
 	    if (typeof stringifyQuery !== 'function') stringifyQuery = defaultStringifyQuery;
 
 	    if (typeof parseQueryString !== 'function') parseQueryString = defaultParseQueryString;
 
-	    var decodeQuery = function decodeQuery(location) {
+	    const decodeQuery = function decodeQuery(location) {
 	      if (!location) return location;
 
-	      if (location.query == null) location.query = parseQueryString(location.search.substring(1));
+	      if (location.query === null) location.query = parseQueryString(location.search.substring(1));
 
 	      return location;
 	    };
 
-	    var encodeQuery = function encodeQuery(location, query) {
-	      if (query == null) return location;
+	    const encodeQuery = function encodeQuery(location, query) {
+	      if (query === null) return location;
 
-	      var object = typeof location === 'string' ? (0, _PathUtils.parsePath)(location) : location;
-	      var queryString = stringifyQuery(query);
-	      var search = queryString ? '?' + queryString : '';
+	      let object = typeof location === 'string' ? (0, _PathUtils.parsePath)(location) : location;
+	      const queryString = stringifyQuery(query);
+	      const search = queryString ? '?' + queryString : '';
 
 	      return _extends({}, object, {
 	        search: search
@@ -2665,45 +2665,45 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    // Override all read methods with query-aware versions.
-	    var getCurrentLocation = function getCurrentLocation() {
+	    let getCurrentLocation = function getCurrentLocation() {
 	      return decodeQuery(history.getCurrentLocation());
 	    };
 
-	    var listenBefore = function listenBefore(hook) {
+	    let listenBefore = function listenBefore(hook) {
 	      return history.listenBefore(function (location, callback) {
 	        return (0, _runTransitionHook2.default)(hook, decodeQuery(location), callback);
 	      });
 	    };
 
-	    var listen = function listen(listener) {
+	    let listen = function listen(listener) {
 	      return history.listen(function (location) {
 	        return listener(decodeQuery(location));
 	      });
 	    };
 
 	    // Override all write methods with query-aware versions.
-	    var push = function push(location) {
+	    const push = function push(location) {
 	      return history.push(encodeQuery(location, location.query));
 	    };
 
-	    var replace = function replace(location) {
+	    const replace = function replace(location) {
 	      return history.replace(encodeQuery(location, location.query));
 	    };
 
-	    var createPath = function createPath(location) {
+	    const createPath = function createPath(location) {
 	      return history.createPath(encodeQuery(location, location.query));
 	    };
 
-	    var createHref = function createHref(location) {
+	    let createHref = function createHref(location) {
 	      return history.createHref(encodeQuery(location, location.query));
 	    };
 
-	    var createLocation = function createLocation(location) {
-	      for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+	    const createLocation = function createLocation(location) {
+	      for (let _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
 	        args[_key - 1] = arguments[_key];
 	      }
 
-	      var newLocation = history.createLocation.apply(history, [encodeQuery(location, location.query)].concat(args));
+	      const newLocation = history.createLocation.apply(history, [encodeQuery(location, location.query)].concat(args));
 
 	      if (location.query) newLocation.query = (0, _LocationUtils.createQuery)(location.query);
 
@@ -2733,22 +2733,22 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _Link = __webpack_require__(20);
+	const _Link = __webpack_require__(20);
 
-	var _Link2 = _interopRequireDefault(_Link);
+	const _Link2 = _interopRequireDefault(_Link);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	/**
 	 * An <IndexLink> is used to link to an <IndexRoute>.
 	 */
-	var IndexLink = _react2.default.createClass({
+	const IndexLink = _react2.default.createClass({
 	  displayName: 'IndexLink',
 	  render: function render() {
 	    return _react2.default.createElement(_Link2.default, _extends({}, this.props, { onlyActiveOnIndex: true }));
@@ -2765,23 +2765,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _routerWarning = __webpack_require__(7);
+	let _routerWarning = __webpack_require__(7);
 
-	var _routerWarning2 = _interopRequireDefault(_routerWarning);
+	let _routerWarning2 = _interopRequireDefault(_routerWarning);
 
-	var _invariant = __webpack_require__(1);
+	let _invariant = __webpack_require__(1);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _Redirect = __webpack_require__(22);
+	const _Redirect = __webpack_require__(22);
 
-	var _Redirect2 = _interopRequireDefault(_Redirect);
+	const _Redirect2 = _interopRequireDefault(_Redirect);
 
-	var _InternalPropTypes = __webpack_require__(9);
+	let _InternalPropTypes = __webpack_require__(9);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2794,7 +2794,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	/* eslint-disable react/require-render-return */
 
-	var IndexRedirect = _react2.default.createClass({
+	const IndexRedirect = _react2.default.createClass({
 	  displayName: 'IndexRedirect',
 
 
@@ -2833,25 +2833,25 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _routerWarning = __webpack_require__(7);
+	let _routerWarning = __webpack_require__(7);
 
-	var _routerWarning2 = _interopRequireDefault(_routerWarning);
+	let _routerWarning2 = _interopRequireDefault(_routerWarning);
 
-	var _invariant = __webpack_require__(1);
+	let _invariant = __webpack_require__(1);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _RouteUtils = __webpack_require__(3);
+	let _RouteUtils = __webpack_require__(3);
 
-	var _InternalPropTypes = __webpack_require__(9);
+	let _InternalPropTypes = __webpack_require__(9);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var func = _react2.default.PropTypes.func;
+	let func = _react2.default.PropTypes.func;
 
 	/**
 	 * An <IndexRoute> is used to specify its parent's <Route indexRoute> in
@@ -2859,7 +2859,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	/* eslint-disable react/require-render-return */
 
-	var IndexRoute = _react2.default.createClass({
+	const IndexRoute = _react2.default.createClass({
 	  displayName: 'IndexRoute',
 
 
@@ -2898,17 +2898,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _invariant = __webpack_require__(1);
+	let _invariant = __webpack_require__(1);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _RouteUtils = __webpack_require__(3);
+	let _RouteUtils = __webpack_require__(3);
 
-	var _InternalPropTypes = __webpack_require__(9);
+	let _InternalPropTypes = __webpack_require__(9);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2928,7 +2928,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	/* eslint-disable react/require-render-return */
 
-	var Route = _react2.default.createClass({
+	const Route = _react2.default.createClass({
 	  displayName: 'Route',
 
 
@@ -2960,37 +2960,37 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _invariant = __webpack_require__(1);
+	let _invariant = __webpack_require__(1);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _createTransitionManager2 = __webpack_require__(26);
+	let _createTransitionManager2 = __webpack_require__(26);
 
-	var _createTransitionManager3 = _interopRequireDefault(_createTransitionManager2);
+	const _createTransitionManager3 = _interopRequireDefault(_createTransitionManager2);
 
-	var _InternalPropTypes = __webpack_require__(9);
+	const _InternalPropTypes = __webpack_require__(9);
 
-	var _RouterContext = __webpack_require__(15);
+	let _RouterContext = __webpack_require__(15);
 
-	var _RouterContext2 = _interopRequireDefault(_RouterContext);
+	let _RouterContext2 = _interopRequireDefault(_RouterContext);
 
-	var _RouteUtils = __webpack_require__(3);
+	let _RouteUtils = __webpack_require__(3);
 
-	var _RouterUtils = __webpack_require__(23);
+	let _RouterUtils = __webpack_require__(23);
 
-	var _routerWarning = __webpack_require__(7);
+	let _routerWarning = __webpack_require__(7);
 
-	var _routerWarning2 = _interopRequireDefault(_routerWarning);
+	let _routerWarning2 = _interopRequireDefault(_routerWarning);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	function _objectWithoutProperties(obj, keys) { let target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 	var _React$PropTypes = _react2.default.PropTypes,
 	    func = _React$PropTypes.func,
@@ -3002,7 +3002,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * it needs each time the URL changes.
 	 */
 
-	var Router = _react2.default.createClass({
+	const Router = _react2.default.createClass({
 	  displayName: 'Router',
 
 
@@ -3043,25 +3043,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  createRouterObject: function createRouterObject(state) {
-	    var matchContext = this.props.matchContext;
+	    let matchContext = this.props.matchContext;
 
 	    if (matchContext) {
 	      return matchContext.router;
 	    }
 
-	    var history = this.props.history;
+	    let history = this.props.history;
 
 	    return (0, _RouterUtils.createRouterObject)(history, this.transitionManager, state);
 	  },
 	  createTransitionManager: function createTransitionManager() {
-	    var matchContext = this.props.matchContext;
+	    const matchContext = this.props.matchContext;
 
 	    if (matchContext) {
 	      return matchContext.transitionManager;
 	    }
 
-	    var history = this.props.history;
-	    var _props = this.props,
+	    let history = this.props.history;
+	    const _props = this.props,
 	        routes = _props.routes,
 	        children = _props.children;
 
@@ -3071,7 +3071,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return (0, _createTransitionManager3.default)(history, (0, _RouteUtils.createRoutes)(routes || children));
 	  },
 	  componentWillMount: function componentWillMount() {
-	    var _this = this;
+	    let _this = this;
 
 	    this.transitionManager = this.createTransitionManager();
 	    this.router = this.createRouterObject(this.state);
@@ -3099,18 +3099,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (this._unlisten) this._unlisten();
 	  },
 	  render: function render() {
-	    var _state = this.state,
+	    const _state = this.state,
 	        location = _state.location,
 	        routes = _state.routes,
 	        params = _state.params,
 	        components = _state.components;
 
-	    var _props2 = this.props,
+	    const _props2 = this.props,
 	        createElement = _props2.createElement,
 	        render = _props2.render,
 	        props = _objectWithoutProperties(_props2, ['createElement', 'render']);
 
-	    if (location == null) return null; // Async match
+	    if (location === null) return null; // Async match
 
 	    // Only forward non-Router-specific props to routing context, as those are
 	    // the only ones that might be custom routing context props.
@@ -3142,12 +3142,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.runChangeHooks = runChangeHooks;
 	exports.runLeaveHooks = runLeaveHooks;
 
-	var _AsyncUtils = __webpack_require__(12);
+	let _AsyncUtils = __webpack_require__(12);
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var PendingHooks = function PendingHooks() {
-	  var _this = this;
+	const PendingHooks = function PendingHooks() {
+	  let _this = this;
 
 	  _classCallCheck(this, PendingHooks);
 
@@ -3172,21 +3172,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	};
 
-	var enterHooks = new PendingHooks();
-	var changeHooks = new PendingHooks();
+	const enterHooks = new PendingHooks();
+	const changeHooks = new PendingHooks();
 
 	function createTransitionHook(hook, route, asyncArity, pendingHooks) {
-	  var isSync = hook.length < asyncArity;
+	  let isSync = hook.length < asyncArity;
 
-	  var transitionHook = function transitionHook() {
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	  const transitionHook = function transitionHook() {
+	    for (let _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
 	      args[_key] = arguments[_key];
 	    }
 
 	    hook.apply(route, args);
 
 	    if (isSync) {
-	      var callback = args[args.length - 1];
+	      const callback = args[args.length - 1];
 	      // Assume hook executes synchronously and
 	      // automatically call the callback.
 	      callback();
@@ -3218,7 +3218,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  var redirectInfo = void 0;
+	  let redirectInfo = void 0;
 	  function replace(location) {
 	    redirectInfo = location;
 	  }
@@ -3246,9 +3246,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	function runEnterHooks(routes, nextState, callback) {
 	  enterHooks.clear();
-	  var hooks = getEnterHooks(routes);
+	  let hooks = getEnterHooks(routes);
 	  return runTransitionHooks(hooks.length, function (index, replace, next) {
-	    var wrappedNext = function wrappedNext() {
+	    let wrappedNext = function wrappedNext() {
 	      if (enterHooks.has(hooks[index])) {
 	        next.apply(undefined, arguments);
 	        enterHooks.remove(hooks[index]);
@@ -3270,9 +3270,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	function runChangeHooks(routes, state, nextState, callback) {
 	  changeHooks.clear();
-	  var hooks = getChangeHooks(routes);
+	  const hooks = getChangeHooks(routes);
 	  return runTransitionHooks(hooks.length, function (index, replace, next) {
-	    var wrappedNext = function wrappedNext() {
+	    const wrappedNext = function wrappedNext() {
 	      if (changeHooks.has(hooks[index])) {
 	        next.apply(undefined, arguments);
 	        changeHooks.remove(hooks[index]);
@@ -3286,7 +3286,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Runs all onLeave hooks in the given array of routes in order.
 	 */
 	function runLeaveHooks(routes, prevState) {
-	  for (var i = 0, len = routes.length; i < len; ++i) {
+	  for (let i = 0, len = routes.length; i < len; ++i) {
 	    if (routes[i].onLeave) routes[i].onLeave.call(routes[i], prevState);
 	  }
 	}
@@ -3299,24 +3299,24 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _RouterContext = __webpack_require__(15);
+	const _RouterContext = __webpack_require__(15);
 
-	var _RouterContext2 = _interopRequireDefault(_RouterContext);
+	const _RouterContext2 = _interopRequireDefault(_RouterContext);
 
-	var _routerWarning = __webpack_require__(7);
+	let _routerWarning = __webpack_require__(7);
 
-	var _routerWarning2 = _interopRequireDefault(_routerWarning);
+	let _routerWarning2 = _interopRequireDefault(_routerWarning);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = function () {
-	  for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key < _len; _key++) {
+	  for (let _len = arguments.length, middlewares = Array(_len), _key = 0; _key < _len; _key++) {
 	    middlewares[_key] = arguments[_key];
 	  }
 
@@ -3326,15 +3326,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  }
 
-	  var withContext = middlewares.map(function (middleware) {
+	  const withContext = middlewares.map(function (middleware) {
 	    return middleware.renderRouterContext;
 	  }).filter(Boolean);
-	  var withComponent = middlewares.map(function (middleware) {
+	  const withComponent = middlewares.map(function (middleware) {
 	    return middleware.renderRouteComponent;
 	  }).filter(Boolean);
 
-	  var makeCreateElement = function makeCreateElement() {
-	    var baseCreateElement = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _react.createElement;
+	  const makeCreateElement = function makeCreateElement() {
+	    const baseCreateElement = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _react.createElement;
 	    return function (Component, props) {
 	      return withComponent.reduceRight(function (previous, renderRouteComponent) {
 	        return renderRouteComponent(previous, props);
@@ -3359,13 +3359,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _createBrowserHistory = __webpack_require__(50);
+	const _createBrowserHistory = __webpack_require__(50);
 
-	var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
+	const _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
 
-	var _createRouterHistory = __webpack_require__(25);
+	let _createRouterHistory = __webpack_require__(25);
 
-	var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
+	let _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3379,12 +3379,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _PatternUtils = __webpack_require__(6);
+	let _PatternUtils = __webpack_require__(6);
 
 	function routeParamsChanged(route, prevState, nextState) {
 	  if (!route.path) return false;
 
-	  var paramNames = (0, _PatternUtils.getParamNames)(route.path);
+	  let paramNames = (0, _PatternUtils.getParamNames)(route.path);
 
 	  return paramNames.some(function (paramName) {
 	    return prevState.params[paramName] !== nextState.params[paramName];
@@ -3405,20 +3405,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * the transition.
 	 */
 	function computeChangedRoutes(prevState, nextState) {
-	  var prevRoutes = prevState && prevState.routes;
-	  var nextRoutes = nextState.routes;
+	  const prevRoutes = prevState && prevState.routes;
+	  const nextRoutes = nextState.routes;
 
-	  var leaveRoutes = void 0,
+	  let leaveRoutes = void 0,
 	      changeRoutes = void 0,
 	      enterRoutes = void 0;
 	  if (prevRoutes) {
 	    (function () {
-	      var parentIsLeaving = false;
+	      let parentIsLeaving = false;
 	      leaveRoutes = prevRoutes.filter(function (route) {
 	        if (parentIsLeaving) {
 	          return true;
 	        } else {
-	          var isLeaving = nextRoutes.indexOf(route) === -1 || routeParamsChanged(route, prevState, nextState);
+	          const isLeaving = nextRoutes.indexOf(route) === -1 || routeParamsChanged(route, prevState, nextState);
 	          if (isLeaving) parentIsLeaving = true;
 	          return isLeaving;
 	        }
@@ -3431,8 +3431,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      changeRoutes = [];
 
 	      nextRoutes.forEach(function (route) {
-	        var isNew = prevRoutes.indexOf(route) === -1;
-	        var paramsChanged = leaveRoutes.indexOf(route) !== -1;
+	        const isNew = prevRoutes.indexOf(route) === -1;
+	        const paramsChanged = leaveRoutes.indexOf(route) !== -1;
 
 	        if (isNew || paramsChanged) enterRoutes.push(route);else changeRoutes.push(route);
 	      });
@@ -3460,9 +3460,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _AsyncUtils = __webpack_require__(12);
+	let _AsyncUtils = __webpack_require__(12);
 
-	var _PromiseUtils = __webpack_require__(21);
+	let _PromiseUtils = __webpack_require__(21);
 
 	function getComponentsForRoute(nextState, route, callback) {
 	  if (route.component || route.components) {
@@ -3470,9 +3470,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  var getComponent = route.getComponent || route.getComponents;
+	  const getComponent = route.getComponent || route.getComponents;
 	  if (getComponent) {
-	    var componentReturn = getComponent.call(route, nextState, callback);
+	    const componentReturn = getComponent.call(route, nextState, callback);
 	    if ((0, _PromiseUtils.isPromise)(componentReturn)) componentReturn.then(function (component) {
 	      return callback(null, component);
 	    }, callback);
@@ -3504,14 +3504,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _PatternUtils = __webpack_require__(6);
+	let _PatternUtils = __webpack_require__(6);
 
 	/**
 	 * Extracts an object of params the given route cares about from
 	 * the given params object.
 	 */
 	function getRouteParams(route, params) {
-	  var routeParams = {};
+	  const routeParams = {};
 
 	  if (!route.path) return routeParams;
 
@@ -3534,13 +3534,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _createHashHistory = __webpack_require__(51);
+	const _createHashHistory = __webpack_require__(51);
 
-	var _createHashHistory2 = _interopRequireDefault(_createHashHistory);
+	const _createHashHistory2 = _interopRequireDefault(_createHashHistory);
 
-	var _createRouterHistory = __webpack_require__(25);
+	const _createRouterHistory = __webpack_require__(25);
 
-	var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
+	const _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3554,16 +3554,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+	let _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 	exports.default = isActive;
 
-	var _PatternUtils = __webpack_require__(6);
+	let _PatternUtils = __webpack_require__(6);
 
 	function deepEqual(a, b) {
-	  if (a == b) return true;
+	  if (a === b) return true;
 
-	  if (a == null || b == null) return false;
+	  if (a === null || b === null) return false;
 
 	  if (Array.isArray(a)) {
 	    return Array.isArray(b) && a.length === b.length && a.every(function (item, index) {
@@ -3623,14 +3623,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Returns true if the given pathname matches the active routes and params.
 	 */
 	function routeIsActive(pathname, routes, params) {
-	  var remainingPathname = pathname,
+	  let remainingPathname = pathname,
 	      paramNames = [],
 	      paramValues = [];
 
 	  // for...of would work here but it's probably slower post-transpilation.
-	  for (var i = 0, len = routes.length; i < len; ++i) {
-	    var route = routes[i];
-	    var pattern = route.path || '';
+	  for (let i = 0, len = routes.length; i < len; ++i) {
+	    const route = routes[i];
+	    let pattern = route.path || '';
 
 	    if (pattern.charAt(0) === '/') {
 	      remainingPathname = pathname;
@@ -3639,7 +3639,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    if (remainingPathname !== null && pattern) {
-	      var matched = (0, _PatternUtils.matchPattern)(pattern, remainingPathname);
+	      let matched = (0, _PatternUtils.matchPattern)(pattern, remainingPathname);
 	      if (matched) {
 	        remainingPathname = matched.remainingPathname;
 	        paramNames = [].concat(paramNames, matched.paramNames);
@@ -3667,9 +3667,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * currently active.
 	 */
 	function queryIsActive(query, activeQuery) {
-	  if (activeQuery == null) return query == null;
+	  if (activeQuery === null) return query === null;
 
-	  if (query == null) return true;
+	  if (query === null) return true;
 
 	  return deepEqual(query, activeQuery);
 	}
@@ -3679,10 +3679,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * currently active.
 	 */
 	function isActive(_ref, indexOnly, currentLocation, routes, params) {
-	  var pathname = _ref.pathname,
+	  let pathname = _ref.pathname,
 	      query = _ref.query;
 
-	  if (currentLocation == null) return false;
+	  if (currentLocation === null) return false;
 
 	  // TODO: This is a bit ugly. It keeps around support for treating pathnames
 	  // without preceding slashes as absolute paths, but possibly also works
@@ -3710,29 +3710,29 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _Actions = __webpack_require__(10);
+	let _Actions = __webpack_require__(10);
 
-	var _invariant = __webpack_require__(1);
+	let _invariant = __webpack_require__(1);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _createMemoryHistory = __webpack_require__(24);
+	const _createMemoryHistory = __webpack_require__(24);
 
-	var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
+	const _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 
-	var _createTransitionManager = __webpack_require__(26);
+	const _createTransitionManager = __webpack_require__(26);
 
-	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
+	const _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
-	var _RouteUtils = __webpack_require__(3);
+	let _RouteUtils = __webpack_require__(3);
 
-	var _RouterUtils = __webpack_require__(23);
+	const _RouterUtils = __webpack_require__(23);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	function _objectWithoutProperties(obj, keys) { const target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 	/**
 	 * A high-level API to be used for server-side rendering.
@@ -3744,7 +3744,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * server-side rendering with async routes.
 	 */
 	function match(_ref, callback) {
-	  var history = _ref.history,
+	  let history = _ref.history,
 	      routes = _ref.routes,
 	      location = _ref.location,
 	      options = _objectWithoutProperties(_ref, ['history', 'routes', 'location']);
@@ -3752,7 +3752,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  !(history || location) ?  true ? (0, _invariant2.default)(false, 'match needs a history or a location') : (0, _invariant2.default)(false) : void 0;
 
 	  history = history ? history : (0, _createMemoryHistory2.default)(options);
-	  var transitionManager = (0, _createTransitionManager2.default)(history, (0, _RouteUtils.createRoutes)(routes));
+	  const transitionManager = (0, _createTransitionManager2.default)(history, (0, _RouteUtils.createRoutes)(routes));
 
 	  if (location) {
 	    // Allow match({ location: '/the/path', ... })
@@ -3762,10 +3762,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  transitionManager.match(location, function (error, redirectLocation, nextState) {
-	    var renderProps = void 0;
+	    let renderProps = void 0;
 
 	    if (nextState) {
-	      var router = (0, _RouterUtils.createRouterObject)(history, transitionManager, nextState);
+	      let router = (0, _RouterUtils.createRouterObject)(history, transitionManager, nextState);
 	      renderProps = _extends({}, nextState, {
 	        router: router,
 	        matchContext: { transitionManager: transitionManager, router: router }
@@ -3786,23 +3786,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+	const _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 	exports.default = matchRoutes;
 
-	var _AsyncUtils = __webpack_require__(12);
+	const _AsyncUtils = __webpack_require__(12);
 
-	var _PromiseUtils = __webpack_require__(21);
+	const _PromiseUtils = __webpack_require__(21);
 
-	var _PatternUtils = __webpack_require__(6);
+	const _PatternUtils = __webpack_require__(6);
 
-	var _routerWarning = __webpack_require__(7);
+	const _routerWarning = __webpack_require__(7);
 
-	var _routerWarning2 = _interopRequireDefault(_routerWarning);
+	const _routerWarning2 = _interopRequireDefault(_routerWarning);
 
-	var _RouteUtils = __webpack_require__(3);
+	const _RouteUtils = __webpack_require__(3);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3814,15 +3814,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return [];
 	  }
 
-	  var sync = true,
+	  let sync = true,
 	      result = void 0;
 
-	  var partialNextState = {
+	  let partialNextState = {
 	    location: location,
 	    params: createParams(paramNames, paramValues)
 	  };
 
-	  var childRoutesReturn = route.getChildRoutes(partialNextState, function (error, childRoutes) {
+	  const childRoutesReturn = route.getChildRoutes(partialNextState, function (error, childRoutes) {
 	    childRoutes = !error && (0, _RouteUtils.createRoutes)(childRoutes);
 	    if (sync) {
 	      result = [error, childRoutes];
@@ -3844,12 +3844,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (route.indexRoute) {
 	    callback(null, route.indexRoute);
 	  } else if (route.getIndexRoute) {
-	    var partialNextState = {
+	    const partialNextState = {
 	      location: location,
 	      params: createParams(paramNames, paramValues)
 	    };
 
-	    var indexRoutesReturn = route.getIndexRoute(partialNextState, function (error, indexRoute) {
+	    const indexRoutesReturn = route.getIndexRoute(partialNextState, function (error, indexRoute) {
 	      callback(error, !error && (0, _RouteUtils.createRoutes)(indexRoute)[0]);
 	    });
 
@@ -3857,20 +3857,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return callback(null, (0, _RouteUtils.createRoutes)(indexRoute)[0]);
 	    }, callback);
 	  } else if (route.childRoutes || route.getChildRoutes) {
-	    var onChildRoutes = function onChildRoutes(error, childRoutes) {
+	    let onChildRoutes = function onChildRoutes(error, childRoutes) {
 	      if (error) {
 	        callback(error);
 	        return;
 	      }
 
-	      var pathless = childRoutes.filter(function (childRoute) {
+	      const pathless = childRoutes.filter(function (childRoute) {
 	        return !childRoute.path;
 	      });
 
 	      (0, _AsyncUtils.loopAsync)(pathless.length, function (index, next, done) {
 	        getIndexRoute(pathless[index], location, paramNames, paramValues, function (error, indexRoute) {
 	          if (error || indexRoute) {
-	            var routes = [pathless[index]].concat(Array.isArray(indexRoute) ? indexRoute : [indexRoute]);
+	            let routes = [pathless[index]].concat(Array.isArray(indexRoute) ? indexRoute : [indexRoute]);
 	            done(error, routes);
 	          } else {
 	            next();
@@ -3881,7 +3881,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	    };
 
-	    var result = getChildRoutes(route, location, paramNames, paramValues, onChildRoutes);
+	    let result = getChildRoutes(route, location, paramNames, paramValues, onChildRoutes);
 	    if (result) {
 	      onChildRoutes.apply(undefined, result);
 	    }
@@ -3892,7 +3892,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function assignParams(params, paramNames, paramValues) {
 	  return paramNames.reduce(function (params, paramName, index) {
-	    var paramValue = paramValues && paramValues[index];
+	    const paramValue = paramValues && paramValues[index];
 
 	    if (Array.isArray(params[paramName])) {
 	      params[paramName].push(paramValue);
@@ -3911,7 +3911,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function matchRouteDeep(route, location, remainingPathname, paramNames, paramValues, callback) {
-	  var pattern = route.path || '';
+	  const pattern = route.path || '';
 
 	  if (pattern.charAt(0) === '/') {
 	    remainingPathname = location.pathname;
@@ -3923,7 +3923,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // we're not just searching for potential nested absolute paths.
 	  if (remainingPathname !== null && pattern) {
 	    try {
-	      var matched = (0, _PatternUtils.matchPattern)(pattern, remainingPathname);
+	      const matched = (0, _PatternUtils.matchPattern)(pattern, remainingPathname);
 	      if (matched) {
 	        remainingPathname = matched.remainingPathname;
 	        paramNames = [].concat(paramNames, matched.paramNames);
@@ -3938,8 +3938,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // By assumption, pattern is non-empty here, which is the prerequisite for
 	    // actually terminating a match.
 	    if (remainingPathname === '') {
-	      var _ret = function () {
-	        var match = {
+	      const _ret = function () {
+	        const match = {
 	          routes: [route],
 	          params: createParams(paramNames, paramValues)
 	        };
@@ -3973,11 +3973,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }
 
-	  if (remainingPathname != null || route.childRoutes) {
+	  if (remainingPathname !== null || route.childRoutes) {
 	    // Either a) this route matched at least some of the path or b)
 	    // we don't have to load this route's children asynchronously. In
 	    // either case continue checking for matches in the subtree.
-	    var onChildRoutes = function onChildRoutes(error, childRoutes) {
+	    const onChildRoutes = function onChildRoutes(error, childRoutes) {
 	      if (error) {
 	        callback(error);
 	      } else if (childRoutes) {
@@ -3998,7 +3998,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    };
 
-	    var result = getChildRoutes(route, location, paramNames, paramValues, onChildRoutes);
+	    let result = getChildRoutes(route, location, paramNames, paramValues, onChildRoutes);
 	    if (result) {
 	      onChildRoutes.apply(undefined, result);
 	    }
@@ -4019,8 +4019,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * asynchronous getChildRoutes method.
 	 */
 	function matchRoutes(routes, location, callback, remainingPathname) {
-	  var paramNames = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : [];
-	  var paramValues = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : [];
+	  const paramNames = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : [];
+	  const paramValues = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : [];
 
 	  if (remainingPathname === undefined) {
 	    // TODO: This is a little bit ugly, but it works around a quirk in history
@@ -4053,25 +4053,25 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	exports.default = withRouter;
 
-	var _invariant = __webpack_require__(1);
+	let _invariant = __webpack_require__(1);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _react = __webpack_require__(2);
+	const _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	const _react2 = _interopRequireDefault(_react);
 
-	var _hoistNonReactStatics = __webpack_require__(53);
+	const _hoistNonReactStatics = __webpack_require__(53);
 
-	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
+	const _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-	var _ContextUtils = __webpack_require__(13);
+	const _ContextUtils = __webpack_require__(13);
 
-	var _PropTypes = __webpack_require__(14);
+	const _PropTypes = __webpack_require__(14);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4080,9 +4080,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function withRouter(WrappedComponent, options) {
-	  var withRef = options && options.withRef;
+	  const withRef = options && options.withRef;
 
-	  var WithRouter = _react2.default.createClass({
+	  const WithRouter = _react2.default.createClass({
 	    displayName: 'WithRouter',
 
 	    mixins: [(0, _ContextUtils.ContextSubscriber)('router')],
@@ -4096,18 +4096,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return this.wrappedInstance;
 	    },
 	    render: function render() {
-	      var _this = this;
+	      const _this = this;
 
-	      var router = this.props.router || this.context.router;
+	      const router = this.props.router || this.context.router;
 	      if (!router) {
 	        return _react2.default.createElement(WrappedComponent, this.props);
 	      }
 
-	      var params = router.params,
+	      const params = router.params,
 	          location = router.location,
 	          routes = router.routes;
 
-	      var props = _extends({}, this.props, { router: router, params: params, location: location, routes: routes });
+	      const props = _extends({}, this.props, { router: router, params: params, location: location, routes: routes });
 
 	      if (withRef) {
 	        props.ref = function (c) {
@@ -4132,15 +4132,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	"use strict";
 
 	exports.__esModule = true;
-	var loopAsync = exports.loopAsync = function loopAsync(turns, work, callback) {
-	  var currentTurn = 0,
+	let loopAsync = exports.loopAsync = function loopAsync(turns, work, callback) {
+	  let currentTurn = 0,
 	      isDone = false;
-	  var isSync = false,
+	  let isSync = false,
 	      hasNext = false,
 	      doneArgs = void 0;
 
-	  var done = function done() {
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	  const done = function done() {
+	    for (const _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
 	      args[_key] = arguments[_key];
 	    }
 
@@ -4155,7 +4155,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    callback.apply(undefined, args);
 	  };
 
-	  var next = function next() {
+	  const next = function next() {
 	    if (isDone) return;
 
 	    hasNext = true;
@@ -4195,7 +4195,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.replaceLocation = exports.pushLocation = exports.startListener = exports.getCurrentLocation = exports.go = exports.getUserConfirmation = undefined;
 
-	var _BrowserProtocol = __webpack_require__(16);
+	let _BrowserProtocol = __webpack_require__(16);
 
 	Object.defineProperty(exports, 'getUserConfirmation', {
 	  enumerable: true,
@@ -4210,68 +4210,68 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	});
 
-	var _warning = __webpack_require__(5);
+	let _warning = __webpack_require__(5);
 
-	var _warning2 = _interopRequireDefault(_warning);
+	let _warning2 = _interopRequireDefault(_warning);
 
-	var _LocationUtils = __webpack_require__(8);
+	let _LocationUtils = __webpack_require__(8);
 
-	var _DOMUtils = __webpack_require__(11);
+	let _DOMUtils = __webpack_require__(11);
 
-	var _DOMStateStorage = __webpack_require__(28);
+	const _DOMStateStorage = __webpack_require__(28);
 
-	var _PathUtils = __webpack_require__(4);
+	let _PathUtils = __webpack_require__(4);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var HashChangeEvent = 'hashchange';
+	const HashChangeEvent = 'hashchange';
 
-	var getHashPath = function getHashPath() {
+	const getHashPath = function getHashPath() {
 	  // We can't use window.location.hash here because it's not
 	  // consistent across browsers - Firefox will pre-decode it!
-	  var href = window.location.href;
-	  var hashIndex = href.indexOf('#');
+	  let href = window.location.href;
+	  let hashIndex = href.indexOf('#');
 	  return hashIndex === -1 ? '' : href.substring(hashIndex + 1);
 	};
 
-	var pushHashPath = function pushHashPath(path) {
+	const pushHashPath = function pushHashPath(path) {
 	  return window.location.hash = path;
 	};
 
-	var replaceHashPath = function replaceHashPath(path) {
-	  var hashIndex = window.location.href.indexOf('#');
+	const replaceHashPath = function replaceHashPath(path) {
+	  const hashIndex = window.location.href.indexOf('#');
 
 	  window.location.replace(window.location.href.slice(0, hashIndex >= 0 ? hashIndex : 0) + '#' + path);
 	};
 
-	var getCurrentLocation = exports.getCurrentLocation = function getCurrentLocation(pathCoder, queryKey) {
-	  var path = pathCoder.decodePath(getHashPath());
-	  var key = (0, _PathUtils.getQueryStringValueFromPath)(path, queryKey);
+	let getCurrentLocation = exports.getCurrentLocation = function getCurrentLocation(pathCoder, queryKey) {
+	  let path = pathCoder.decodePath(getHashPath());
+	  let key = (0, _PathUtils.getQueryStringValueFromPath)(path, queryKey);
 
-	  var state = void 0;
+	  let state = void 0;
 	  if (key) {
 	    path = (0, _PathUtils.stripQueryStringValueFromPath)(path, queryKey);
 	    state = (0, _DOMStateStorage.readState)(key);
 	  }
 
-	  var init = (0, _PathUtils.parsePath)(path);
+	  let init = (0, _PathUtils.parsePath)(path);
 	  init.state = state;
 
 	  return (0, _LocationUtils.createLocation)(init, undefined, key);
 	};
 
-	var prevLocation = void 0;
+	let prevLocation = void 0;
 
-	var startListener = exports.startListener = function startListener(listener, pathCoder, queryKey) {
-	  var handleHashChange = function handleHashChange() {
-	    var path = getHashPath();
-	    var encodedPath = pathCoder.encodePath(path);
+	let startListener = exports.startListener = function startListener(listener, pathCoder, queryKey) {
+	  const handleHashChange = function handleHashChange() {
+	    let path = getHashPath();
+	    let encodedPath = pathCoder.encodePath(path);
 
 	    if (path !== encodedPath) {
 	      // Always be sure we have a properly-encoded hash.
 	      replaceHashPath(encodedPath);
 	    } else {
-	      var currentLocation = getCurrentLocation(pathCoder, queryKey);
+	      let currentLocation = getCurrentLocation(pathCoder, queryKey);
 
 	      if (prevLocation && currentLocation.key && prevLocation.key === currentLocation.key) return; // Ignore extraneous hashchange events
 
@@ -4282,8 +4282,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 
 	  // Ensure the hash is encoded properly.
-	  var path = getHashPath();
-	  var encodedPath = pathCoder.encodePath(path);
+	  let path = getHashPath();
+	  const encodedPath = pathCoder.encodePath(path);
 
 	  if (path !== encodedPath) replaceHashPath(encodedPath);
 
@@ -4294,12 +4294,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	};
 
-	var updateLocation = function updateLocation(location, pathCoder, queryKey, updateHash) {
-	  var state = location.state;
-	  var key = location.key;
+	const updateLocation = function updateLocation(location, pathCoder, queryKey, updateHash) {
+	  let state = location.state;
+	  let key = location.key;
 
 
-	  var path = pathCoder.encodePath((0, _PathUtils.createPath)(location));
+	  let path = pathCoder.encodePath((0, _PathUtils.createPath)(location));
 
 	  if (state !== undefined) {
 	    path = (0, _PathUtils.addQueryStringValueToPath)(path, queryKey, key);
@@ -4311,7 +4311,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  updateHash(path);
 	};
 
-	var pushLocation = exports.pushLocation = function pushLocation(location, pathCoder, queryKey) {
+	let pushLocation = exports.pushLocation = function pushLocation(location, pathCoder, queryKey) {
 	  return updateLocation(location, pathCoder, queryKey, function (path) {
 	    if (getHashPath() !== path) {
 	      pushHashPath(path);
@@ -4321,7 +4321,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  });
 	};
 
-	var replaceLocation = exports.replaceLocation = function replaceLocation(location, pathCoder, queryKey) {
+	let replaceLocation = exports.replaceLocation = function replaceLocation(location, pathCoder, queryKey) {
 	  return updateLocation(location, pathCoder, queryKey, function (path) {
 	    if (getHashPath() !== path) replaceHashPath(path);
 	  });
@@ -4336,7 +4336,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.replaceLocation = exports.pushLocation = exports.getCurrentLocation = exports.go = exports.getUserConfirmation = undefined;
 
-	var _BrowserProtocol = __webpack_require__(16);
+	let _BrowserProtocol = __webpack_require__(16);
 
 	Object.defineProperty(exports, 'getUserConfirmation', {
 	  enumerable: true,
@@ -4351,20 +4351,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	});
 
-	var _LocationUtils = __webpack_require__(8);
+	let _LocationUtils = __webpack_require__(8);
 
-	var _PathUtils = __webpack_require__(4);
+	let _PathUtils = __webpack_require__(4);
 
-	var getCurrentLocation = exports.getCurrentLocation = function getCurrentLocation() {
+	let getCurrentLocation = exports.getCurrentLocation = function getCurrentLocation() {
 	  return (0, _LocationUtils.createLocation)(window.location);
 	};
 
-	var pushLocation = exports.pushLocation = function pushLocation(location) {
+	let pushLocation = exports.pushLocation = function pushLocation(location) {
 	  window.location.href = (0, _PathUtils.createPath)(location);
 	  return false; // Don't update location
 	};
 
-	var replaceLocation = exports.replaceLocation = function replaceLocation(location) {
+	let replaceLocation = exports.replaceLocation = function replaceLocation(location) {
 	  window.location.replace((0, _PathUtils.createPath)(location));
 	  return false; // Don't update location
 	};
@@ -4377,29 +4377,29 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _invariant = __webpack_require__(1);
+	let _invariant = __webpack_require__(1);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _ExecutionEnvironment = __webpack_require__(17);
+	let _ExecutionEnvironment = __webpack_require__(17);
 
-	var _BrowserProtocol = __webpack_require__(16);
+	const _BrowserProtocol = __webpack_require__(16);
 
-	var BrowserProtocol = _interopRequireWildcard(_BrowserProtocol);
+	const BrowserProtocol = _interopRequireWildcard(_BrowserProtocol);
 
-	var _RefreshProtocol = __webpack_require__(49);
+	const _RefreshProtocol = __webpack_require__(49);
 
-	var RefreshProtocol = _interopRequireWildcard(_RefreshProtocol);
+	const RefreshProtocol = _interopRequireWildcard(_RefreshProtocol);
 
-	var _DOMUtils = __webpack_require__(11);
+	let _DOMUtils = __webpack_require__(11);
 
-	var _createHistory = __webpack_require__(18);
+	let _createHistory = __webpack_require__(18);
 
-	var _createHistory2 = _interopRequireDefault(_createHistory);
+	let _createHistory2 = _interopRequireDefault(_createHistory);
 
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { let newObj = {}; if (obj !== null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4413,22 +4413,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * page reloads will be used to preserve clean URLs. You can force this
 	 * behavior using { forceRefresh: true } in options.
 	 */
-	var createBrowserHistory = function createBrowserHistory() {
-	  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	const createBrowserHistory = function createBrowserHistory() {
+	  let options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
 	  !_ExecutionEnvironment.canUseDOM ?  true ? (0, _invariant2.default)(false, 'Browser history needs a DOM') : (0, _invariant2.default)(false) : void 0;
 
-	  var useRefresh = options.forceRefresh || !(0, _DOMUtils.supportsHistory)();
-	  var Protocol = useRefresh ? RefreshProtocol : BrowserProtocol;
+	  const useRefresh = options.forceRefresh || !(0, _DOMUtils.supportsHistory)();
+	  const Protocol = useRefresh ? RefreshProtocol : BrowserProtocol;
 
-	  var getUserConfirmation = Protocol.getUserConfirmation;
-	  var getCurrentLocation = Protocol.getCurrentLocation;
-	  var pushLocation = Protocol.pushLocation;
-	  var replaceLocation = Protocol.replaceLocation;
-	  var go = Protocol.go;
+	  let getUserConfirmation = Protocol.getUserConfirmation;
+	  let getCurrentLocation = Protocol.getCurrentLocation;
+	  let pushLocation = Protocol.pushLocation;
+	  let replaceLocation = Protocol.replaceLocation;
+	  let go = Protocol.go;
 
 
-	  var history = (0, _createHistory2.default)(_extends({
+	  let history = (0, _createHistory2.default)(_extends({
 	    getUserConfirmation: getUserConfirmation }, options, {
 	    getCurrentLocation: getCurrentLocation,
 	    pushLocation: pushLocation,
@@ -4436,13 +4436,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    go: go
 	  }));
 
-	  var listenerCount = 0,
+	  let listenerCount = 0,
 	      stopListener = void 0;
 
-	  var startListener = function startListener(listener, before) {
+	  let startListener = function startListener(listener, before) {
 	    if (++listenerCount === 1) stopListener = BrowserProtocol.startListener(history.transitionTo);
 
-	    var unlisten = before ? history.listenBefore(listener) : history.listen(listener);
+	    let unlisten = before ? history.listenBefore(listener) : history.listen(listener);
 
 	    return function () {
 	      unlisten();
@@ -4451,11 +4451,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  };
 
-	  var listenBefore = function listenBefore(listener) {
+	  let listenBefore = function listenBefore(listener) {
 	    return startListener(listener, true);
 	  };
 
-	  var listen = function listen(listener) {
+	  let listen = function listen(listener) {
 	    return startListener(listener, false);
 	  };
 
@@ -4475,39 +4475,39 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _warning = __webpack_require__(5);
+	let _warning = __webpack_require__(5);
 
-	var _warning2 = _interopRequireDefault(_warning);
+	let _warning2 = _interopRequireDefault(_warning);
 
-	var _invariant = __webpack_require__(1);
+	let _invariant = __webpack_require__(1);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _ExecutionEnvironment = __webpack_require__(17);
+	const _ExecutionEnvironment = __webpack_require__(17);
 
-	var _DOMUtils = __webpack_require__(11);
+	const _DOMUtils = __webpack_require__(11);
 
-	var _HashProtocol = __webpack_require__(48);
+	const _HashProtocol = __webpack_require__(48);
 
-	var HashProtocol = _interopRequireWildcard(_HashProtocol);
+	const HashProtocol = _interopRequireWildcard(_HashProtocol);
 
-	var _createHistory = __webpack_require__(18);
+	let _createHistory = __webpack_require__(18);
 
-	var _createHistory2 = _interopRequireDefault(_createHistory);
+	let _createHistory2 = _interopRequireDefault(_createHistory);
 
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { const newObj = {}; if (obj !== null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var DefaultQueryKey = '_k';
+	const DefaultQueryKey = '_k';
 
-	var addLeadingSlash = function addLeadingSlash(path) {
+	const addLeadingSlash = function addLeadingSlash(path) {
 	  return path.charAt(0) === '/' ? path : '/' + path;
 	};
 
-	var HashPathCoders = {
+	const HashPathCoders = {
 	  hashbang: {
 	    encodePath: function encodePath(path) {
 	      return path.charAt(0) === '!' ? path : '!' + path;
@@ -4528,20 +4528,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 
-	var createHashHistory = function createHashHistory() {
-	  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	const createHashHistory = function createHashHistory() {
+	  let options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
 	  !_ExecutionEnvironment.canUseDOM ?  true ? (0, _invariant2.default)(false, 'Hash history needs a DOM') : (0, _invariant2.default)(false) : void 0;
 
-	  var queryKey = options.queryKey;
-	  var hashType = options.hashType;
+	  let queryKey = options.queryKey;
+	  let hashType = options.hashType;
 
 
 	   true ? (0, _warning2.default)(queryKey !== false, 'Using { queryKey: false } no longer works. Instead, just don\'t ' + 'use location state if you don\'t want a key in your URL query string') : void 0;
 
 	  if (typeof queryKey !== 'string') queryKey = DefaultQueryKey;
 
-	  if (hashType == null) hashType = 'slash';
+	  if (hashType === null) hashType = 'slash';
 
 	  if (!(hashType in HashPathCoders)) {
 	     true ? (0, _warning2.default)(false, 'Invalid hash type: %s', hashType) : void 0;
@@ -4549,24 +4549,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	    hashType = 'slash';
 	  }
 
-	  var pathCoder = HashPathCoders[hashType];
+	  const pathCoder = HashPathCoders[hashType];
 
-	  var getUserConfirmation = HashProtocol.getUserConfirmation;
+	  const getUserConfirmation = HashProtocol.getUserConfirmation;
 
 
-	  var getCurrentLocation = function getCurrentLocation() {
+	  let getCurrentLocation = function getCurrentLocation() {
 	    return HashProtocol.getCurrentLocation(pathCoder, queryKey);
 	  };
 
-	  var pushLocation = function pushLocation(location) {
+	  let pushLocation = function pushLocation(location) {
 	    return HashProtocol.pushLocation(location, pathCoder, queryKey);
 	  };
 
-	  var replaceLocation = function replaceLocation(location) {
+	  let replaceLocation = function replaceLocation(location) {
 	    return HashProtocol.replaceLocation(location, pathCoder, queryKey);
 	  };
 
-	  var history = (0, _createHistory2.default)(_extends({
+	  let history = (0, _createHistory2.default)(_extends({
 	    getUserConfirmation: getUserConfirmation }, options, {
 	    getCurrentLocation: getCurrentLocation,
 	    pushLocation: pushLocation,
@@ -4574,13 +4574,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    go: HashProtocol.go
 	  }));
 
-	  var listenerCount = 0,
+	  const listenerCount = 0,
 	      stopListener = void 0;
 
-	  var startListener = function startListener(listener, before) {
+	  const startListener = function startListener(listener, before) {
 	    if (++listenerCount === 1) stopListener = HashProtocol.startListener(history.transitionTo, pathCoder, queryKey);
 
-	    var unlisten = before ? history.listenBefore(listener) : history.listen(listener);
+	    const unlisten = before ? history.listenBefore(listener) : history.listen(listener);
 
 	    return function () {
 	      unlisten();
@@ -4589,23 +4589,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  };
 
-	  var listenBefore = function listenBefore(listener) {
+	  const listenBefore = function listenBefore(listener) {
 	    return startListener(listener, true);
 	  };
 
-	  var listen = function listen(listener) {
+	  const listen = function listen(listener) {
 	    return startListener(listener, false);
 	  };
 
-	  var goIsSupportedWithoutReload = (0, _DOMUtils.supportsGoWithoutReloadUsingHash)();
+	  const goIsSupportedWithoutReload = (0, _DOMUtils.supportsGoWithoutReloadUsingHash)();
 
-	  var go = function go(n) {
+	  let go = function go(n) {
 	     true ? (0, _warning2.default)(goIsSupportedWithoutReload, 'Hash history go(n) causes a full page reload in this browser') : void 0;
 
 	    history.go(n);
 	  };
 
-	  var createHref = function createHref(path) {
+	  const createHref = function createHref(path) {
 	    return '#' + pathCoder.encodePath(history.createHref(path));
 	  };
 
@@ -4627,29 +4627,29 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	const _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { const source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _warning = __webpack_require__(5);
+	const _warning = __webpack_require__(5);
 
-	var _warning2 = _interopRequireDefault(_warning);
+	const _warning2 = _interopRequireDefault(_warning);
 
-	var _invariant = __webpack_require__(1);
+	const _invariant = __webpack_require__(1);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	const _invariant2 = _interopRequireDefault(_invariant);
 
-	var _LocationUtils = __webpack_require__(8);
+	const _LocationUtils = __webpack_require__(8);
 
-	var _PathUtils = __webpack_require__(4);
+	const _PathUtils = __webpack_require__(4);
 
-	var _createHistory = __webpack_require__(18);
+	const _createHistory = __webpack_require__(18);
 
-	var _createHistory2 = _interopRequireDefault(_createHistory);
+	const _createHistory2 = _interopRequireDefault(_createHistory);
 
-	var _Actions = __webpack_require__(10);
+	const _Actions = __webpack_require__(10);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var createStateStorage = function createStateStorage(entries) {
+	const createStateStorage = function createStateStorage(entries) {
 	  return entries.filter(function (entry) {
 	    return entry.state;
 	  }).reduce(function (memo, entry) {
@@ -4658,8 +4658,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {});
 	};
 
-	var createMemoryHistory = function createMemoryHistory() {
-	  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	const createMemoryHistory = function createMemoryHistory() {
+	  let options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
 	  if (Array.isArray(options)) {
 	    options = { entries: options };
@@ -4667,28 +4667,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	    options = { entries: [options] };
 	  }
 
-	  var getCurrentLocation = function getCurrentLocation() {
-	    var entry = entries[current];
-	    var path = (0, _PathUtils.createPath)(entry);
+	  const getCurrentLocation = function getCurrentLocation() {
+	    const entry = entries[current];
+	    const path = (0, _PathUtils.createPath)(entry);
 
-	    var key = void 0,
+	    let key = void 0,
 	        state = void 0;
 	    if (entry.key) {
 	      key = entry.key;
 	      state = readState(key);
 	    }
 
-	    var init = (0, _PathUtils.parsePath)(path);
+	    const init = (0, _PathUtils.parsePath)(path);
 
 	    return (0, _LocationUtils.createLocation)(_extends({}, init, { state: state }), undefined, key);
 	  };
 
-	  var canGo = function canGo(n) {
-	    var index = current + n;
+	  const canGo = function canGo(n) {
+	    const index = current + n;
 	    return index >= 0 && index < entries.length;
 	  };
 
-	  var go = function go(n) {
+	  const go = function go(n) {
 	    if (!n) return;
 
 	    if (!canGo(n)) {
@@ -4698,13 +4698,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    current += n;
-	    var currentLocation = getCurrentLocation();
+	    const currentLocation = getCurrentLocation();
 
 	    // Change action to POP
 	    history.transitionTo(_extends({}, currentLocation, { action: _Actions.POP }));
 	  };
 
-	  var pushLocation = function pushLocation(location) {
+	  const pushLocation = function pushLocation(location) {
 	    current += 1;
 
 	    if (current < entries.length) entries.splice(current);
@@ -4714,21 +4714,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	    saveState(location.key, location.state);
 	  };
 
-	  var replaceLocation = function replaceLocation(location) {
+	  const replaceLocation = function replaceLocation(location) {
 	    entries[current] = location;
 	    saveState(location.key, location.state);
 	  };
 
-	  var history = (0, _createHistory2.default)(_extends({}, options, {
+	  const history = (0, _createHistory2.default)(_extends({}, options, {
 	    getCurrentLocation: getCurrentLocation,
 	    pushLocation: pushLocation,
 	    replaceLocation: replaceLocation,
 	    go: go
 	  }));
 
-	  var _options = options;
-	  var entries = _options.entries;
-	  var current = _options.current;
+	  const _options = options;
+	  let entries = _options.entries;
+	  let current = _options.current;
 
 
 	  if (typeof entries === 'string') {
@@ -4741,19 +4741,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return (0, _LocationUtils.createLocation)(entry);
 	  });
 
-	  if (current == null) {
+	  if (current === null) {
 	    current = entries.length - 1;
 	  } else {
 	    !(current >= 0 && current < entries.length) ?  true ? (0, _invariant2.default)(false, 'Current index must be >= 0 and < %s, was %s', entries.length, current) : (0, _invariant2.default)(false) : void 0;
 	  }
 
-	  var storage = createStateStorage(entries);
+	  const storage = createStateStorage(entries);
 
-	  var saveState = function saveState(key, state) {
+	  const saveState = function saveState(key, state) {
 	    return storage[key] = state;
 	  };
 
-	  var readState = function readState(key) {
+	  const readState = function readState(key) {
 	    return storage[key];
 	  };
 
@@ -4774,7 +4774,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	'use strict';
 
-	var REACT_STATICS = {
+	const REACT_STATICS = {
 	    childContextTypes: true,
 	    contextTypes: true,
 	    defaultProps: true,
@@ -4785,7 +4785,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    type: true
 	};
 
-	var KNOWN_STATICS = {
+	const KNOWN_STATICS = {
 	    name: true,
 	    length: true,
 	    prototype: true,
@@ -4794,18 +4794,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    arity: true
 	};
 
-	var isGetOwnPropertySymbolsAvailable = typeof Object.getOwnPropertySymbols === 'function';
+	const isGetOwnPropertySymbolsAvailable = typeof Object.getOwnPropertySymbols === 'function';
 
 	module.exports = function hoistNonReactStatics(targetComponent, sourceComponent, customStatics) {
 	    if (typeof sourceComponent !== 'string') { // don't hoist over string (html) components
-	        var keys = Object.getOwnPropertyNames(sourceComponent);
+	        let keys = Object.getOwnPropertyNames(sourceComponent);
 
 	        /* istanbul ignore else */
 	        if (isGetOwnPropertySymbolsAvailable) {
 	            keys = keys.concat(Object.getOwnPropertySymbols(sourceComponent));
 	        }
 
-	        for (var i = 0; i < keys.length; ++i) {
+	        for (let i = 0; i < keys.length; ++i) {
 	            if (!REACT_STATICS[keys[i]] && !KNOWN_STATICS[keys[i]] && (!customStatics || !customStatics[keys[i]])) {
 	                try {
 	                    targetComponent[keys[i]] = sourceComponent[keys[i]];
@@ -4826,8 +4826,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	/* eslint-disable no-unused-vars */
-	var hasOwnProperty = Object.prototype.hasOwnProperty;
-	var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+	const hasOwnProperty = Object.prototype.hasOwnProperty;
+	const propIsEnumerable = Object.prototype.propertyIsEnumerable;
 
 	function toObject(val) {
 		if (val === null || val === undefined) {
@@ -4846,18 +4846,18 @@ return /******/ (function(modules) { // webpackBootstrap
 			// Detect buggy property enumeration order in older V8 versions.
 
 			// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-			var test1 = new String('abc');  // eslint-disable-line
+			const test1 = new String('abc');  // eslint-disable-line
 			test1[5] = 'de';
 			if (Object.getOwnPropertyNames(test1)[0] === '5') {
 				return false;
 			}
 
 			// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-			var test2 = {};
-			for (var i = 0; i < 10; i++) {
+			const test2 = {};
+			for (let i = 0; i < 10; i++) {
 				test2['_' + String.fromCharCode(i)] = i;
 			}
-			var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			const order2 = Object.getOwnPropertyNames(test2).map(function (n) {
 				return test2[n];
 			});
 			if (order2.join('') !== '0123456789') {
@@ -4865,7 +4865,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 
 			// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-			var test3 = {};
+			const test3 = {};
 			'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
 				test3[letter] = letter;
 			});
@@ -4883,10 +4883,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 		var from;
-		var to = toObject(target);
+		const to = toObject(target);
 		var symbols;
 
-		for (var s = 1; s < arguments.length; s++) {
+		for (let s = 1; s < arguments.length; s++) {
 			from = Object(arguments[s]);
 
 			for (var key in from) {
@@ -4897,7 +4897,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 			if (Object.getOwnPropertySymbols) {
 				symbols = Object.getOwnPropertySymbols(from);
-				for (var i = 0; i < symbols.length; i++) {
+				for (let i = 0; i < symbols.length; i++) {
 					if (propIsEnumerable.call(from, symbols[i])) {
 						to[symbols[i]] = from[symbols[i]];
 					}
@@ -4914,8 +4914,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var strictUriEncode = __webpack_require__(56);
-	var objectAssign = __webpack_require__(54);
+	const strictUriEncode = __webpack_require__(56);
+	const objectAssign = __webpack_require__(54);
 
 	function encode(value, opts) {
 		if (opts.encode) {
@@ -4932,7 +4932,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.parse = function (str) {
 		// Create an object with no prototype
 		// https://github.com/sindresorhus/query-string/issues/47
-		var ret = Object.create(null);
+		const ret = Object.create(null);
 
 		if (typeof str !== 'string') {
 			return ret;
@@ -4945,11 +4945,11 @@ return /******/ (function(modules) { // webpackBootstrap
 		}
 
 		str.split('&').forEach(function (param) {
-			var parts = param.replace(/\+/g, ' ').split('=');
+			const parts = param.replace(/\+/g, ' ').split('=');
 			// Firefox (pre 40) decodes `%3D` to `=`
 			// https://github.com/sindresorhus/query-string/pull/37
-			var key = parts.shift();
-			var val = parts.length > 0 ? parts.join('=') : undefined;
+			let key = parts.shift();
+			let val = parts.length > 0 ? parts.join('=') : undefined;
 
 			key = decodeURIComponent(key);
 
@@ -4970,7 +4970,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	exports.stringify = function (obj, opts) {
-		var defaults = {
+		const defaults = {
 			encode: true,
 			strict: true
 		};
@@ -4978,7 +4978,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		opts = objectAssign(defaults, opts);
 
 		return obj ? Object.keys(obj).sort().map(function (key) {
-			var val = obj[key];
+			const val = obj[key];
 
 			if (val === undefined) {
 				return '';
@@ -4989,7 +4989,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 
 			if (Array.isArray(val)) {
-				var result = [];
+				const result = [];
 
 				val.slice().forEach(function (val2) {
 					if (val2 === undefined) {

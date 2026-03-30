@@ -10,7 +10,7 @@
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/ 	const installedModules = {};
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -20,7 +20,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 			return installedModules[moduleId].exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
+/******/ 		const module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
@@ -59,7 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
+/******/ 		const getter = module && module.__esModule ?
 /******/ 			function getDefault() { return module['default']; } :
 /******/ 			function getModuleExports() { return module; };
 /******/ 		__webpack_require__.d(getter, 'a', getter);
@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
  * will remain to ensure logic does not differ in production.
  */
 
-var validateFormat = function validateFormat(format) {};
+let validateFormat = function validateFormat(format) {};
 
 if (true) {
   validateFormat = function validateFormat(format) {
@@ -122,8 +122,8 @@ function invariant(condition, format, a, b, c, d, e, f) {
     if (format === undefined) {
       error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
     } else {
-      var args = [a, b, c, d, e, f];
-      var argIndex = 0;
+      const args = [a, b, c, d, e, f];
+      let argIndex = 0;
       error = new Error(format.replace(/%s/g, function () {
         return args[argIndex++];
       }));
@@ -150,9 +150,9 @@ object-assign
 
 
 /* eslint-disable no-unused-vars */
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+const getOwnPropertySymbols = Object.getOwnPropertySymbols;
+let hasOwnProperty = Object.prototype.hasOwnProperty;
+const propIsEnumerable = Object.prototype.propertyIsEnumerable;
 
 function toObject(val) {
 	if (val === null || val === undefined) {
@@ -171,18 +171,18 @@ function shouldUseNative() {
 		// Detect buggy property enumeration order in older V8 versions.
 
 		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		const test1 = new String('abc');  // eslint-disable-line no-new-wrappers
 		test1[5] = 'de';
 		if (Object.getOwnPropertyNames(test1)[0] === '5') {
 			return false;
 		}
 
 		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test2 = {};
-		for (var i = 0; i < 10; i++) {
+		const test2 = {};
+		for (let i = 0; i < 10; i++) {
 			test2['_' + String.fromCharCode(i)] = i;
 		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+		const order2 = Object.getOwnPropertyNames(test2).map(function (n) {
 			return test2[n];
 		});
 		if (order2.join('') !== '0123456789') {
@@ -190,7 +190,7 @@ function shouldUseNative() {
 		}
 
 		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test3 = {};
+		const test3 = {};
 		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
 			test3[letter] = letter;
 		});
@@ -208,10 +208,10 @@ function shouldUseNative() {
 
 module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	var from;
-	var to = toObject(target);
+	const to = toObject(target);
 	var symbols;
 
-	for (var s = 1; s < arguments.length; s++) {
+	for (let s = 1; s < arguments.length; s++) {
 		from = Object(arguments[s]);
 
 		for (var key in from) {
@@ -222,7 +222,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 		if (getOwnPropertySymbols) {
 			symbols = getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
+			for (let i = 0; i < symbols.length; i++) {
 				if (propIsEnumerable.call(from, symbols[i])) {
 					to[symbols[i]] = from[symbols[i]];
 				}
@@ -250,9 +250,9 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 
-var _assign = __webpack_require__(1);
-var invariant = __webpack_require__(0);
-var hasOwnProperty = {}.hasOwnProperty;
+const _assign = __webpack_require__(1);
+const invariant = __webpack_require__(0);
+const hasOwnProperty = {}.hasOwnProperty;
 
 function shallowCopy(x) {
   if (Array.isArray(x)) {
@@ -264,14 +264,14 @@ function shallowCopy(x) {
   }
 }
 
-var COMMAND_PUSH = '$push';
-var COMMAND_UNSHIFT = '$unshift';
-var COMMAND_SPLICE = '$splice';
-var COMMAND_SET = '$set';
-var COMMAND_MERGE = '$merge';
-var COMMAND_APPLY = '$apply';
+const COMMAND_PUSH = '$push';
+const COMMAND_UNSHIFT = '$unshift';
+const COMMAND_SPLICE = '$splice';
+const COMMAND_SET = '$set';
+const COMMAND_MERGE = '$merge';
+const COMMAND_APPLY = '$apply';
 
-var ALL_COMMANDS_LIST = [
+const ALL_COMMANDS_LIST = [
   COMMAND_PUSH,
   COMMAND_UNSHIFT,
   COMMAND_SPLICE,
@@ -280,7 +280,7 @@ var ALL_COMMANDS_LIST = [
   COMMAND_APPLY
 ];
 
-var ALL_COMMANDS_SET = {};
+const ALL_COMMANDS_SET = {};
 
 ALL_COMMANDS_LIST.forEach(function(command) {
   ALL_COMMANDS_SET[command] = true;
@@ -293,7 +293,7 @@ function invariantArrayCase(value, spec, command) {
     command,
     value
   );
-  var specValue = spec[command];
+  const specValue = spec[command];
   invariant(
     Array.isArray(specValue),
     'update(): expected spec of %s to be an array; got %s. ' +
@@ -326,10 +326,10 @@ function update(value, spec) {
     return spec[COMMAND_SET];
   }
 
-  var nextValue = shallowCopy(value);
+  let nextValue = shallowCopy(value);
 
   if (hasOwnProperty.call(spec, COMMAND_MERGE)) {
-    var mergeObj = spec[COMMAND_MERGE];
+    const mergeObj = spec[COMMAND_MERGE];
     invariant(
       mergeObj && typeof mergeObj === 'object',
       "update(): %s expects a spec of type 'object'; got %s",

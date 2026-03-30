@@ -26,7 +26,7 @@ export default Login
 
 //     render(){
 //         let button = null;
-//         if(this.state.status == 0){
+//         if(this.state.status === 0){
 //             button = <Login click={this.login.bind(this)}/>
 //         } else {
 //             button = <Logout click={this.logout.bind(this)} />

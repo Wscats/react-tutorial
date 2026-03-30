@@ -10,7 +10,7 @@ class ModalComponent extends Component{
     }
     render(){
         let content = null;
-        if(this.props.config.type == 'datagrid'){
+        if(this.props.config.type === 'datagrid'){
             content = <DatagridComponent config={this.props.config} cb={this.props.cb}/>
         } else {
             content = <p>modal</p>

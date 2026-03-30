@@ -1,5 +1,5 @@
-var React = require('react');
-var ReactDom = require('react-dom');
+const React = require('react');
+const ReactDom = require('react-dom');
 //npm install --save react-router-config
 import { matchRoutes, renderRoutes } from 'react-router-config'
 import {
@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom'
 
 
-var routes = require("./routes.js");
+const routes = require("./routes.js");
 matchRoutes(routes, '/index');
 console.log(routes)
 //默认路由

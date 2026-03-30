@@ -1,5 +1,7 @@
-var React = require('react');
-var Component1 = React.createClass({
+'use strict';
+
+const React = require('react');
+const Component1 = React.createClass({
     render: function(){
         return (
             <div>

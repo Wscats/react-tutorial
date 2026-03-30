@@ -31,7 +31,7 @@ OrderComponent.propTypes = {
 }
 
 // const mapStateToProps = state => ({order: state.order})
-// state == store
+// state === store
 const mapStateToProps = (store) => {
     return {
         order: store.order

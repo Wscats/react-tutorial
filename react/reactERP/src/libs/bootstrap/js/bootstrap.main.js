@@ -1,6 +1,8 @@
+'use strict';
+
 // global variables
-var isIE8 = false;
-var isIE9 = false;
+let isIE8 = false;
+let isIE9 = false;
 var $windowWidth;
 var $windowHeight;
 var $pageArea;
@@ -8,10 +10,10 @@ var $pageArea;
 (function ($, sr) {
     // debouncing function from John Hann
     // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
-    var debounce = function (func, threshold, execAsap) {
+    const debounce = function (func, threshold, execAsap) {
         var timeout;
         return function debounced() {
-            var obj = this,
+            const obj = this,
                 args = arguments;
 
             function delayed() {
@@ -36,20 +38,20 @@ var $pageArea;
 })(jQuery, 'clipresize');
 
 //Main Function
-var Main = function () {
+const Main = function () {
     //function to detect explorer browser and its version
-    var runInit = function () {
+    const runInit = function () {
         if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
-            var ieversion = new Number(RegExp.$1);
-            if (ieversion == 8) {
+            const ieversion = new Number(RegExp.$1);
+            if (ieversion === 8) {
                 isIE8 = true;
-            } else if (ieversion == 9) {
+            } else if (ieversion === 9) {
                 isIE9 = true;
             }
         }
     };
     //function to adjust the template elements based on the window size
-    var runElementsPosition = function () {
+    const runElementsPosition = function () {
         $windowWidth = $(window).width();
         $windowHeight = $(window).height();
         $pageArea = $windowHeight - $('body > .navbar').outerHeight() - $('body > .footer').outerHeight();
@@ -58,7 +60,7 @@ var Main = function () {
 
     };
     //function to adapt the Main Content height to the Main Navigation height
-    var runContainerHeight = function () {
+    const runContainerHeight = function () {
         mainContainer = $('.main-content > .container');
         mainNavigation = $('.main-navigation');
         if ($pageArea < 760) {
@@ -74,7 +76,7 @@ var Main = function () {
         }
     };
     //function to activate the ToDo list, if present
-    var runToDoAction = function () {
+    const runToDoAction = function () {
         if ($(".todo-actions").length) {
             $(".todo-actions").click(function () {
                 if ($(this).find("i").hasClass("fa-square-o") || $(this).find("i").hasClass("icon-check-empty")) {
@@ -99,23 +101,23 @@ var Main = function () {
         }
     };
     //function to activate the Tooltips, if present
-    var runTooltips = function () {
+    const runTooltips = function () {
         if ($(".tooltips").length) {
             $('.tooltips').tooltip();
         }
     };
     //function to activate the Popovers, if present
-    var runPopovers = function () {
+    const runPopovers = function () {
         if ($(".popovers").length) {
             $('.popovers').popover();
         }
     };
     //function to allow a button or a link to open a tab
-    var runShowTab = function () {
+    const runShowTab = function () {
         if ($(".show-tab").length) {
             $('.show-tab').bind('click', function (e) {
                 e.preventDefault();
-                var tabToShow = $(this).attr("href");
+                const tabToShow = $(this).attr("href");
                 if ($(tabToShow).length) {
                     $('a[href="' + tabToShow + '"]').tab('show');
                 }
@@ -125,7 +127,7 @@ var Main = function () {
             $('a[href="#' + getParameterByName('tabId') + '"]').tab('show');
         }
     };
-    var runPanelScroll = function () {
+    const runPanelScroll = function () {
         if ($(".panel-scroll").length) {
             $('.panel-scroll').perfectScrollbar({
                 wheelSpeed: 50,
@@ -135,7 +137,7 @@ var Main = function () {
         }
     };
     //function to extend the default settings of the Accordion
-    var runAccordionFeatures = function () {
+    const runAccordionFeatures = function () {
         if ($('.accordion').length) {
             $('.accordion .panel-collapse').each(function () {
                 if (!$(this).hasClass('in')) {
@@ -154,7 +156,7 @@ var Main = function () {
         });
     };
     //function to reduce the size of the Main Menu
-    var runNavigationToggler = function () {
+    const runNavigationToggler = function () {
         $('.navigation-toggler').bind('click', function () {
             if (!$('body').hasClass('navigation-small')) {
                 $('body').addClass('navigation-small');
@@ -164,7 +166,7 @@ var Main = function () {
         });
     };
     //function to activate the panel tools
-    var runModuleTools = function () {
+    const runModuleTools = function () {
         $('.panel-tools .panel-expand').bind('click', function (e) {
             $('.panel-tools a').not(this).hide();
             $('body').append('<div class="full-white-backdrop"></div>');
@@ -201,7 +203,7 @@ var Main = function () {
             e.preventDefault();
         });
         $('.panel-tools .panel-refresh').bind('click', function (e) {
-            var el = $(this).parents(".panel");
+            let el = $(this).parents(".panel");
             el.block({
                 overlayCSS: {
                     backgroundColor: '#fff'
@@ -220,7 +222,7 @@ var Main = function () {
         });
         $('.panel-tools .panel-collapse').bind('click', function (e) {
             e.preventDefault();
-            var el = jQuery(this).parent().closest(".panel").children(".panel-body");
+            let el = jQuery(this).parent().closest(".panel").children(".panel-body");
             if ($(this).hasClass("collapses")) {
                 $(this).addClass("expand").removeClass("collapses");
                 el.slideUp(200);
@@ -231,7 +233,7 @@ var Main = function () {
         });
     };
     //function to activate the 3rd and 4th level menus
-    var runNavigationMenu = function () {
+    const runNavigationMenu = function () {
         $('.main-navigation-menu li.active').addClass('open');
         $('.main-navigation-menu > li a').bind('click', function () {
             if ($(this).parent().children('ul').hasClass('sub-menu') && ((!$('body').hasClass('navigation-small') || $windowWidth < 767) || !$(this).parent().parent().hasClass('main-navigation-menu'))) {
@@ -256,7 +258,7 @@ var Main = function () {
         });
     };
     //function to activate the Go-Top button
-    var runGoTop = function () {
+    const runGoTop = function () {
         $('.go-top').bind('click', function (e) {
             $("html, body").animate({
                 scrollTop: 0
@@ -265,7 +267,7 @@ var Main = function () {
         });
     };
     //function to avoid closing the dropdown on click
-    var runDropdownEnduring = function () {
+    const runDropdownEnduring = function () {
         if ($('.dropdown-menu.dropdown-enduring').length) {
             $('.dropdown-menu.dropdown-enduring').click(function (event) {
                 event.stopPropagation();
@@ -273,14 +275,14 @@ var Main = function () {
         }
     };
     //function to return the querystring parameter with a given name.
-    var getParameterByName = function (name) {
+    const getParameterByName = function (name) {
         name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        const regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
             results = regex.exec(location.search);
-        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     };
     //function to activate the iCheck Plugin
-    var runCustomCheck = function () {
+    const runCustomCheck = function () {
         if ($('input[type="checkbox"]').length || $('input[type="radio"]').length) {
             $('input[type="checkbox"].grey, input[type="radio"].grey').iCheck({
                 checkboxClass: 'icheckbox_minimal-grey',
@@ -400,16 +402,16 @@ var Main = function () {
         };
     };
     //Search Input function
-    var runSearchInput = function () {
-        var search_input = $('.sidebar-search input');
-        var search_button = $('.sidebar-search button');
-        var search_form = $('.sidebar-search');
+    const runSearchInput = function () {
+        const search_input = $('.sidebar-search input');
+        const search_button = $('.sidebar-search button');
+        const search_form = $('.sidebar-search');
         search_input.attr('data-default', $(search_input).outerWidth()).focus(function () {
             $(this).animate({
                 width: 200
             }, 200);
         }).blur(function () {
-            if ($(this).val() == "") {
+            if ($(this).val() === "") {
                 if ($(this).hasClass('open')) {
                     $(this).animate({
                         width: 0,
@@ -433,14 +435,14 @@ var Main = function () {
                     width: 200,
                     opacity: 1
                 }, 200).focus();
-            } else if ($(search_input).hasClass('open') && $(search_input).val() == '') {
+            } else if ($(search_input).hasClass('open') && $(search_input).val() === '') {
                 $(search_input).removeClass('open').animate({
                     width: 0,
                     opacity: 0
                 }, 200, function () {
                     $(this).hide();
                 });
-            } else if ($(search_input).val() != '') {
+            } else if ($(search_input).val() !== '') {
                 return;
             } else
                 $(search_input).focus();
@@ -448,7 +450,7 @@ var Main = function () {
         });
     };
     //Set of functions for Style Selector
-    var runStyleSelector = function () {
+    const runStyleSelector = function () {
         $('.style-toggle').bind('click', function () {
             if ($(this).hasClass('open')) {
                 $(this).removeClass('open').addClass('close');
@@ -472,13 +474,13 @@ var Main = function () {
     $('.navbar-tools .dropdown').on('shown.bs.dropdown', function () {
         $(this).find('.drop-down-wrapper').scrollTop(0).perfectScrollbar('update');
     });
-    var setColorScheme = function () {
+    const setColorScheme = function () {
         $('.icons-color a').bind('click', function () {
             $('.icons-color img').each(function () {
                 $(this).removeClass('active');
             });
             $(this).find('img').addClass('active');
-            if ($('#skin_color').attr("rel") == "stylesheet/less") {
+            if ($('#skin_color').attr("rel") === "stylesheet/less") {
                 $('#skin_color').next('style').remove();
                 $('#skin_color').attr("rel", "stylesheet");
 
@@ -487,10 +489,10 @@ var Main = function () {
 
         });
     };
-    var setBoxedBackgrounds = function () {
+    const setBoxedBackgrounds = function () {
         $('.boxed-patterns a').bind('click', function () {
             if ($('body').hasClass('layout-boxed')) {
-                var classes = $('body').attr("class").split(" ").filter(function (item) {
+                const classes = $('body').attr("class").split(" ").filter(function (item) {
                     return item.indexOf("bg_style_") === -1 ? item : "";
                 });
                 $('body').attr("class", classes.join(" "));
@@ -504,31 +506,31 @@ var Main = function () {
             }
         });
     };
-    var setLayoutStyle = function () {
+    const setLayoutStyle = function () {
         $('select[name="layout"]').change(function () {
-            if ($('select[name="layout"] option:selected').val() == 'boxed')
+            if ($('select[name="layout"] option:selected').val() === 'boxed')
                 $('body').addClass('layout-boxed');
             else
                 $('body').removeClass('layout-boxed');
         });
     };
-    var setHeaderStyle = function () {
+    const setHeaderStyle = function () {
         $('select[name="header"]').change(function () {
-            if ($('select[name="header"] option:selected').val() == 'default')
+            if ($('select[name="header"] option:selected').val() === 'default')
                 $('body').addClass('header-default');
             else
                 $('body').removeClass('header-default');
         });
     };
-    var setFooterStyle = function () {
+    const setFooterStyle = function () {
         $('select[name="footer"]').change(function () {
-            if ($('select[name="footer"] option:selected').val() == 'fixed')
+            if ($('select[name="footer"] option:selected').val() === 'fixed')
                 $('body').addClass('footer-fixed');
             else
                 $('body').removeClass('footer-fixed');
         });
     };
-    var runColorPalette = function () {
+    const runColorPalette = function () {
         if ($('.colorpalette').length) {
             $('.colorpalette').colorPalette().on('selectColor', function (e) {
                 $(this).closest('ul').prev('a').children('i').css('background-color', e.color).end().closest('div').prev('input').val(e.color);
@@ -538,9 +540,9 @@ var Main = function () {
     };
 
     //function to activate Less style
-    var runActivateLess = function () {
+    const runActivateLess = function () {
         $('		.icons-color img').removeClass('active');
-        if ($('#skin_color').attr("rel") == "stylesheet") {
+        if ($('#skin_color').attr("rel") === "stylesheet") {
             $('#skin_color').attr("rel", "stylesheet/less").attr("href", "assets/less/styles.less");
             less.sheets.push($('link#skin_color')[0]);
             less.refresh();
@@ -553,16 +555,16 @@ var Main = function () {
     };
 
     //Window Resize Function
-    var runWIndowResize = function (func, threshold, execAsap) {
+    const runWIndowResize = function (func, threshold, execAsap) {
         //wait until the user is done resizing the window, then execute
         $(window).clipresize(function () {
             runElementsPosition();
         });
     };
     //function to save user settings
-    var runSaveSetting = function () {
+    const runSaveSetting = function () {
         $('.save_style').bind('click', function () {
-            var clipSetting = new Object;
+            const clipSetting = new Object;
             if ($('body').hasClass('rtl')) {
                 clipSetting.rtl = true;
             } else {
@@ -571,8 +573,8 @@ var Main = function () {
             if ($('body').hasClass('layout-boxed')) {
                 clipSetting.layoutBoxed = true;
                 $("body[class]").filter(function () {
-                    var classNames = this.className.split(/\s+/);
-                    for (var i = 0; i < classNames.length; ++i) {
+                    const classNames = this.className.split(/\s+/);
+                    for (const i = 0; i < classNames.length; ++i) {
                         if (classNames[i].substr(0, 9) === "bg_style_") {
                             clipSetting.bgStyle = classNames[i];
                         }
@@ -592,9 +594,9 @@ var Main = function () {
             } else {
                 clipSetting.footerDefault = true;
             };
-            if ($('#skin_color').attr('rel') == 'stylesheet') {
+            if ($('#skin_color').attr('rel') === 'stylesheet') {
                 clipSetting.useLess = false;
-            } else if ($('#skin_color').attr('rel') == 'stylesheet/less') {
+            } else if ($('#skin_color').attr('rel') === 'stylesheet/less') {
                 clipSetting.useLess = true;
                 clipSetting.baseColor = $('.color-base').val();
                 clipSetting.textColor = $('.color-text').val();
@@ -604,7 +606,7 @@ var Main = function () {
 
             $.cookie("clip-setting", JSON.stringify(clipSetting));
 
-            var el = $('#style_selector_container');
+            const el = $('#style_selector_container');
             el.block({
                 overlayCSS: {
                     backgroundColor: '#fff'
@@ -622,9 +624,9 @@ var Main = function () {
         });
     };
     //function to load user settings
-    var runCustomSetting = function () {
+    const runCustomSetting = function () {
         if ($.cookie("clip-setting")) {
-            var loadSetting = jQuery.parseJSON($.cookie("clip-setting"));
+            const loadSetting = jQuery.parseJSON($.cookie("clip-setting"));
             if (loadSetting.layoutBoxed) {
 
                 $('body').addClass('layout-boxed');
@@ -658,12 +660,12 @@ var Main = function () {
         };
     };
     //function to clear user settings
-    var runClearSetting = function () {
+    const runClearSetting = function () {
         $('.clear_style').bind('click', function () {
             $.removeCookie("clip-setting");
             $('body').removeClass("layout-boxed header-default footer-fixed");
             $('body')[0].className = $('body')[0].className.replace(/\bbg_style_.*?\b/g, '');
-            if ($('#skin_color').attr("rel") == "stylesheet/less") {
+            if ($('#skin_color').attr("rel") === "stylesheet/less") {
                 $('#skin_color').next('style').remove();
                 $('#skin_color').attr("rel", "stylesheet");
 
@@ -674,7 +676,7 @@ var Main = function () {
         });
     };
     //function to restore user settings
-    var runDefaultSetting = function () {
+    const runDefaultSetting = function () {
         $('#style_selector select[name="layout"]').val('default');
         $('#style_selector select[name="header"]').val('fixed');
         $('#style_selector select[name="footer"]').val('default');

@@ -10,7 +10,7 @@
 })(this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/ 	const installedModules = {};
 
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -20,7 +20,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 			return installedModules[moduleId].exports;
 
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
+/******/ 		const module = installedModules[moduleId] = {
 /******/ 			exports: {},
 /******/ 			id: moduleId,
 /******/ 			loaded: false
@@ -59,59 +59,59 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.propTypes = exports.createServerRenderContext = exports.matchPattern = exports.StaticRouter = exports.ServerRouter = exports.MemoryRouter = exports.HashRouter = exports.BrowserRouter = exports.Redirect = exports.NavigationPrompt = exports.Miss = exports.Match = exports.Link = undefined;
 
-	var _Link2 = __webpack_require__(1);
+	const _Link2 = __webpack_require__(1);
 
-	var _Link3 = _interopRequireDefault(_Link2);
+	const _Link3 = _interopRequireDefault(_Link2);
 
-	var _Match2 = __webpack_require__(9);
+	const _Match2 = __webpack_require__(9);
 
-	var _Match3 = _interopRequireDefault(_Match2);
+	const _Match3 = _interopRequireDefault(_Match2);
 
-	var _Miss2 = __webpack_require__(15);
+	const _Miss2 = __webpack_require__(15);
 
-	var _Miss3 = _interopRequireDefault(_Miss2);
+	const _Miss3 = _interopRequireDefault(_Miss2);
 
-	var _NavigationPrompt2 = __webpack_require__(16);
+	const _NavigationPrompt2 = __webpack_require__(16);
 
-	var _NavigationPrompt3 = _interopRequireDefault(_NavigationPrompt2);
+	const _NavigationPrompt3 = _interopRequireDefault(_NavigationPrompt2);
 
-	var _Redirect2 = __webpack_require__(17);
+	const _Redirect2 = __webpack_require__(17);
 
-	var _Redirect3 = _interopRequireDefault(_Redirect2);
+	const _Redirect3 = _interopRequireDefault(_Redirect2);
 
-	var _BrowserRouter2 = __webpack_require__(18);
+	const _BrowserRouter2 = __webpack_require__(18);
 
-	var _BrowserRouter3 = _interopRequireDefault(_BrowserRouter2);
+	const _BrowserRouter3 = _interopRequireDefault(_BrowserRouter2);
 
-	var _HashRouter2 = __webpack_require__(34);
+	const _HashRouter2 = __webpack_require__(34);
 
-	var _HashRouter3 = _interopRequireDefault(_HashRouter2);
+	const _HashRouter3 = _interopRequireDefault(_HashRouter2);
 
-	var _MemoryRouter2 = __webpack_require__(36);
+	const _MemoryRouter2 = __webpack_require__(36);
 
-	var _MemoryRouter3 = _interopRequireDefault(_MemoryRouter2);
+	const _MemoryRouter3 = _interopRequireDefault(_MemoryRouter2);
 
-	var _ServerRouter2 = __webpack_require__(38);
+	const _ServerRouter2 = __webpack_require__(38);
 
-	var _ServerRouter3 = _interopRequireDefault(_ServerRouter2);
+	const _ServerRouter3 = _interopRequireDefault(_ServerRouter2);
 
-	var _StaticRouter2 = __webpack_require__(28);
+	let _StaticRouter2 = __webpack_require__(28);
 
-	var _StaticRouter3 = _interopRequireDefault(_StaticRouter2);
+	const _StaticRouter3 = _interopRequireDefault(_StaticRouter2);
 
-	var _matchPattern2 = __webpack_require__(11);
+	let _matchPattern2 = __webpack_require__(11);
 
-	var _matchPattern3 = _interopRequireDefault(_matchPattern2);
+	const _matchPattern3 = _interopRequireDefault(_matchPattern2);
 
-	var _createServerRenderContext2 = __webpack_require__(39);
+	const _createServerRenderContext2 = __webpack_require__(39);
 
-	var _createServerRenderContext3 = _interopRequireDefault(_createServerRenderContext2);
+	const _createServerRenderContext3 = _interopRequireDefault(_createServerRenderContext2);
 
-	var _PropTypes = __webpack_require__(8);
+	let _PropTypes = __webpack_require__(8);
 
-	var _propTypes = _interopRequireWildcard(_PropTypes);
+	const _propTypes = _interopRequireWildcard(_PropTypes);
 
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { const newObj = {}; if (obj !== null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -152,21 +152,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+	let _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _Broadcasts = __webpack_require__(3);
+	let _Broadcasts = __webpack_require__(3);
 
-	var _PropTypes = __webpack_require__(8);
+	let _PropTypes = __webpack_require__(8);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	function _objectWithoutProperties(obj, keys) { let target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -174,7 +174,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Link = function (_React$Component) {
+	const Link = function (_React$Component) {
 	  _inherits(Link, _React$Component);
 
 	  function Link() {
@@ -182,7 +182,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    _classCallCheck(this, Link);
 
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	    for (let _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
 	      args[_key] = arguments[_key];
 	    }
 
@@ -196,22 +196,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _this.handleTransition();
 	      }
 	    }, _this.handleTransition = function () {
-	      var router = _this.context.router;
+	      let router = _this.context.router;
 	      var _this$props = _this.props,
 	          to = _this$props.to,
 	          replace = _this$props.replace;
 
-	      var navigate = replace ? router.replaceWith : router.transitionTo;
+	      let navigate = replace ? router.replaceWith : router.transitionTo;
 	      navigate(to);
 	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 
 	  Link.prototype.render = function render() {
-	    var _this2 = this;
+	    let _this2 = this;
 
-	    var router = this.context.router;
+	    let router = this.context.router;
 
-	    var _props = this.props,
+	    let _props = this.props,
 	        to = _props.to,
 	        style = _props.style,
 	        activeStyle = _props.activeStyle,
@@ -227,11 +227,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _Broadcasts.LocationSubscriber,
 	      null,
 	      function (location) {
-	        var isActive = getIsActive(location, createLocationDescriptor(to), _this2.props);
+	        const isActive = getIsActive(location, createLocationDescriptor(to), _this2.props);
 
 	        // If children is a function, we are using a Function as Children Component
 	        // so useful values will be passed down to the children function.
-	        if (typeof children == 'function') {
+	        if (typeof children === 'function') {
 	          return children({
 	            isActive: isActive,
 	            location: location,
@@ -295,34 +295,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	// we should probably use LocationUtils.createLocationDescriptor
-	var createLocationDescriptor = function createLocationDescriptor(to) {
+	const createLocationDescriptor = function createLocationDescriptor(to) {
 	  return (typeof to === 'undefined' ? 'undefined' : _typeof(to)) === 'object' ? to : { pathname: to };
 	};
 
-	var pathIsActive = function pathIsActive(to, pathname, activeOnlyWhenExact) {
+	const pathIsActive = function pathIsActive(to, pathname, activeOnlyWhenExact) {
 	  return activeOnlyWhenExact ? pathname === to : pathname.indexOf(to) === 0;
 	};
 
-	var queryIsActive = function queryIsActive(query, activeQuery) {
-	  if (activeQuery == null) return query == null;
+	const queryIsActive = function queryIsActive(query, activeQuery) {
+	  if (activeQuery === null) return query === null;
 
-	  if (query == null) return true;
+	  if (query === null) return true;
 
 	  return deepEqual(query, activeQuery);
 	};
 
-	var isLeftClickEvent = function isLeftClickEvent(event) {
+	const isLeftClickEvent = function isLeftClickEvent(event) {
 	  return event.button === 0;
 	};
 
-	var isModifiedEvent = function isModifiedEvent(event) {
+	const isModifiedEvent = function isModifiedEvent(event) {
 	  return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
 	};
 
-	var deepEqual = function deepEqual(a, b) {
-	  if (a == b) return true;
+	const deepEqual = function deepEqual(a, b) {
+	  if (a === b) return true;
 
-	  if (a == null || b == null) return false;
+	  if (a === null || b === null) return false;
 
 	  if (Array.isArray(a)) {
 	    return Array.isArray(b) && a.length === b.length && a.every(function (item, index) {
@@ -370,23 +370,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.LocationSubscriber = exports.LocationBroadcast = undefined;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _reactBroadcast = __webpack_require__(4);
+	const _reactBroadcast = __webpack_require__(4);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var LocationChannel = 'location';
+	const LocationChannel = 'location';
 
-	var LocationBroadcast = exports.LocationBroadcast = function LocationBroadcast(props) {
+	let LocationBroadcast = exports.LocationBroadcast = function LocationBroadcast(props) {
 	  return _react2.default.createElement(_reactBroadcast.Broadcast, _extends({}, props, { channel: LocationChannel }));
 	};
 
-	var LocationSubscriber = exports.LocationSubscriber = function LocationSubscriber(props) {
+	let LocationSubscriber = exports.LocationSubscriber = function LocationSubscriber(props) {
 	  return _react2.default.createElement(_reactBroadcast.Subscriber, _extends({}, props, { channel: LocationChannel }));
 	};
 
@@ -399,13 +399,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.Subscriber = exports.Broadcast = undefined;
 
-	var _Broadcast2 = __webpack_require__(5);
+	const _Broadcast2 = __webpack_require__(5);
 
-	var _Broadcast3 = _interopRequireDefault(_Broadcast2);
+	const _Broadcast3 = _interopRequireDefault(_Broadcast2);
 
-	var _Subscriber2 = __webpack_require__(7);
+	const _Subscriber2 = __webpack_require__(7);
 
-	var _Subscriber3 = _interopRequireDefault(_Subscriber2);
+	const _Subscriber3 = _interopRequireDefault(_Subscriber2);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -420,15 +420,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _invariant = __webpack_require__(6);
+	let _invariant = __webpack_require__(6);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -438,9 +438,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var createBroadcast = function createBroadcast(initialValue) {
-	  var listeners = [];
-	  var currentValue = initialValue;
+	const createBroadcast = function createBroadcast(initialValue) {
+	  let listeners = [];
+	  let currentValue = initialValue;
 
 	  return {
 	    publish: function publish(value) {
@@ -474,7 +474,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * <Subscriber> component for a reference implementation.
 	 */
 
-	var Broadcast = function (_React$Component) {
+	const Broadcast = function (_React$Component) {
 	  _inherits(Broadcast, _React$Component);
 
 	  function Broadcast() {
@@ -482,7 +482,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    _classCallCheck(this, Broadcast);
 
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	    for (let _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
 	      args[_key] = arguments[_key];
 	    }
 
@@ -492,8 +492,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  Broadcast.prototype.getBroadcastsContext = function getBroadcastsContext() {
 	    var _extends2;
 
-	    var channel = this.props.channel;
-	    var broadcasts = this.context.broadcasts;
+	    let channel = this.props.channel;
+	    const broadcasts = this.context.broadcasts;
 
 
 	    return _extends({}, broadcasts, (_extends2 = {}, _extends2[channel] = this.broadcast.subscribe, _extends2));
@@ -562,7 +562,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * will remain to ensure logic does not differ in production.
 	 */
 
-	var invariant = function(condition, format, a, b, c, d, e, f) {
+	const invariant = function(condition, format, a, b, c, d, e, f) {
 	  if (false) {
 	    if (format === undefined) {
 	      throw new Error('invariant requires an error message argument');
@@ -577,8 +577,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        'for the full error message and additional helpful warnings.'
 	      );
 	    } else {
-	      var args = [a, b, c, d, e, f];
-	      var argIndex = 0;
+	      let args = [a, b, c, d, e, f];
+	      let argIndex = 0;
 	      error = new Error(
 	        format.replace(/%s/g, function() { return args[argIndex++]; })
 	      );
@@ -601,13 +601,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _invariant = __webpack_require__(6);
+	let _invariant = __webpack_require__(6);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -621,7 +621,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * A <Subscriber> pulls the value for a channel off of context.broadcasts
 	 * and passes it to its children function.
 	 */
-	var Subscriber = function (_React$Component) {
+	const Subscriber = function (_React$Component) {
 	  _inherits(Subscriber, _React$Component);
 
 	  function Subscriber() {
@@ -629,7 +629,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    _classCallCheck(this, Subscriber);
 
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	    for (let _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
 	      args[_key] = arguments[_key];
 	    }
 
@@ -639,13 +639,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  Subscriber.prototype.componentWillMount = function componentWillMount() {
-	    var _this2 = this;
+	    let _this2 = this;
 
-	    var channel = this.props.channel;
+	    let channel = this.props.channel;
 
 
 	    if (this.context.broadcasts) {
-	      var subscribe = this.context.broadcasts[channel];
+	      const subscribe = this.context.broadcasts[channel];
 
 	      !(typeof subscribe === 'function') ?  false ? (0, _invariant2.default)(false, '<Subscriber channel="%s"> must be rendered in the context of a <Broadcast channel="%s">', channel, channel) : (0, _invariant2.default)(false) : void 0;
 
@@ -690,16 +690,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.routerContext = exports.historyContext = exports.location = exports.history = exports.matchContext = exports.action = undefined;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var action = exports.action = _react.PropTypes.oneOf(['PUSH', 'REPLACE', 'POP']);
+	let action = exports.action = _react.PropTypes.oneOf(['PUSH', 'REPLACE', 'POP']);
 
-	var matchContext = exports.matchContext = _react.PropTypes.shape({
+	let matchContext = exports.matchContext = _react.PropTypes.shape({
 	  addMatch: _react.PropTypes.func.isRequired,
 	  removeMatch: _react.PropTypes.func.isRequired
 	});
 
-	var history = exports.history = _react.PropTypes.shape({
+	let history = exports.history = _react.PropTypes.shape({
 	  listen: _react.PropTypes.func.isRequired,
 	  listenBefore: _react.PropTypes.func.isRequired,
 	  push: _react.PropTypes.func.isRequired,
@@ -707,7 +707,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  go: _react.PropTypes.func.isRequired
 	});
 
-	var location = exports.location = _react.PropTypes.shape({
+	let location = exports.location = _react.PropTypes.shape({
 	  pathname: _react.PropTypes.string.isRequired,
 	  search: _react.PropTypes.string.isRequired,
 	  hash: _react.PropTypes.string.isRequired,
@@ -715,7 +715,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  key: _react.PropTypes.string
 	});
 
-	var historyContext = exports.historyContext = _react.PropTypes.shape({
+	let historyContext = exports.historyContext = _react.PropTypes.shape({
 	  action: action.isRequired,
 	  location: location.isRequired,
 	  push: _react.PropTypes.func.isRequired,
@@ -727,7 +727,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  block: _react.PropTypes.func.isRequired
 	});
 
-	var routerContext = exports.routerContext = _react.PropTypes.shape({
+	let routerContext = exports.routerContext = _react.PropTypes.shape({
 	  transitionTo: _react.PropTypes.func.isRequired,
 	  replaceWith: _react.PropTypes.func.isRequired,
 	  blockTransitions: _react.PropTypes.func.isRequired,
@@ -742,21 +742,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _MatchProvider = __webpack_require__(10);
+	let _MatchProvider = __webpack_require__(10);
 
-	var _MatchProvider2 = _interopRequireDefault(_MatchProvider);
+	let _MatchProvider2 = _interopRequireDefault(_MatchProvider);
 
-	var _matchPattern = __webpack_require__(11);
+	const _matchPattern = __webpack_require__(11);
 
-	var _matchPattern2 = _interopRequireDefault(_matchPattern);
+	const _matchPattern2 = _interopRequireDefault(_matchPattern);
 
-	var _Broadcasts = __webpack_require__(3);
+	let _Broadcasts = __webpack_require__(3);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -766,7 +766,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var RegisterMatch = function (_React$Component) {
+	const RegisterMatch = function (_React$Component) {
 	  _inherits(RegisterMatch, _React$Component);
 
 	  function RegisterMatch() {
@@ -776,8 +776,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  RegisterMatch.prototype.registerMatch = function registerMatch() {
-	    var matchContext = this.context.match;
-	    var match = this.props.match;
+	    let matchContext = this.context.match;
+	    let match = this.props.match;
 
 
 	    if (match && matchContext) {
@@ -798,7 +798,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 
 	  RegisterMatch.prototype.componentDidUpdate = function componentDidUpdate(prevProps) {
-	    var match = this.context.match;
+	    let match = this.context.match;
 
 
 	    if (match) {
@@ -836,7 +836,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	}
 
-	var Match = function (_React$Component2) {
+	const Match = function (_React$Component2) {
 	  _inherits(Match, _React$Component2);
 
 	  function Match() {
@@ -846,23 +846,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  Match.prototype.render = function render() {
-	    var _this3 = this;
+	    let _this3 = this;
 
 	    return _react2.default.createElement(
 	      _Broadcasts.LocationSubscriber,
 	      null,
 	      function (location) {
-	        var _props = _this3.props,
+	        let _props = _this3.props,
 	            children = _props.children,
 	            render = _props.render,
 	            Component = _props.component,
 	            pattern = _props.pattern,
 	            exactly = _props.exactly;
-	        var matchContext = _this3.context.match;
+	        const matchContext = _this3.context.match;
 
-	        var parent = matchContext && matchContext.parent;
-	        var match = (0, _matchPattern2.default)(pattern, location, exactly, parent);
-	        var props = _extends({}, match, { location: location, pattern: pattern });
+	        const parent = matchContext && matchContext.parent;
+	        let match = (0, _matchPattern2.default)(pattern, location, exactly, parent);
+	        let props = _extends({}, match, { location: location, pattern: pattern });
 	        return _react2.default.createElement(
 	          RegisterMatch,
 	          { match: match },
@@ -908,11 +908,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _PropTypes = __webpack_require__(8);
+	let _PropTypes = __webpack_require__(8);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -922,7 +922,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var MatchProvider = function (_React$Component) {
+	const MatchProvider = function (_React$Component) {
 	  _inherits(MatchProvider, _React$Component);
 
 	  function MatchProvider(props) {
@@ -930,7 +930,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    // **IMPORTANT** we must mutate matches, never reassign, in order for
 	    // server rendering to work w/ the two-pass render approach for Miss
-	    var _this = _possibleConstructorReturn(this, _React$Component.call(this, props));
+	    let _this = _possibleConstructorReturn(this, _React$Component.call(this, props));
 
 	    _this.addMatch = function (match) {
 	      _this.matches.push(match);
@@ -948,7 +948,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  MatchProvider.prototype.getChildContext = function getChildContext() {
-	    var _this2 = this;
+	    let _this2 = this;
 
 	    return {
 	      match: {
@@ -972,7 +972,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 
 	  MatchProvider.prototype.componentWillMount = function componentWillMount() {
-	    var serverRouter = this.context.serverRouter;
+	    let serverRouter = this.context.serverRouter;
 
 	    if (serverRouter) {
 	      this.serverRouterIndex = serverRouter.registerMatchContext(this.matches);
@@ -986,7 +986,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 
 	  MatchProvider.prototype.notifySubscribers = function notifySubscribers() {
-	    var _this3 = this;
+	    const _this3 = this;
 
 	    if (this.subscribers.length) {
 	      this.hasMatches = this.matches.length !== 0;
@@ -1028,29 +1028,29 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _pathToRegexp = __webpack_require__(12);
+	const _pathToRegexp = __webpack_require__(12);
 
-	var _pathToRegexp2 = _interopRequireDefault(_pathToRegexp);
+	const _pathToRegexp2 = _interopRequireDefault(_pathToRegexp);
 
-	var _MatcherCache = __webpack_require__(14);
+	const _MatcherCache = __webpack_require__(14);
 
-	var _MatcherCache2 = _interopRequireDefault(_MatcherCache);
+	const _MatcherCache2 = _interopRequireDefault(_MatcherCache);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// cache[exactly][pattern] contains getMatcher(pattern, exactly)
-	var cache = {
+	let cache = {
 	  true: new _MatcherCache2.default(),
 	  false: new _MatcherCache2.default()
 	};
 
-	var getMatcher = function getMatcher(pattern, exactly) {
-	  var exactlyStr = exactly ? 'true' : 'false';
-	  var matcher = cache[exactlyStr].get(pattern);
+	const getMatcher = function getMatcher(pattern, exactly) {
+	  const exactlyStr = exactly ? 'true' : 'false';
+	  let matcher = cache[exactlyStr].get(pattern);
 
 	  if (!matcher) {
-	    var keys = [];
-	    var regex = (0, _pathToRegexp2.default)(pattern, keys, { end: exactly, strict: true });
+	    let keys = [];
+	    const regex = (0, _pathToRegexp2.default)(pattern, keys, { end: exactly, strict: true });
 	    matcher = { keys: keys, regex: regex };
 	    cache[exactlyStr].set(pattern, matcher);
 	  }
@@ -1058,7 +1058,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return matcher;
 	};
 
-	var parseParams = function parseParams(pattern, match, keys) {
+	const parseParams = function parseParams(pattern, match, keys) {
 	  return match.slice(1).filter(function (value) {
 	    return value !== undefined;
 	  }).reduce(function (params, value, index) {
@@ -1067,8 +1067,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {});
 	};
 
-	var matchPattern = function matchPattern(pattern, location, matchExactly, parent) {
-	  var specialCase = !matchExactly && pattern === '/';
+	const matchPattern = function matchPattern(pattern, location, matchExactly, parent) {
+	  const specialCase = !matchExactly && pattern === '/';
 
 	  if (specialCase) {
 	    return {
@@ -1081,13 +1081,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      pattern = parent.pathname + (parent.pathname.charAt(parent.pathname.length - 1) !== '/' ? '/' : '') + pattern;
 	    }
 
-	    var matcher = getMatcher(pattern, matchExactly);
-	    var match = matcher.regex.exec(location.pathname);
+	    const matcher = getMatcher(pattern, matchExactly);
+	    let match = matcher.regex.exec(location.pathname);
 
 	    if (match) {
-	      var params = parseParams(pattern, match, matcher.keys);
-	      var pathname = match[0];
-	      var isExact = pathname === location.pathname;
+	      const params = parseParams(pattern, match, matcher.keys);
+	      let pathname = match[0];
+	      const isExact = pathname === location.pathname;
 
 	      return { params: params, isExact: isExact, pathname: pathname };
 	    } else {
@@ -1102,7 +1102,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isarray = __webpack_require__(13)
+	const isarray = __webpack_require__(13)
 
 	/**
 	 * Expose `pathToRegexp`.
@@ -1118,7 +1118,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 * @type {RegExp}
 	 */
-	var PATH_REGEXP = new RegExp([
+	const PATH_REGEXP = new RegExp([
 	  // Match escaped characters that would otherwise appear in future matches.
 	  // This allows the user to escape special characters that won't transform.
 	  '(\\\\.)',
@@ -1139,17 +1139,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @return {!Array}
 	 */
 	function parse (str, options) {
-	  var tokens = []
-	  var key = 0
-	  var index = 0
-	  var path = ''
-	  var defaultDelimiter = options && options.delimiter || '/'
+	  const tokens = []
+	  let key = 0
+	  let index = 0
+	  let path = ''
+	  const defaultDelimiter = options && options.delimiter || '/'
 	  var res
 
-	  while ((res = PATH_REGEXP.exec(str)) != null) {
-	    var m = res[0]
-	    var escaped = res[1]
-	    var offset = res.index
+	  while ((res = PATH_REGEXP.exec(str)) !== null) {
+	    const m = res[0]
+	    const escaped = res[1]
+	    const offset = res.index
 	    path += str.slice(index, offset)
 	    index = offset + m.length
 
@@ -1159,13 +1159,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      continue
 	    }
 
-	    var next = str[index]
-	    var prefix = res[2]
-	    var name = res[3]
-	    var capture = res[4]
-	    var group = res[5]
-	    var modifier = res[6]
-	    var asterisk = res[7]
+	    const next = str[index]
+	    let prefix = res[2]
+	    const name = res[3]
+	    let capture = res[4]
+	    const group = res[5]
+	    const modifier = res[6]
+	    const asterisk = res[7]
 
 	    // Push the current path onto the tokens.
 	    if (path) {
@@ -1173,11 +1173,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      path = ''
 	    }
 
-	    var partial = prefix != null && next != null && next !== prefix
-	    var repeat = modifier === '+' || modifier === '*'
-	    var optional = modifier === '?' || modifier === '*'
-	    var delimiter = res[2] || defaultDelimiter
-	    var pattern = capture || group
+	    const partial = prefix !== null && next !== null && next !== prefix
+	    const repeat = modifier === '+' || modifier === '*'
+	    const optional = modifier === '?' || modifier === '*'
+	    let delimiter = res[2] || defaultDelimiter
+	    const pattern = capture || group
 
 	    tokens.push({
 	      name: name || key++,
@@ -1244,23 +1244,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	function tokensToFunction (tokens) {
 	  // Compile all the tokens into regexps.
-	  var matches = new Array(tokens.length)
+	  const matches = new Array(tokens.length)
 
 	  // Compile all the patterns before compilation.
-	  for (var i = 0; i < tokens.length; i++) {
+	  for (let i = 0; i < tokens.length; i++) {
 	    if (typeof tokens[i] === 'object') {
 	      matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$')
 	    }
 	  }
 
 	  return function (obj, opts) {
-	    var path = ''
-	    var data = obj || {}
-	    var options = opts || {}
-	    var encode = options.pretty ? encodeURIComponentPretty : encodeURIComponent
+	    let path = ''
+	    const data = obj || {}
+	    let options = opts || {}
+	    const encode = options.pretty ? encodeURIComponentPretty : encodeURIComponent
 
-	    for (var i = 0; i < tokens.length; i++) {
-	      var token = tokens[i]
+	    for (let i = 0; i < tokens.length; i++) {
+	      let token = tokens[i]
 
 	      if (typeof token === 'string') {
 	        path += token
@@ -1268,10 +1268,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        continue
 	      }
 
-	      var value = data[token.name]
+	      const value = data[token.name]
 	      var segment
 
-	      if (value == null) {
+	      if (value === null) {
 	        if (token.optional) {
 	          // Prepend partial segment prefixes.
 	          if (token.partial) {
@@ -1297,7 +1297,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          }
 	        }
 
-	        for (var j = 0; j < value.length; j++) {
+	        for (let j = 0; j < value.length; j++) {
 	          segment = encode(value[j])
 
 	          if (!matches[i].test(segment)) {
@@ -1374,10 +1374,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	function regexpToRegexp (path, keys) {
 	  // Use a negative lookahead to match only capturing groups.
-	  var groups = path.source.match(/\((?!\?)/g)
+	  const groups = path.source.match(/\((?!\?)/g)
 
 	  if (groups) {
-	    for (var i = 0; i < groups.length; i++) {
+	    for (let i = 0; i < groups.length; i++) {
 	      keys.push({
 	        name: i,
 	        prefix: null,
@@ -1403,13 +1403,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @return {!RegExp}
 	 */
 	function arrayToRegexp (path, keys, options) {
-	  var parts = []
+	  let parts = []
 
-	  for (var i = 0; i < path.length; i++) {
+	  for (let i = 0; i < path.length; i++) {
 	    parts.push(pathToRegexp(path[i], keys, options).source)
 	  }
 
-	  var regexp = new RegExp('(?:' + parts.join('|') + ')', flags(options))
+	  const regexp = new RegExp('(?:' + parts.join('|') + ')', flags(options))
 
 	  return attachKeys(regexp, keys)
 	}
@@ -1442,19 +1442,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  options = options || {}
 
-	  var strict = options.strict
-	  var end = options.end !== false
-	  var route = ''
+	  const strict = options.strict
+	  const end = options.end !== false
+	  let route = ''
 
 	  // Iterate over the tokens and create our regexp string.
-	  for (var i = 0; i < tokens.length; i++) {
-	    var token = tokens[i]
+	  for (let i = 0; i < tokens.length; i++) {
+	    const token = tokens[i]
 
 	    if (typeof token === 'string') {
 	      route += escapeString(token)
 	    } else {
-	      var prefix = escapeString(token.prefix)
-	      var capture = '(?:' + token.pattern + ')'
+	      const prefix = escapeString(token.prefix)
+	      let capture = '(?:' + token.pattern + ')'
 
 	      keys.push(token)
 
@@ -1476,8 +1476,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }
 
-	  var delimiter = escapeString(options.delimiter || '/')
-	  var endsWithDelimiter = route.slice(-delimiter.length) === delimiter
+	  const delimiter = escapeString(options.delimiter || '/')
+	  const endsWithDelimiter = route.slice(-delimiter.length) === delimiter
 
 	  // In non-strict mode we allow a slash at the end of match. If the path to
 	  // match already ends with a slash, we remove it for consistency. The slash
@@ -1535,7 +1535,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports = Array.isArray || function (arr) {
-	  return Object.prototype.toString.call(arr) == '[object Array]';
+	  return Object.prototype.toString.call(arr) === '[object Array]';
 	};
 
 
@@ -1547,27 +1547,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	// Simple cache - NEW cached items are added to cachedKeys array. When cache is
 	// full, oldest key is removed from array and item is removed from cache
 
-	var DEFAULT_OPTIONS = {
+	const DEFAULT_OPTIONS = {
 	  limit: 200
 	};
 
-	var MatcherCache = function () {
+	const MatcherCache = function () {
 	  function MatcherCache() {
-	    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+	    let options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
 	    _classCallCheck(this, MatcherCache);
 
 	    this.cache = {};
 	    this.cachedKeys = [];
 
-	    var mergedOptions = _extends({}, DEFAULT_OPTIONS, options);
+	    const mergedOptions = _extends({}, DEFAULT_OPTIONS, options);
 	    this.options = mergedOptions;
 	  }
 
@@ -1587,7 +1587,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  MatcherCache.prototype.checkCacheLimit = function checkCacheLimit() {
 	    // Clear a cache item if we are over limit
 	    if (this.cachedKeys.length > this.options.limit) {
-	      var keyToUncache = this.cachedKeys.shift();
+	      const keyToUncache = this.cachedKeys.shift();
 	      delete this.cache[keyToUncache];
 	    }
 	  };
@@ -1605,11 +1605,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _Broadcasts = __webpack_require__(3);
+	let _Broadcasts = __webpack_require__(3);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1619,14 +1619,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Miss = function (_React$Component) {
+	const Miss = function (_React$Component) {
 	  _inherits(Miss, _React$Component);
 
 	  function Miss(props, context) {
 	    _classCallCheck(this, Miss);
 
 	    // ignore if rendered out of context (probably for unit tests)
-	    var _this = _possibleConstructorReturn(this, _React$Component.call(this, props, context));
+	    let _this = _possibleConstructorReturn(this, _React$Component.call(this, props, context));
 
 	    if (context.match && !context.serverRouter) {
 	      _this.unsubscribe = _this.context.match.subscribe(function (matchesFound) {
@@ -1653,21 +1653,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 
 	  Miss.prototype.render = function render() {
-	    var _this2 = this;
+	    let _this2 = this;
 
 	    return _react2.default.createElement(
 	      _Broadcasts.LocationSubscriber,
 	      null,
 	      function (location) {
-	        var _props = _this2.props,
+	        let _props = _this2.props,
 	            render = _props.render,
 	            Component = _props.component;
-	        var noMatchesInContext = _this2.state.noMatchesInContext;
-	        var _context = _this2.context,
+	        const noMatchesInContext = _this2.state.noMatchesInContext;
+	        const _context = _this2.context,
 	            serverRouter = _context.serverRouter,
 	            match = _context.match;
 
-	        var noMatchesOnServerContext = serverRouter && serverRouter.missedAtIndex(match.serverRouterIndex);
+	        const noMatchesOnServerContext = serverRouter && serverRouter.missedAtIndex(match.serverRouterIndex);
 	        if (noMatchesInContext || noMatchesOnServerContext) {
 	          return render ? render({ location: location }) : _react2.default.createElement(Component, { location: location });
 	        } else {
@@ -1704,11 +1704,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _PropTypes = __webpack_require__(8);
+	let _PropTypes = __webpack_require__(8);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1718,7 +1718,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var NavigationPrompt = function (_React$Component) {
+	const NavigationPrompt = function (_React$Component) {
 	  _inherits(NavigationPrompt, _React$Component);
 
 	  function NavigationPrompt() {
@@ -1786,11 +1786,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _PropTypes = __webpack_require__(8);
+	let _PropTypes = __webpack_require__(8);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1800,7 +1800,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Redirect = function (_React$Component) {
+	const Redirect = function (_React$Component) {
 	  _inherits(Redirect, _React$Component);
 
 	  function Redirect() {
@@ -1818,14 +1818,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 
 	  Redirect.prototype.redirect = function redirect() {
-	    var router = this.context.router;
-	    var _props = this.props,
+	    const router = this.context.router;
+	    let _props = this.props,
 	        to = _props.to,
 	        push = _props.push;
 	    // so that folks can unit test w/o hassle
 
 	    if (router) {
-	      var navigate = push ? router.transitionTo : router.replaceWith;
+	      const navigate = push ? router.transitionTo : router.replaceWith;
 	      navigate(to);
 	    }
 	  };
@@ -1863,30 +1863,30 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _createBrowserHistory = __webpack_require__(19);
+	const _createBrowserHistory = __webpack_require__(19);
 
-	var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
+	const _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
 
-	var _StaticRouter = __webpack_require__(28);
+	let _StaticRouter = __webpack_require__(28);
 
-	var _StaticRouter2 = _interopRequireDefault(_StaticRouter);
+	let _StaticRouter2 = _interopRequireDefault(_StaticRouter);
 
-	var _History = __webpack_require__(33);
+	let _History = __webpack_require__(33);
 
-	var _History2 = _interopRequireDefault(_History);
+	let _History2 = _interopRequireDefault(_History);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	function _objectWithoutProperties(obj, keys) { let target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-	var BrowserRouter = function BrowserRouter(_ref) {
-	  var basename = _ref.basename,
+	const BrowserRouter = function BrowserRouter(_ref) {
+	  let basename = _ref.basename,
 	      forceRefresh = _ref.forceRefresh,
 	      getUserConfirmation = _ref.getUserConfirmation,
 	      keyLength = _ref.keyLength,
@@ -1904,7 +1904,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    },
 	    function (_ref2) {
-	      var history = _ref2.history,
+	      let history = _ref2.history,
 	          action = _ref2.action,
 	          location = _ref2.location;
 	      return _react2.default.createElement(_StaticRouter2.default, _extends({
@@ -1939,36 +1939,36 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+	let _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _warning = __webpack_require__(20);
+	let _warning = __webpack_require__(20);
 
-	var _warning2 = _interopRequireDefault(_warning);
+	let _warning2 = _interopRequireDefault(_warning);
 
-	var _invariant = __webpack_require__(6);
+	let _invariant = __webpack_require__(6);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	let _invariant2 = _interopRequireDefault(_invariant);
 
-	var _LocationUtils = __webpack_require__(21);
+	let _LocationUtils = __webpack_require__(21);
 
-	var _PathUtils = __webpack_require__(24);
+	let _PathUtils = __webpack_require__(24);
 
-	var _createTransitionManager = __webpack_require__(25);
+	let _createTransitionManager = __webpack_require__(25);
 
-	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
+	let _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
-	var _ExecutionEnvironment = __webpack_require__(26);
+	let _ExecutionEnvironment = __webpack_require__(26);
 
-	var _DOMUtils = __webpack_require__(27);
+	let _DOMUtils = __webpack_require__(27);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var PopStateEvent = 'popstate';
-	var HashChangeEvent = 'hashchange';
+	const PopStateEvent = 'popstate';
+	let HashChangeEvent = 'hashchange';
 
-	var getHistoryState = function getHistoryState() {
+	const getHistoryState = function getHistoryState() {
 	  try {
 	    return window.history.state || {};
 	  } catch (e) {
@@ -1982,37 +1982,37 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Creates a history object that uses the HTML5 history API including
 	 * pushState, replaceState, and the popstate event.
 	 */
-	var createBrowserHistory = function createBrowserHistory() {
-	  var props = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	const createBrowserHistory = function createBrowserHistory() {
+	  let props = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
 	  !_ExecutionEnvironment.canUseDOM ?  false ? (0, _invariant2.default)(false, 'Browser history needs a DOM') : (0, _invariant2.default)(false) : void 0;
 
-	  var globalHistory = window.history;
-	  var canUseHistory = (0, _DOMUtils.supportsHistory)();
-	  var needsHashChangeListener = !(0, _DOMUtils.supportsPopStateOnHashChange)();
+	  let globalHistory = window.history;
+	  const canUseHistory = (0, _DOMUtils.supportsHistory)();
+	  const needsHashChangeListener = !(0, _DOMUtils.supportsPopStateOnHashChange)();
 
 	  var _props$basename = props.basename;
-	  var basename = _props$basename === undefined ? '' : _props$basename;
+	  let basename = _props$basename === undefined ? '' : _props$basename;
 	  var _props$forceRefresh = props.forceRefresh;
-	  var forceRefresh = _props$forceRefresh === undefined ? false : _props$forceRefresh;
+	  const forceRefresh = _props$forceRefresh === undefined ? false : _props$forceRefresh;
 	  var _props$getUserConfirm = props.getUserConfirmation;
-	  var getUserConfirmation = _props$getUserConfirm === undefined ? _DOMUtils.getConfirmation : _props$getUserConfirm;
+	  let getUserConfirmation = _props$getUserConfirm === undefined ? _DOMUtils.getConfirmation : _props$getUserConfirm;
 	  var _props$keyLength = props.keyLength;
-	  var keyLength = _props$keyLength === undefined ? 6 : _props$keyLength;
+	  let keyLength = _props$keyLength === undefined ? 6 : _props$keyLength;
 
 
-	  var getDOMLocation = function getDOMLocation(historyState) {
-	    var _ref = historyState || {};
+	  let getDOMLocation = function getDOMLocation(historyState) {
+	    const _ref = historyState || {};
 
-	    var key = _ref.key;
-	    var state = _ref.state;
+	    let key = _ref.key;
+	    let state = _ref.state;
 	    var _window$location = window.location;
-	    var pathname = _window$location.pathname;
-	    var search = _window$location.search;
-	    var hash = _window$location.hash;
+	    let pathname = _window$location.pathname;
+	    let search = _window$location.search;
+	    let hash = _window$location.hash;
 
 
-	    var path = pathname + search + hash;
+	    let path = pathname + search + hash;
 
 	    if (basename) path = (0, _PathUtils.stripPrefix)(path, basename);
 
@@ -2022,13 +2022,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  };
 
-	  var createKey = function createKey() {
+	  let createKey = function createKey() {
 	    return Math.random().toString(36).substr(2, keyLength);
 	  };
 
-	  var transitionManager = (0, _createTransitionManager2.default)();
+	  let transitionManager = (0, _createTransitionManager2.default)();
 
-	  var setState = function setState(nextState) {
+	  let setState = function setState(nextState) {
 	    _extends(history, nextState);
 
 	    history.length = globalHistory.length;
@@ -2036,25 +2036,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    transitionManager.notifyListeners(history.location, history.action);
 	  };
 
-	  var handlePopState = function handlePopState(event) {
+	  const handlePopState = function handlePopState(event) {
 	    if (event.state === undefined) return; // Ignore extraneous popstate events in WebKit.
 
 	    handlePop(getDOMLocation(event.state));
 	  };
 
-	  var handleHashChange = function handleHashChange() {
+	  let handleHashChange = function handleHashChange() {
 	    handlePop(getDOMLocation(getHistoryState()));
 	  };
 
-	  var forceNextPop = false;
+	  let forceNextPop = false;
 
-	  var handlePop = function handlePop(location) {
+	  let handlePop = function handlePop(location) {
 	    if (forceNextPop) {
 	      forceNextPop = false;
 	      setState();
 	    } else {
 	      (function () {
-	        var action = 'POP';
+	        let action = 'POP';
 
 	        transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
 	          if (ok) {
@@ -2067,22 +2067,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  };
 
-	  var revertPop = function revertPop(fromLocation) {
-	    var toLocation = history.location;
+	  let revertPop = function revertPop(fromLocation) {
+	    let toLocation = history.location;
 
 	    // TODO: We could probably make this more reliable by
 	    // keeping a list of keys we've seen in sessionStorage.
 	    // Instead, we just default to 0 for keys we don't know.
 
-	    var toIndex = allKeys.indexOf(toLocation.key);
+	    let toIndex = allKeys.indexOf(toLocation.key);
 
 	    if (toIndex === -1) toIndex = 0;
 
-	    var fromIndex = allKeys.indexOf(fromLocation.key);
+	    let fromIndex = allKeys.indexOf(fromLocation.key);
 
 	    if (fromIndex === -1) fromIndex = 0;
 
-	    var delta = toIndex - fromIndex;
+	    let delta = toIndex - fromIndex;
 
 	    if (delta) {
 	      forceNextPop = true;
@@ -2090,23 +2090,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  };
 
-	  var initialLocation = getDOMLocation(getHistoryState());
-	  var allKeys = [initialLocation.key];
+	  let initialLocation = getDOMLocation(getHistoryState());
+	  let allKeys = [initialLocation.key];
 
 	  // Public interface
 
-	  var push = function push(path, state) {
+	  let push = function push(path, state) {
 	     false ? (0, _warning2.default)(!((typeof path === 'undefined' ? 'undefined' : _typeof(path)) === 'object' && path.state !== undefined && state !== undefined), 'You should avoid providing a 2nd state argument to push when the 1st ' + 'argument is a location-like object that already has state; it is ignored') : void 0;
 
-	    var action = 'PUSH';
-	    var location = (0, _LocationUtils.createLocation)(path, state, createKey(), history.location);
+	    let action = 'PUSH';
+	    let location = (0, _LocationUtils.createLocation)(path, state, createKey(), history.location);
 
 	    transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
 	      if (!ok) return;
 
-	      var url = basename + (0, _PathUtils.createPath)(location);
-	      var key = location.key;
-	      var state = location.state;
+	      let url = basename + (0, _PathUtils.createPath)(location);
+	      let key = location.key;
+	      let state = location.state;
 
 
 	      if (canUseHistory) {
@@ -2115,8 +2115,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (forceRefresh) {
 	          window.location.href = url;
 	        } else {
-	          var prevIndex = allKeys.indexOf(history.location.key);
-	          var nextKeys = allKeys.slice(0, prevIndex === -1 ? 0 : prevIndex + 1);
+	          let prevIndex = allKeys.indexOf(history.location.key);
+	          const nextKeys = allKeys.slice(0, prevIndex === -1 ? 0 : prevIndex + 1);
 
 	          nextKeys.push(location.key);
 	          allKeys = nextKeys;
@@ -2131,18 +2131,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  };
 
-	  var replace = function replace(path, state) {
+	  let replace = function replace(path, state) {
 	     false ? (0, _warning2.default)(!((typeof path === 'undefined' ? 'undefined' : _typeof(path)) === 'object' && path.state !== undefined && state !== undefined), 'You should avoid providing a 2nd state argument to replace when the 1st ' + 'argument is a location-like object that already has state; it is ignored') : void 0;
 
-	    var action = 'REPLACE';
-	    var location = (0, _LocationUtils.createLocation)(path, state, createKey(), history.location);
+	    let action = 'REPLACE';
+	    let location = (0, _LocationUtils.createLocation)(path, state, createKey(), history.location);
 
 	    transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
 	      if (!ok) return;
 
-	      var url = basename + (0, _PathUtils.createPath)(location);
-	      var key = location.key;
-	      var state = location.state;
+	      const url = basename + (0, _PathUtils.createPath)(location);
+	      let key = location.key;
+	      let state = location.state;
 
 
 	      if (canUseHistory) {
@@ -2151,7 +2151,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (forceRefresh) {
 	          window.location.replace(url);
 	        } else {
-	          var prevIndex = allKeys.indexOf(history.location.key);
+	          let prevIndex = allKeys.indexOf(history.location.key);
 
 	          if (prevIndex !== -1) allKeys[prevIndex] = location.key;
 
@@ -2165,21 +2165,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  };
 
-	  var go = function go(n) {
+	  let go = function go(n) {
 	    globalHistory.go(n);
 	  };
 
-	  var goBack = function goBack() {
+	  let goBack = function goBack() {
 	    return go(-1);
 	  };
 
-	  var goForward = function goForward() {
+	  let goForward = function goForward() {
 	    return go(1);
 	  };
 
-	  var listenerCount = 0;
+	  let listenerCount = 0;
 
-	  var checkDOMListeners = function checkDOMListeners(delta) {
+	  let checkDOMListeners = function checkDOMListeners(delta) {
 	    listenerCount += delta;
 
 	    if (listenerCount === 1) {
@@ -2193,12 +2193,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  };
 
-	  var isBlocked = false;
+	  let isBlocked = false;
 
-	  var block = function block() {
-	    var prompt = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
+	  let block = function block() {
+	    let prompt = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
 
-	    var unblock = transitionManager.setPrompt(prompt);
+	    let unblock = transitionManager.setPrompt(prompt);
 
 	    if (!isBlocked) {
 	      checkDOMListeners(1);
@@ -2215,8 +2215,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  };
 
-	  var listen = function listen(listener) {
-	    var unlisten = transitionManager.appendListener(listener);
+	  let listen = function listen(listener) {
+	    let unlisten = transitionManager.appendListener(listener);
 	    checkDOMListeners(1);
 
 	    return function () {
@@ -2225,7 +2225,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  };
 
-	  var history = {
+	  let history = {
 	    length: globalHistory.length,
 	    action: 'POP',
 	    location: initialLocation,
@@ -2265,13 +2265,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * same logic and follow the same code paths.
 	 */
 
-	var warning = function() {};
+	let warning = function() {};
 
 	if (false) {
 	  warning = function(condition, format, args) {
-	    var len = arguments.length;
+	    const len = arguments.length;
 	    args = new Array(len > 2 ? len - 2 : 0);
-	    for (var key = 2; key < len; key++) {
+	    for (let key = 2; key < len; key++) {
 	      args[key - 2] = arguments[key];
 	    }
 	    if (format === undefined) {
@@ -2289,8 +2289,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    if (!condition) {
-	      var argIndex = 0;
-	      var message = 'Warning: ' +
+	      let argIndex = 0;
+	      const message = 'Warning: ' +
 	        format.replace(/%s/g, function() {
 	          return args[argIndex++];
 	        });
@@ -2318,22 +2318,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.locationsAreEqual = exports.createLocation = undefined;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _resolvePathname = __webpack_require__(22);
+	const _resolvePathname = __webpack_require__(22);
 
-	var _resolvePathname2 = _interopRequireDefault(_resolvePathname);
+	const _resolvePathname2 = _interopRequireDefault(_resolvePathname);
 
-	var _valueEqual = __webpack_require__(23);
+	const _valueEqual = __webpack_require__(23);
 
-	var _valueEqual2 = _interopRequireDefault(_valueEqual);
+	const _valueEqual2 = _interopRequireDefault(_valueEqual);
 
-	var _PathUtils = __webpack_require__(24);
+	let _PathUtils = __webpack_require__(24);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var createLocation = exports.createLocation = function createLocation(path, state, key, currentLocation) {
-	  var location = void 0;
+	let createLocation = exports.createLocation = function createLocation(path, state, key, currentLocation) {
+	  let location = void 0;
 	  if (typeof path === 'string') {
 	    // Two-arg form: push(path, state)
 	    location = (0, _PathUtils.parsePath)(path);
@@ -2373,7 +2373,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return location;
 	};
 
-	var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a, b) {
+	let locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a, b) {
 	  return a.pathname === b.pathname && a.search === b.search && a.hash === b.hash && a.key === b.key && (0, _valueEqual2.default)(a.state, b.state);
 	};
 
@@ -2383,27 +2383,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var isAbsolute = function isAbsolute(pathname) {
+	const isAbsolute = function isAbsolute(pathname) {
 	  return pathname.charAt(0) === '/';
 	};
 
 	// About 1.5x faster than the two-arg version of Array#splice()
-	var spliceOne = function spliceOne(list, index) {
-	  for (var i = index, k = i + 1, n = list.length; k < n; i += 1, k += 1) {
+	const spliceOne = function spliceOne(list, index) {
+	  for (let i = index, k = i + 1, n = list.length; k < n; i += 1, k += 1) {
 	    list[i] = list[k];
 	  }list.pop();
 	};
 
 	// This implementation is based heavily on node's url.parse
-	var resolvePathname = function resolvePathname(to) {
-	  var from = arguments.length <= 1 || arguments[1] === undefined ? '' : arguments[1];
+	const resolvePathname = function resolvePathname(to) {
+	  let from = arguments.length <= 1 || arguments[1] === undefined ? '' : arguments[1];
 
-	  var toParts = to && to.split('/') || [];
-	  var fromParts = from && from.split('/') || [];
+	  const toParts = to && to.split('/') || [];
+	  let fromParts = from && from.split('/') || [];
 
-	  var isToAbs = to && isAbsolute(to);
-	  var isFromAbs = from && isAbsolute(from);
-	  var mustEndAbs = isToAbs || isFromAbs;
+	  const isToAbs = to && isAbsolute(to);
+	  const isFromAbs = from && isAbsolute(from);
+	  const mustEndAbs = isToAbs || isFromAbs;
 
 	  if (to && isAbsolute(to)) {
 	    // to is absolute
@@ -2416,17 +2416,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  if (!fromParts.length) return '/';
 
-	  var hasTrailingSlash = void 0;
+	  let hasTrailingSlash = void 0;
 	  if (fromParts.length) {
-	    var last = fromParts[fromParts.length - 1];
+	    const last = fromParts[fromParts.length - 1];
 	    hasTrailingSlash = last === '.' || last === '..' || last === '';
 	  } else {
 	    hasTrailingSlash = false;
 	  }
 
-	  var up = 0;
-	  for (var i = fromParts.length; i >= 0; i--) {
-	    var part = fromParts[i];
+	  let up = 0;
+	  for (let i = fromParts.length; i >= 0; i--) {
+	    const part = fromParts[i];
 
 	    if (part === '.') {
 	      spliceOne(fromParts, i);
@@ -2443,7 +2443,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    fromParts.unshift('..');
 	  }if (mustEndAbs && fromParts[0] !== '' && (!fromParts[0] || !isAbsolute(fromParts[0]))) fromParts.unshift('');
 
-	  var result = fromParts.join('/');
+	  let result = fromParts.join('/');
 
 	  if (hasTrailingSlash && result.substr(-1) !== '/') result += '/';
 
@@ -2460,12 +2460,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+	let _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var valueEqual = function valueEqual(a, b) {
+	const valueEqual = function valueEqual(a, b) {
 	  if (a === b) return true;
 
-	  if (a == null || b == null) return false;
+	  if (a === null || b === null) return false;
 
 	  if (Array.isArray(a)) {
 	    if (!Array.isArray(b) || a.length !== b.length) return false;
@@ -2475,19 +2475,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  }
 
-	  var aType = typeof a === 'undefined' ? 'undefined' : _typeof(a);
-	  var bType = typeof b === 'undefined' ? 'undefined' : _typeof(b);
+	  const aType = typeof a === 'undefined' ? 'undefined' : _typeof(a);
+	  const bType = typeof b === 'undefined' ? 'undefined' : _typeof(b);
 
 	  if (aType !== bType) return false;
 
 	  if (aType === 'object') {
-	    var aValue = a.valueOf();
-	    var bValue = b.valueOf();
+	    const aValue = a.valueOf();
+	    const bValue = b.valueOf();
 
 	    if (aValue !== a || bValue !== b) return valueEqual(aValue, bValue);
 
-	    var aKeys = Object.keys(a);
-	    var bKeys = Object.keys(b);
+	    const aKeys = Object.keys(a);
+	    const bKeys = Object.keys(b);
 
 	    if (aKeys.length !== bKeys.length) return false;
 
@@ -2508,30 +2508,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	exports.__esModule = true;
-	var addLeadingSlash = exports.addLeadingSlash = function addLeadingSlash(path) {
+	let addLeadingSlash = exports.addLeadingSlash = function addLeadingSlash(path) {
 	  return path.charAt(0) === '/' ? path : '/' + path;
 	};
 
-	var stripLeadingSlash = exports.stripLeadingSlash = function stripLeadingSlash(path) {
+	let stripLeadingSlash = exports.stripLeadingSlash = function stripLeadingSlash(path) {
 	  return path.charAt(0) === '/' ? path.substr(1) : path;
 	};
 
-	var stripPrefix = exports.stripPrefix = function stripPrefix(path, prefix) {
+	let stripPrefix = exports.stripPrefix = function stripPrefix(path, prefix) {
 	  return path.indexOf(prefix) === 0 ? path.substr(prefix.length) : path;
 	};
 
-	var parsePath = exports.parsePath = function parsePath(path) {
-	  var pathname = path || '/';
-	  var search = '';
-	  var hash = '';
+	let parsePath = exports.parsePath = function parsePath(path) {
+	  let pathname = path || '/';
+	  let search = '';
+	  let hash = '';
 
-	  var hashIndex = pathname.indexOf('#');
+	  let hashIndex = pathname.indexOf('#');
 	  if (hashIndex !== -1) {
 	    hash = pathname.substr(hashIndex);
 	    pathname = pathname.substr(0, hashIndex);
 	  }
 
-	  var searchIndex = pathname.indexOf('?');
+	  const searchIndex = pathname.indexOf('?');
 	  if (searchIndex !== -1) {
 	    search = pathname.substr(searchIndex);
 	    pathname = pathname.substr(0, searchIndex);
@@ -2544,13 +2544,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	};
 
-	var createPath = exports.createPath = function createPath(location) {
-	  var pathname = location.pathname;
-	  var search = location.search;
-	  var hash = location.hash;
+	let createPath = exports.createPath = function createPath(location) {
+	  const pathname = location.pathname;
+	  const search = location.search;
+	  let hash = location.hash;
 
 
-	  var path = pathname || '/';
+	  let path = pathname || '/';
 
 	  if (search && search !== '?') path += search.charAt(0) === '?' ? search : '?' + search;
 
@@ -2567,17 +2567,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _warning = __webpack_require__(20);
+	let _warning = __webpack_require__(20);
 
-	var _warning2 = _interopRequireDefault(_warning);
+	let _warning2 = _interopRequireDefault(_warning);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var createTransitionManager = function createTransitionManager() {
-	  var prompt = null;
+	const createTransitionManager = function createTransitionManager() {
+	  let prompt = null;
 
-	  var setPrompt = function setPrompt(nextPrompt) {
-	     false ? (0, _warning2.default)(prompt == null, 'A history supports only one prompt at a time') : void 0;
+	  const setPrompt = function setPrompt(nextPrompt) {
+	     false ? (0, _warning2.default)(prompt === null, 'A history supports only one prompt at a time') : void 0;
 
 	    prompt = nextPrompt;
 
@@ -2586,12 +2586,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  };
 
-	  var confirmTransitionTo = function confirmTransitionTo(location, action, getUserConfirmation, callback) {
+	  const confirmTransitionTo = function confirmTransitionTo(location, action, getUserConfirmation, callback) {
 	    // TODO: If another transition starts while we're still confirming
 	    // the previous one, we may end up in a weird state. Figure out the
 	    // best way to handle this.
-	    if (prompt != null) {
-	      var result = typeof prompt === 'function' ? prompt(location, action) : prompt;
+	    if (prompt !== null) {
+	      let result = typeof prompt === 'function' ? prompt(location, action) : prompt;
 
 	      if (typeof result === 'string') {
 	        if (typeof getUserConfirmation === 'function') {
@@ -2610,9 +2610,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  };
 
-	  var listeners = [];
+	  let listeners = [];
 
-	  var appendListener = function appendListener(listener) {
+	  const appendListener = function appendListener(listener) {
 	    listeners.push(listener);
 
 	    return function () {
@@ -2622,8 +2622,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  };
 
-	  var notifyListeners = function notifyListeners() {
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	  const notifyListeners = function notifyListeners() {
+	    for (let _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
 	      args[_key] = arguments[_key];
 	    }
 
@@ -2649,7 +2649,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	exports.__esModule = true;
-	var canUseDOM = exports.canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+	let canUseDOM = exports.canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 
 /***/ },
 /* 27 */
@@ -2658,15 +2658,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	exports.__esModule = true;
-	var addEventListener = exports.addEventListener = function addEventListener(node, event, listener) {
+	let addEventListener = exports.addEventListener = function addEventListener(node, event, listener) {
 	  return node.addEventListener ? node.addEventListener(event, listener, false) : node.attachEvent('on' + event, listener);
 	};
 
-	var removeEventListener = exports.removeEventListener = function removeEventListener(node, event, listener) {
+	let removeEventListener = exports.removeEventListener = function removeEventListener(node, event, listener) {
 	  return node.removeEventListener ? node.removeEventListener(event, listener, false) : node.detachEvent('on' + event, listener);
 	};
 
-	var getConfirmation = exports.getConfirmation = function getConfirmation(message, callback) {
+	let getConfirmation = exports.getConfirmation = function getConfirmation(message, callback) {
 	  return callback(window.confirm(message));
 	}; // eslint-disable-line no-alert
 
@@ -2677,8 +2677,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * https://github.com/Modernizr/Modernizr/blob/master/feature-detects/history.js
 	 * changed to avoid false negatives for Windows Phones: https://github.com/reactjs/react-router/issues/586
 	 */
-	var supportsHistory = exports.supportsHistory = function supportsHistory() {
-	  var ua = window.navigator.userAgent;
+	let supportsHistory = exports.supportsHistory = function supportsHistory() {
+	  const ua = window.navigator.userAgent;
 
 	  if ((ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) && ua.indexOf('Mobile Safari') !== -1 && ua.indexOf('Chrome') === -1 && ua.indexOf('Windows Phone') === -1) return false;
 
@@ -2689,14 +2689,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Returns true if browser fires popstate on hash change.
 	 * IE10 and IE11 do not.
 	 */
-	var supportsPopStateOnHashChange = exports.supportsPopStateOnHashChange = function supportsPopStateOnHashChange() {
+	let supportsPopStateOnHashChange = exports.supportsPopStateOnHashChange = function supportsPopStateOnHashChange() {
 	  return window.navigator.userAgent.indexOf('Trident') === -1;
 	};
 
 	/**
 	 * Returns false if using go(n) with hash history causes a full page reload.
 	 */
-	var supportsGoWithoutReloadUsingHash = exports.supportsGoWithoutReloadUsingHash = function supportsGoWithoutReloadUsingHash() {
+	let supportsGoWithoutReloadUsingHash = exports.supportsGoWithoutReloadUsingHash = function supportsGoWithoutReloadUsingHash() {
 	  return window.navigator.userAgent.indexOf('Firefox') === -1;
 	};
 
@@ -2708,21 +2708,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _queryString = __webpack_require__(29);
+	const _queryString = __webpack_require__(29);
 
-	var _MatchProvider = __webpack_require__(10);
+	const _MatchProvider = __webpack_require__(10);
 
-	var _MatchProvider2 = _interopRequireDefault(_MatchProvider);
+	const _MatchProvider2 = _interopRequireDefault(_MatchProvider);
 
-	var _Broadcasts = __webpack_require__(3);
+	const _Broadcasts = __webpack_require__(3);
 
-	var _LocationUtils = __webpack_require__(32);
+	let _LocationUtils = __webpack_require__(32);
 
-	var _PropTypes = __webpack_require__(8);
+	let _PropTypes = __webpack_require__(8);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2732,11 +2732,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var stringifyQuery = function stringifyQuery(query) {
+	let stringifyQuery = function stringifyQuery(query) {
 	  return (0, _queryString.stringify)(query).replace(/%20/g, '+');
 	};
 
-	var StaticRouter = function (_React$Component) {
+	const StaticRouter = function (_React$Component) {
 	  _inherits(StaticRouter, _React$Component);
 
 	  function StaticRouter() {
@@ -2744,7 +2744,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    _classCallCheck(this, StaticRouter);
 
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	    for (const _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
 	      args[_key] = arguments[_key];
 	    }
 
@@ -2755,7 +2755,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }, _this.blockTransitions = function (prompt) {
 	      return _this.props.blockTransitions(prompt);
 	    }, _this.createHref = function (to) {
-	      var path = (0, _LocationUtils.createRouterPath)(to, _this.props.stringifyQuery);
+	      let path = (0, _LocationUtils.createRouterPath)(to, _this.props.stringifyQuery);
 
 	      if (_this.props.basename) if (path === '/') path = _this.props.basename;else if (path.length >= 2 && path.charAt(0) === '/' && path.charAt(1) === '?') path = _this.props.basename + path.substring(1);else path = _this.props.basename + path;
 
@@ -2766,7 +2766,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  StaticRouter.prototype.createLocation = function createLocation(location) {
-	    var _props = this.props,
+	    let _props = this.props,
 	        parseQueryString = _props.parseQueryString,
 	        stringifyQuery = _props.stringifyQuery;
 
@@ -2795,14 +2795,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 
 	  StaticRouter.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-	    var nextLocation = this.createLocation(nextProps.location);
+	    const nextLocation = this.createLocation(nextProps.location);
 
 	    if (!(0, _LocationUtils.locationsAreEqual)(this.state.location, nextLocation)) this.setState({ location: nextLocation });
 	  };
 
 	  StaticRouter.prototype.render = function render() {
-	    var location = this.state.location;
-	    var _props2 = this.props,
+	    let location = this.state.location;
+	    const _props2 = this.props,
 	        action = _props2.action,
 	        children = _props2.children;
 
@@ -2859,8 +2859,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var strictUriEncode = __webpack_require__(30);
-	var objectAssign = __webpack_require__(31);
+	const strictUriEncode = __webpack_require__(30);
+	const objectAssign = __webpack_require__(31);
 
 	function encode(value, opts) {
 		if (opts.encode) {
@@ -2877,7 +2877,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.parse = function (str) {
 		// Create an object with no prototype
 		// https://github.com/sindresorhus/query-string/issues/47
-		var ret = Object.create(null);
+		const ret = Object.create(null);
 
 		if (typeof str !== 'string') {
 			return ret;
@@ -2890,11 +2890,11 @@ return /******/ (function(modules) { // webpackBootstrap
 		}
 
 		str.split('&').forEach(function (param) {
-			var parts = param.replace(/\+/g, ' ').split('=');
+			const parts = param.replace(/\+/g, ' ').split('=');
 			// Firefox (pre 40) decodes `%3D` to `=`
 			// https://github.com/sindresorhus/query-string/pull/37
-			var key = parts.shift();
-			var val = parts.length > 0 ? parts.join('=') : undefined;
+			let key = parts.shift();
+			let val = parts.length > 0 ? parts.join('=') : undefined;
 
 			key = decodeURIComponent(key);
 
@@ -2915,7 +2915,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	exports.stringify = function (obj, opts) {
-		var defaults = {
+		const defaults = {
 			encode: true,
 			strict: true
 		};
@@ -2923,7 +2923,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		opts = objectAssign(defaults, opts);
 
 		return obj ? Object.keys(obj).sort().map(function (key) {
-			var val = obj[key];
+			const val = obj[key];
 
 			if (val === undefined) {
 				return '';
@@ -2934,7 +2934,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 
 			if (Array.isArray(val)) {
-				var result = [];
+				const result = [];
 
 				val.slice().forEach(function (val2) {
 					if (val2 === undefined) {
@@ -2976,8 +2976,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	/* eslint-disable no-unused-vars */
-	var hasOwnProperty = Object.prototype.hasOwnProperty;
-	var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+	const hasOwnProperty = Object.prototype.hasOwnProperty;
+	const propIsEnumerable = Object.prototype.propertyIsEnumerable;
 
 	function toObject(val) {
 		if (val === null || val === undefined) {
@@ -2996,18 +2996,18 @@ return /******/ (function(modules) { // webpackBootstrap
 			// Detect buggy property enumeration order in older V8 versions.
 
 			// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-			var test1 = new String('abc');  // eslint-disable-line
+			const test1 = new String('abc');  // eslint-disable-line
 			test1[5] = 'de';
 			if (Object.getOwnPropertyNames(test1)[0] === '5') {
 				return false;
 			}
 
 			// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-			var test2 = {};
-			for (var i = 0; i < 10; i++) {
+			const test2 = {};
+			for (let i = 0; i < 10; i++) {
 				test2['_' + String.fromCharCode(i)] = i;
 			}
-			var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			const order2 = Object.getOwnPropertyNames(test2).map(function (n) {
 				return test2[n];
 			});
 			if (order2.join('') !== '0123456789') {
@@ -3015,7 +3015,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 
 			// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-			var test3 = {};
+			const test3 = {};
 			'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
 				test3[letter] = letter;
 			});
@@ -3033,10 +3033,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 		var from;
-		var to = toObject(target);
+		const to = toObject(target);
 		var symbols;
 
-		for (var s = 1; s < arguments.length; s++) {
+		for (let s = 1; s < arguments.length; s++) {
 			from = Object(arguments[s]);
 
 			for (var key in from) {
@@ -3047,7 +3047,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 			if (Object.getOwnPropertySymbols) {
 				symbols = Object.getOwnPropertySymbols(from);
-				for (var i = 0; i < symbols.length; i++) {
+				for (let i = 0; i < symbols.length; i++) {
 					if (propIsEnumerable.call(from, symbols[i])) {
 						to[symbols[i]] = from[symbols[i]];
 					}
@@ -3068,9 +3068,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.createRouterPath = exports.createRouterLocation = exports.locationsAreEqual = undefined;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _LocationUtils = __webpack_require__(21);
+	let _LocationUtils = __webpack_require__(21);
 
 	Object.defineProperty(exports, 'locationsAreEqual', {
 	  enumerable: true,
@@ -3079,11 +3079,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	});
 
-	var _PathUtils = __webpack_require__(24);
+	let _PathUtils = __webpack_require__(24);
 
-	var createRouterLocation = exports.createRouterLocation = function createRouterLocation(input, parseQueryString, stringifyQuery) {
+	let createRouterLocation = exports.createRouterLocation = function createRouterLocation(input, parseQueryString, stringifyQuery) {
 	  if (typeof input === 'string') {
-	    var location = (0, _PathUtils.parsePath)(input);
+	    let location = (0, _PathUtils.parsePath)(input);
 	    location.query = location.search !== '' ? parseQueryString(location.search) : null;
 	    return location;
 	  } else {
@@ -3099,7 +3099,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 
-	var createRouterPath = exports.createRouterPath = function createRouterPath(input, stringifyQuery) {
+	let createRouterPath = exports.createRouterPath = function createRouterPath(input, stringifyQuery) {
 	  return typeof input === 'string' ? input : (0, _PathUtils.createPath)(_extends({}, input, {
 	    search: input.search || (input.query ? '?' + stringifyQuery(input.query) : '')
 	  }));
@@ -3113,11 +3113,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _PropTypes = __webpack_require__(8);
+	const _PropTypes = __webpack_require__(8);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3130,7 +3130,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * The common public API for all *History components.
 	 */
-	var History = function (_React$Component) {
+	const History = function (_React$Component) {
 	  _inherits(History, _React$Component);
 
 	  function History() {
@@ -3146,9 +3146,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 
 	  History.prototype.componentWillMount = function componentWillMount() {
-	    var _this2 = this;
+	    const _this2 = this;
 
-	    var _props = this.props,
+	    let _props = this.props,
 	        createHistory = _props.createHistory,
 	        historyOptions = _props.historyOptions;
 
@@ -3163,8 +3163,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 
 	  History.prototype.render = function render() {
-	    var history = this.history;
-	    var location = history.location,
+	    let history = this.history;
+	    let location = history.location,
 	        action = history.action;
 
 
@@ -3201,33 +3201,33 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _createHashHistory = __webpack_require__(35);
+	const _createHashHistory = __webpack_require__(35);
 
-	var _createHashHistory2 = _interopRequireDefault(_createHashHistory);
+	const _createHashHistory2 = _interopRequireDefault(_createHashHistory);
 
-	var _History = __webpack_require__(33);
+	let _History = __webpack_require__(33);
 
-	var _History2 = _interopRequireDefault(_History);
+	let _History2 = _interopRequireDefault(_History);
 
-	var _PathUtils = __webpack_require__(24);
+	let _PathUtils = __webpack_require__(24);
 
-	var _StaticRouter = __webpack_require__(28);
+	let _StaticRouter = __webpack_require__(28);
 
-	var _StaticRouter2 = _interopRequireDefault(_StaticRouter);
+	let _StaticRouter2 = _interopRequireDefault(_StaticRouter);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	function _objectWithoutProperties(obj, keys) { let target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-	var createHref = function createHref(hashType) {
+	const createHref = function createHref(hashType) {
 	  return function (path) {
-	    var newPath = void 0;
+	    let newPath = void 0;
 
 	    switch (hashType) {
 	      case 'hashbang':
@@ -3249,8 +3249,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * A router that uses the URL hash.
 	 */
-	var HashRouter = function HashRouter(_ref) {
-	  var basename = _ref.basename,
+	const HashRouter = function HashRouter(_ref) {
+	  let basename = _ref.basename,
 	      getUserConfirmation = _ref.getUserConfirmation,
 	      hashType = _ref.hashType,
 	      routerProps = _objectWithoutProperties(_ref, ['basename', 'getUserConfirmation', 'hashType']);
@@ -3266,7 +3266,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    },
 	    function (_ref2) {
-	      var history = _ref2.history,
+	      let history = _ref2.history,
 	          action = _ref2.action,
 	          location = _ref2.location;
 	      return _react2.default.createElement(_StaticRouter2.default, _extends({
@@ -3301,33 +3301,33 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _warning = __webpack_require__(20);
+	let _warning = __webpack_require__(20);
 
-	var _warning2 = _interopRequireDefault(_warning);
+	let _warning2 = _interopRequireDefault(_warning);
 
-	var _invariant = __webpack_require__(6);
+	const _invariant = __webpack_require__(6);
 
-	var _invariant2 = _interopRequireDefault(_invariant);
+	const _invariant2 = _interopRequireDefault(_invariant);
 
-	var _LocationUtils = __webpack_require__(21);
+	let _LocationUtils = __webpack_require__(21);
 
-	var _PathUtils = __webpack_require__(24);
+	const _PathUtils = __webpack_require__(24);
 
-	var _createTransitionManager = __webpack_require__(25);
+	let _createTransitionManager = __webpack_require__(25);
 
-	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
+	let _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
-	var _ExecutionEnvironment = __webpack_require__(26);
+	const _ExecutionEnvironment = __webpack_require__(26);
 
-	var _DOMUtils = __webpack_require__(27);
+	const _DOMUtils = __webpack_require__(27);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var HashChangeEvent = 'hashchange';
+	const HashChangeEvent = 'hashchange';
 
-	var HashPathCoders = {
+	const HashPathCoders = {
 	  hashbang: {
 	    encodePath: function encodePath(path) {
 	      return path.charAt(0) === '!' ? path : '!/' + (0, _PathUtils.stripLeadingSlash)(path);
@@ -3346,54 +3346,54 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 
-	var getHashPath = function getHashPath() {
+	const getHashPath = function getHashPath() {
 	  // We can't use window.location.hash here because it's not
 	  // consistent across browsers - Firefox will pre-decode it!
-	  var href = window.location.href;
-	  var hashIndex = href.indexOf('#');
+	  const href = window.location.href;
+	  let hashIndex = href.indexOf('#');
 	  return hashIndex === -1 ? '' : href.substring(hashIndex + 1);
 	};
 
-	var pushHashPath = function pushHashPath(path) {
+	const pushHashPath = function pushHashPath(path) {
 	  return window.location.hash = path;
 	};
 
-	var replaceHashPath = function replaceHashPath(path) {
-	  var hashIndex = window.location.href.indexOf('#');
+	const replaceHashPath = function replaceHashPath(path) {
+	  const hashIndex = window.location.href.indexOf('#');
 
 	  window.location.replace(window.location.href.slice(0, hashIndex >= 0 ? hashIndex : 0) + '#' + path);
 	};
 
-	var createHashHistory = function createHashHistory() {
-	  var props = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	const createHashHistory = function createHashHistory() {
+	  let props = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
 	  !_ExecutionEnvironment.canUseDOM ?  false ? (0, _invariant2.default)(false, 'Hash history needs a DOM') : (0, _invariant2.default)(false) : void 0;
 
-	  var globalHistory = window.history;
-	  var canGoWithoutReload = (0, _DOMUtils.supportsGoWithoutReloadUsingHash)();
+	  const globalHistory = window.history;
+	  const canGoWithoutReload = (0, _DOMUtils.supportsGoWithoutReloadUsingHash)();
 
 	  var _props$basename = props.basename;
-	  var basename = _props$basename === undefined ? '' : _props$basename;
+	  let basename = _props$basename === undefined ? '' : _props$basename;
 	  var _props$getUserConfirm = props.getUserConfirmation;
-	  var getUserConfirmation = _props$getUserConfirm === undefined ? _DOMUtils.getConfirmation : _props$getUserConfirm;
+	  let getUserConfirmation = _props$getUserConfirm === undefined ? _DOMUtils.getConfirmation : _props$getUserConfirm;
 	  var _props$hashType = props.hashType;
-	  var hashType = _props$hashType === undefined ? 'slash' : _props$hashType;
+	  const hashType = _props$hashType === undefined ? 'slash' : _props$hashType;
 	  var _HashPathCoders$hashT = HashPathCoders[hashType];
-	  var encodePath = _HashPathCoders$hashT.encodePath;
-	  var decodePath = _HashPathCoders$hashT.decodePath;
+	  const encodePath = _HashPathCoders$hashT.encodePath;
+	  const decodePath = _HashPathCoders$hashT.decodePath;
 
 
-	  var getDOMLocation = function getDOMLocation() {
-	    var path = decodePath(getHashPath());
+	  const getDOMLocation = function getDOMLocation() {
+	    let path = decodePath(getHashPath());
 
 	    if (basename) path = (0, _PathUtils.stripPrefix)(path, basename);
 
 	    return (0, _PathUtils.parsePath)(path);
 	  };
 
-	  var transitionManager = (0, _createTransitionManager2.default)();
+	  let transitionManager = (0, _createTransitionManager2.default)();
 
-	  var setState = function setState(nextState) {
+	  let setState = function setState(nextState) {
 	    _extends(history, nextState);
 
 	    history.length = globalHistory.length;
@@ -3401,21 +3401,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	    transitionManager.notifyListeners(history.location, history.action);
 	  };
 
-	  var forceNextPop = false;
-	  var ignorePath = null;
+	  let forceNextPop = false;
+	  let ignorePath = null;
 
-	  var handleHashChange = function handleHashChange() {
-	    var path = getHashPath();
-	    var encodedPath = encodePath(path);
+	  const handleHashChange = function handleHashChange() {
+	    let path = getHashPath();
+	    let encodedPath = encodePath(path);
 
 	    if (path !== encodedPath) {
 	      // Ensure we always have a properly-encoded hash.
 	      replaceHashPath(encodedPath);
 	    } else {
-	      var location = getDOMLocation();
-	      var prevLocation = history.location;
+	      let location = getDOMLocation();
+	      const prevLocation = history.location;
 
-	      if (!forceNextPop && (0, _LocationUtils.locationsAreEqual)(prevLocation, location)) return; // A hashchange doesn't always == location change.
+	      if (!forceNextPop && (0, _LocationUtils.locationsAreEqual)(prevLocation, location)) return; // A hashchange doesn't always === location change.
 
 	      if (ignorePath === (0, _PathUtils.createPath)(location)) return; // Ignore this change; we already setState in push/replace.
 
@@ -3425,13 +3425,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  };
 
-	  var handlePop = function handlePop(location) {
+	  const handlePop = function handlePop(location) {
 	    if (forceNextPop) {
 	      forceNextPop = false;
 	      setState();
 	    } else {
 	      (function () {
-	        var action = 'POP';
+	        let action = 'POP';
 
 	        transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
 	          if (ok) {
@@ -3444,22 +3444,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  };
 
-	  var revertPop = function revertPop(fromLocation) {
-	    var toLocation = history.location;
+	  const revertPop = function revertPop(fromLocation) {
+	    const toLocation = history.location;
 
 	    // TODO: We could probably make this more reliable by
 	    // keeping a list of paths we've seen in sessionStorage.
 	    // Instead, we just default to 0 for paths we don't know.
 
-	    var toIndex = allPaths.lastIndexOf((0, _PathUtils.createPath)(toLocation));
+	    let toIndex = allPaths.lastIndexOf((0, _PathUtils.createPath)(toLocation));
 
 	    if (toIndex === -1) toIndex = 0;
 
-	    var fromIndex = allPaths.lastIndexOf((0, _PathUtils.createPath)(fromLocation));
+	    let fromIndex = allPaths.lastIndexOf((0, _PathUtils.createPath)(fromLocation));
 
 	    if (fromIndex === -1) fromIndex = 0;
 
-	    var delta = toIndex - fromIndex;
+	    const delta = toIndex - fromIndex;
 
 	    if (delta) {
 	      forceNextPop = true;
@@ -3468,28 +3468,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 
 	  // Ensure the hash is encoded properly before doing anything else.
-	  var path = getHashPath();
-	  var encodedPath = encodePath(path);
+	  let path = getHashPath();
+	  let encodedPath = encodePath(path);
 
 	  if (path !== encodedPath) replaceHashPath(encodedPath);
 
-	  var initialLocation = getDOMLocation();
-	  var allPaths = [(0, _PathUtils.createPath)(initialLocation)];
+	  const initialLocation = getDOMLocation();
+	  let allPaths = [(0, _PathUtils.createPath)(initialLocation)];
 
 	  // Public interface
 
-	  var push = function push(path, state) {
+	  let push = function push(path, state) {
 	     false ? (0, _warning2.default)(state === undefined, 'Hash history cannot push state; it is ignored') : void 0;
 
-	    var action = 'PUSH';
-	    var location = (0, _LocationUtils.createLocation)(path, undefined, undefined, history.location);
+	    let action = 'PUSH';
+	    let location = (0, _LocationUtils.createLocation)(path, undefined, undefined, history.location);
 
 	    transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
 	      if (!ok) return;
 
-	      var path = (0, _PathUtils.createPath)(location);
-	      var encodedPath = encodePath(basename + path);
-	      var hashChanged = getHashPath() !== encodedPath;
+	      let path = (0, _PathUtils.createPath)(location);
+	      let encodedPath = encodePath(basename + path);
+	      let hashChanged = getHashPath() !== encodedPath;
 
 	      if (hashChanged) {
 	        // We cannot tell if a hashchange was caused by a PUSH, so we'd
@@ -3498,8 +3498,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        ignorePath = path;
 	        pushHashPath(encodedPath);
 
-	        var prevIndex = allPaths.lastIndexOf((0, _PathUtils.createPath)(history.location));
-	        var nextPaths = allPaths.slice(0, prevIndex === -1 ? 0 : prevIndex + 1);
+	        let prevIndex = allPaths.lastIndexOf((0, _PathUtils.createPath)(history.location));
+	        const nextPaths = allPaths.slice(0, prevIndex === -1 ? 0 : prevIndex + 1);
 
 	        nextPaths.push(path);
 	        allPaths = nextPaths;
@@ -3513,18 +3513,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  };
 
-	  var replace = function replace(path, state) {
+	  let replace = function replace(path, state) {
 	     false ? (0, _warning2.default)(state === undefined, 'Hash history cannot replace state; it is ignored') : void 0;
 
-	    var action = 'REPLACE';
-	    var location = (0, _LocationUtils.createLocation)(path, undefined, undefined, history.location);
+	    let action = 'REPLACE';
+	    let location = (0, _LocationUtils.createLocation)(path, undefined, undefined, history.location);
 
 	    transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
 	      if (!ok) return;
 
-	      var path = (0, _PathUtils.createPath)(location);
-	      var encodedPath = encodePath(basename + path);
-	      var hashChanged = getHashPath() !== encodedPath;
+	      const path = (0, _PathUtils.createPath)(location);
+	      const encodedPath = encodePath(basename + path);
+	      const hashChanged = getHashPath() !== encodedPath;
 
 	      if (hashChanged) {
 	        // We cannot tell if a hashchange was caused by a REPLACE, so we'd
@@ -3534,7 +3534,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        replaceHashPath(encodedPath);
 	      }
 
-	      var prevIndex = allPaths.indexOf((0, _PathUtils.createPath)(history.location));
+	      let prevIndex = allPaths.indexOf((0, _PathUtils.createPath)(history.location));
 
 	      if (prevIndex !== -1) allPaths[prevIndex] = path;
 
@@ -3542,23 +3542,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  };
 
-	  var go = function go(n) {
+	  let go = function go(n) {
 	     false ? (0, _warning2.default)(canGoWithoutReload, 'Hash history go(n) causes a full page reload in this browser') : void 0;
 
 	    globalHistory.go(n);
 	  };
 
-	  var goBack = function goBack() {
+	  let goBack = function goBack() {
 	    return go(-1);
 	  };
 
-	  var goForward = function goForward() {
+	  let goForward = function goForward() {
 	    return go(1);
 	  };
 
-	  var listenerCount = 0;
+	  const listenerCount = 0;
 
-	  var checkDOMListeners = function checkDOMListeners(delta) {
+	  const checkDOMListeners = function checkDOMListeners(delta) {
 	    listenerCount += delta;
 
 	    if (listenerCount === 1) {
@@ -3568,12 +3568,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  };
 
-	  var isBlocked = false;
+	  let isBlocked = false;
 
-	  var block = function block() {
-	    var prompt = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
+	  let block = function block() {
+	    let prompt = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
 
-	    var unblock = transitionManager.setPrompt(prompt);
+	    const unblock = transitionManager.setPrompt(prompt);
 
 	    if (!isBlocked) {
 	      checkDOMListeners(1);
@@ -3590,8 +3590,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  };
 
-	  var listen = function listen(listener) {
-	    var unlisten = transitionManager.appendListener(listener);
+	  let listen = function listen(listener) {
+	    const unlisten = transitionManager.appendListener(listener);
 	    checkDOMListeners(1);
 
 	    return function () {
@@ -3600,7 +3600,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  };
 
-	  var history = {
+	  let history = {
 	    length: globalHistory.length,
 	    action: 'POP',
 	    location: initialLocation,
@@ -3626,30 +3626,30 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _react = __webpack_require__(2);
+	let _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	let _react2 = _interopRequireDefault(_react);
 
-	var _createMemoryHistory = __webpack_require__(37);
+	const _createMemoryHistory = __webpack_require__(37);
 
-	var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
+	const _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 
-	var _StaticRouter = __webpack_require__(28);
+	let _StaticRouter = __webpack_require__(28);
 
-	var _StaticRouter2 = _interopRequireDefault(_StaticRouter);
+	let _StaticRouter2 = _interopRequireDefault(_StaticRouter);
 
-	var _History = __webpack_require__(33);
+	const _History = __webpack_require__(33);
 
-	var _History2 = _interopRequireDefault(_History);
+	const _History2 = _interopRequireDefault(_History);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	function _objectWithoutProperties(obj, keys) { let target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-	var MemoryRouter = function MemoryRouter(_ref) {
-	  var getUserConfirmation = _ref.getUserConfirmation,
+	const MemoryRouter = function MemoryRouter(_ref) {
+	  let getUserConfirmation = _ref.getUserConfirmation,
 	      initialEntries = _ref.initialEntries,
 	      initialIndex = _ref.initialIndex,
 	      keyLength = _ref.keyLength,
@@ -3667,7 +3667,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    },
 	    function (_ref2) {
-	      var history = _ref2.history,
+	      let history = _ref2.history,
 	          action = _ref2.action,
 	          location = _ref2.location;
 	      return _react2.default.createElement(_StaticRouter2.default, _extends({
@@ -3701,43 +3701,43 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+	const _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _warning = __webpack_require__(20);
+	const _warning = __webpack_require__(20);
 
-	var _warning2 = _interopRequireDefault(_warning);
+	const _warning2 = _interopRequireDefault(_warning);
 
-	var _LocationUtils = __webpack_require__(21);
+	const _LocationUtils = __webpack_require__(21);
 
-	var _createTransitionManager = __webpack_require__(25);
+	const _createTransitionManager = __webpack_require__(25);
 
-	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
+	const _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var clamp = function clamp(n, lowerBound, upperBound) {
+	const clamp = function clamp(n, lowerBound, upperBound) {
 	  return Math.min(Math.max(n, lowerBound), upperBound);
 	};
 
 	/**
 	 * Creates a history object that stores locations in memory.
 	 */
-	var createMemoryHistory = function createMemoryHistory() {
-	  var props = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-	  var getUserConfirmation = props.getUserConfirmation;
+	const createMemoryHistory = function createMemoryHistory() {
+	  const props = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	  const getUserConfirmation = props.getUserConfirmation;
 	  var _props$initialEntries = props.initialEntries;
-	  var initialEntries = _props$initialEntries === undefined ? ['/'] : _props$initialEntries;
+	  const initialEntries = _props$initialEntries === undefined ? ['/'] : _props$initialEntries;
 	  var _props$initialIndex = props.initialIndex;
-	  var initialIndex = _props$initialIndex === undefined ? 0 : _props$initialIndex;
+	  const initialIndex = _props$initialIndex === undefined ? 0 : _props$initialIndex;
 	  var _props$keyLength = props.keyLength;
-	  var keyLength = _props$keyLength === undefined ? 6 : _props$keyLength;
+	  const keyLength = _props$keyLength === undefined ? 6 : _props$keyLength;
 
 
-	  var transitionManager = (0, _createTransitionManager2.default)();
+	  const transitionManager = (0, _createTransitionManager2.default)();
 
-	  var setState = function setState(nextState) {
+	  const setState = function setState(nextState) {
 	    _extends(history, nextState);
 
 	    history.length = history.entries.length;
@@ -3745,30 +3745,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	    transitionManager.notifyListeners(history.location, history.action);
 	  };
 
-	  var createKey = function createKey() {
+	  const createKey = function createKey() {
 	    return Math.random().toString(36).substr(2, keyLength);
 	  };
 
-	  var index = clamp(initialIndex, 0, initialEntries.length - 1);
-	  var entries = initialEntries.map(function (entry, index) {
+	  const index = clamp(initialIndex, 0, initialEntries.length - 1);
+	  const entries = initialEntries.map(function (entry, index) {
 	    return typeof entry === 'string' ? (0, _LocationUtils.createLocation)(entry, undefined, index ? createKey() : undefined) : (0, _LocationUtils.createLocation)(entry, undefined, index ? entry.key || createKey() : undefined);
 	  });
 
 	  // Public interface
 
-	  var push = function push(path, state) {
+	  const push = function push(path, state) {
 	     false ? (0, _warning2.default)(!((typeof path === 'undefined' ? 'undefined' : _typeof(path)) === 'object' && path.state !== undefined && state !== undefined), 'You should avoid providing a 2nd state argument to push when the 1st ' + 'argument is a location-like object that already has state; it is ignored') : void 0;
 
-	    var action = 'PUSH';
-	    var location = (0, _LocationUtils.createLocation)(path, state, createKey(), history.location);
+	    let action = 'PUSH';
+	    let location = (0, _LocationUtils.createLocation)(path, state, createKey(), history.location);
 
 	    transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
 	      if (!ok) return;
 
-	      var prevIndex = history.index;
-	      var nextIndex = prevIndex + 1;
+	      const prevIndex = history.index;
+	      let nextIndex = prevIndex + 1;
 
-	      var nextEntries = history.entries.slice(0);
+	      const nextEntries = history.entries.slice(0);
 	      if (nextEntries.length > nextIndex) {
 	        nextEntries.splice(nextIndex, nextEntries.length - nextIndex, location);
 	      } else {
@@ -3784,11 +3784,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  };
 
-	  var replace = function replace(path, state) {
+	  const replace = function replace(path, state) {
 	     false ? (0, _warning2.default)(!((typeof path === 'undefined' ? 'undefined' : _typeof(path)) === 'object' && path.state !== undefined && state !== undefined), 'You should avoid providing a 2nd state argument to replace when the 1st ' + 'argument is a location-like object that already has state; it is ignored') : void 0;
 
-	    var action = 'REPLACE';
-	    var location = (0, _LocationUtils.createLocation)(path, state, createKey(), history.location);
+	    let action = 'REPLACE';
+	    let location = (0, _LocationUtils.createLocation)(path, state, createKey(), history.location);
 
 	    transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
 	      if (!ok) return;
@@ -3799,11 +3799,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  };
 
-	  var go = function go(n) {
-	    var nextIndex = clamp(history.index + n, 0, history.entries.length - 1);
+	  const go = function go(n) {
+	    let nextIndex = clamp(history.index + n, 0, history.entries.length - 1);
 
-	    var action = 'POP';
-	    var location = history.entries[nextIndex];
+	    const action = 'POP';
+	    let location = history.entries[nextIndex];
 
 	    transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
 	      if (ok) {
@@ -3820,29 +3820,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  };
 
-	  var goBack = function goBack() {
+	  const goBack = function goBack() {
 	    return go(-1);
 	  };
 
-	  var goForward = function goForward() {
+	  const goForward = function goForward() {
 	    return go(1);
 	  };
 
-	  var canGo = function canGo(n) {
-	    var nextIndex = history.index + n;
+	  const canGo = function canGo(n) {
+	    const nextIndex = history.index + n;
 	    return nextIndex >= 0 && nextIndex < history.entries.length;
 	  };
 
-	  var block = function block() {
-	    var prompt = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
+	  const block = function block() {
+	    const prompt = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
 	    return transitionManager.setPrompt(prompt);
 	  };
 
-	  var listen = function listen(listener) {
+	  const listen = function listen(listener) {
 	    return transitionManager.appendListener(listener);
 	  };
 
-	  var history = {
+	  const history = {
 	    length: entries.length,
 	    action: 'POP',
 	    location: entries[index],
@@ -3871,19 +3871,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	const _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { const source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _react = __webpack_require__(2);
+	const _react = __webpack_require__(2);
 
-	var _react2 = _interopRequireDefault(_react);
+	const _react2 = _interopRequireDefault(_react);
 
-	var _StaticRouter = __webpack_require__(28);
+	const _StaticRouter = __webpack_require__(28);
 
-	var _StaticRouter2 = _interopRequireDefault(_StaticRouter);
+	const _StaticRouter2 = _interopRequireDefault(_StaticRouter);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	function _objectWithoutProperties(obj, keys) { const target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -3891,7 +3891,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var ServerRouter = function (_React$Component) {
+	const ServerRouter = function (_React$Component) {
 	  _inherits(ServerRouter, _React$Component);
 
 	  function ServerRouter() {
@@ -3907,13 +3907,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 
 	  ServerRouter.prototype.render = function render() {
-	    var _props = this.props,
+	    const _props = this.props,
 	        context = _props.context,
 	        location = _props.location,
 	        basename = _props.basename,
 	        rest = _objectWithoutProperties(_props, ['context', 'location', 'basename']);
 
-	    var redirect = function redirect(location) {
+	    let redirect = function redirect(location) {
 	      context.setRedirect(location);
 	    };
 	    return _react2.default.createElement(_StaticRouter2.default, _extends({
@@ -3951,20 +3951,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	"use strict";
 
 	exports.__esModule = true;
-	var k = function k() {};
+	const k = function k() {};
 
-	var createServerRenderContext = function createServerRenderContext() {
-	  var flushed = false;
-	  var redirect = null;
-	  var matchContexts = [
+	const createServerRenderContext = function createServerRenderContext() {
+	  let flushed = false;
+	  let redirect = null;
+	  const matchContexts = [
 	    /* { hasMissComponent: bool, matchesByIdentity: [] } */
 	  ];
 
-	  var setRedirect = flushed ? k : function (location) {
+	  const setRedirect = flushed ? k : function (location) {
 	    if (!redirect) redirect = location;
 	  };
 
-	  var registerMatchContext = flushed ? k : function (matchesByIdentity) {
+	  const registerMatchContext = flushed ? k : function (matchesByIdentity) {
 	    return matchContexts.push({
 	      hasMissComponent: false,
 	      matchesByIdentity: matchesByIdentity
@@ -3973,13 +3973,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  // We need to know there is a potential to miss, if there are no Miss
 	  // components under a Match, then we need to not worry about it
-	  var registerMissPresence = flushed ? k : function (index) {
+	  const registerMissPresence = flushed ? k : function (index) {
 	    matchContexts[index].hasMissComponent = true;
 	  };
 
-	  var getResult = function getResult() {
+	  const getResult = function getResult() {
 	    flushed = true;
-	    var missed = matchContexts.some(function (context, index) {
+	    const missed = matchContexts.some(function (context, index) {
 	      return missedAtIndex(index);
 	    });
 
@@ -3989,8 +3989,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  };
 
-	  var missedAtIndex = function missedAtIndex(index) {
-	    var context = matchContexts[index];
+	  const missedAtIndex = function missedAtIndex(index) {
+	    const context = matchContexts[index];
 	    return context.matchesByIdentity.length === 0 && context.hasMissComponent;
 	  };
 

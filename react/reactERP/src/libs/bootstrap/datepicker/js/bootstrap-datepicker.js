@@ -1,3 +1,5 @@
+'use strict';
+
 ﻿/* =========================================================
  * bootstrap-datepicker.js 
  * http://www.eyecon.ro/bootstrap-datepicker
@@ -28,7 +30,7 @@
 }(function( $ ) {
 	// Picker object
 	
-	var Datepicker = function(element, options){
+	const Datepicker = function(element, options){
 		this.element = $(element);
 		this.format = DPGlobal.parseFormat(options.format||this.element.data('date-format')||'mm/dd/yyyy');
 		this.picker = $(DPGlobal.template)
@@ -107,9 +109,9 @@
 			}
 			if (!this.isInput) {
 			}
-			var that = this;
+			const that = this;
 			$(document).on('mousedown', function(ev){
-				if ($(ev.target).closest('.datepicker').length == 0) {
+				if ($(ev.target).closest('.datepicker').length === 0) {
 					that.hide();
 				}
 			});
@@ -137,7 +139,7 @@
 		},
 		
 		set: function() {
-			var formated = DPGlobal.formatDate(this.date, this.format);
+			const formated = DPGlobal.formatDate(this.date, this.format);
 			if (!this.isInput) {
 				if (this.component){
 					this.element.find('input').prop('value', formated);
@@ -160,7 +162,7 @@
 		},
 		
 		place: function(){
-			var offset = this.component ? this.component.offset() : this.element.offset();
+			const offset = this.component ? this.component.offset() : this.element.offset();
 			this.picker.css({
 				top: offset.top + this.height,
 				left: offset.left
@@ -177,8 +179,8 @@
 		},
 		
 		fillDow: function(){
-			var dowCnt = this.weekStart;
-			var html = '<tr>';
+			let dowCnt = this.weekStart;
+			let html = '<tr>';
 			while (dowCnt < this.weekStart + 7) {
 				html += '<th class="dow">'+DPGlobal.dates.daysMin[(dowCnt++)%7]+'</th>';
 			}
@@ -187,8 +189,8 @@
 		},
 		
 		fillMonths: function(){
-			var html = '';
-			var i = 0
+			let html = '';
+			let i = 0
 			while (i < 12) {
 				html += '<span class="month">'+DPGlobal.dates.monthsShort[i++]+'</span>';
 			}
@@ -196,20 +198,20 @@
 		},
 		
 		fill: function() {
-			var d = new Date(this.viewDate),
+			const d = new Date(this.viewDate),
 				year = d.getFullYear(),
 				month = d.getMonth(),
 				currentDate = this.date.valueOf();
 			this.picker.find('.datepicker-days th:eq(1)')
 						.text(DPGlobal.dates.months[month]+' '+year);
-			var prevMonth = new Date(year, month-1, 28,0,0,0,0),
+			const prevMonth = new Date(year, month-1, 28,0,0,0,0),
 				day = DPGlobal.getDaysInMonth(prevMonth.getFullYear(), prevMonth.getMonth());
 			prevMonth.setDate(day);
 			prevMonth.setDate(day - (prevMonth.getDay() - this.weekStart + 7)%7);
-			var nextMonth = new Date(prevMonth);
+			let nextMonth = new Date(prevMonth);
 			nextMonth.setDate(nextMonth.getDate() + 42);
 			nextMonth = nextMonth.valueOf();
-			var html = [];
+			let html = [];
 			var clsName,
 				prevY,
 				prevM;
@@ -235,9 +237,9 @@
 				prevMonth.setDate(prevMonth.getDate()+1);
 			}
 			this.picker.find('.datepicker-days tbody').empty().append(html.join(''));
-			var currentYear = this.date.getFullYear();
+			const currentYear = this.date.getFullYear();
 			
-			var months = this.picker.find('.datepicker-months')
+			const months = this.picker.find('.datepicker-months')
 						.find('th:eq(1)')
 							.text(year)
 							.end()
@@ -248,13 +250,13 @@
 			
 			html = '';
 			year = parseInt(year/10, 10) * 10;
-			var yearCont = this.picker.find('.datepicker-years')
+			const yearCont = this.picker.find('.datepicker-years')
 								.find('th:eq(1)')
 									.text(year + '-' + (year + 9))
 									.end()
 								.find('td');
 			year -= 1;
-			for (var i = -1; i < 11; i++) {
+			for (let i = -1; i < 11; i++) {
 				html += '<span class="year'+(i === -1 || i === 10 ? ' old' : '')+(currentYear === year ? ' active' : '')+'">'+year+'</span>';
 				year += 1;
 			}
@@ -264,7 +266,7 @@
 		click: function(e) {
 			e.stopPropagation();
 			e.preventDefault();
-			var target = $(e.target).closest('span, td, th');
+			const target = $(e.target).closest('span, td, th');
 			if (target.length === 1) {
 				switch(target[0].nodeName.toLowerCase()) {
 					case 'th':
@@ -286,10 +288,10 @@
 						break;
 					case 'span':
 						if (target.is('.month')) {
-							var month = target.parent().find('span').index(target);
+							let month = target.parent().find('span').index(target);
 							this.viewDate.setMonth(month);
 						} else {
-							var year = parseInt(target.text(), 10)||0;
+							let year = parseInt(target.text(), 10)||0;
 							this.viewDate.setFullYear(year);
 						}
 						if (this.viewMode !== 0) {
@@ -306,14 +308,14 @@
 						break;
 					case 'td':
 						if (target.is('.day') && !target.is('.disabled')){
-							var day = parseInt(target.text(), 10)||1;
-							var month = this.viewDate.getMonth();
+							let day = parseInt(target.text(), 10)||1;
+							let month = this.viewDate.getMonth();
 							if (target.is('.old')) {
 								month -= 1;
 							} else if (target.is('.new')) {
 								month += 1;
 							}
-							var year = this.viewDate.getFullYear();
+							let year = this.viewDate.getFullYear();
 							this.date = new Date(year, month, day,0,0,0,0);
 							this.viewDate = new Date(year, month, Math.min(28, day),0,0,0,0);
 							this.fill();
@@ -362,7 +364,7 @@
 	};
 	$.fn.datepicker.Constructor = Datepicker;
 	
-	var DPGlobal = {
+	const DPGlobal = {
 		modes: [
 			{
 				clsName: 'days',
@@ -393,7 +395,7 @@
 			return [31, (DPGlobal.isLeapYear(year) ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month]
 		},
 		parseFormat: function(format){
-			var separator = format.match(/[.\/\-\s].*?/),
+			const separator = format.match(/[.\/\-\s].*?/),
 				parts = format.split(/\W+/);
 			if (!separator || !parts || parts.length === 0){
 				throw new Error("Invalid date format.");
@@ -401,7 +403,7 @@
 			return {separator: separator, parts: parts};
 		},
 		parseDate: function(date, format) {
-			var parts = date.split(format.separator),
+			const parts = date.split(format.separator),
 				date = new Date(),
 				val;
 			date.setHours(0);
@@ -409,8 +411,8 @@
 			date.setSeconds(0);
 			date.setMilliseconds(0);
 			if (parts.length === format.parts.length) {
-				var year = date.getFullYear(), day = date.getDate(), month = date.getMonth();
-				for (var i=0, cnt = format.parts.length; i < cnt; i++) {
+				let year = date.getFullYear(), day = date.getDate(), month = date.getMonth();
+				for (let i=0, cnt = format.parts.length; i < cnt; i++) {
 					val = parseInt(parts[i], 10)||1;
 					switch(format.parts[i]) {
 						case 'dd':
@@ -438,7 +440,7 @@
 			return date;
 		},
 		formatDate: function(date, format){
-			var val = {
+			const val = {
 				d: date.getDate(),
 				m: date.getMonth() + 1,
 				yy: date.getFullYear().toString().substring(2),
@@ -446,8 +448,8 @@
 			};
 			val.dd = (val.d < 10 ? '0' : '') + val.d;
 			val.mm = (val.m < 10 ? '0' : '') + val.m;
-			var date = [];
-			for (var i=0, cnt = format.parts.length; i < cnt; i++) {
+			const date = [];
+			for (let i=0, cnt = format.parts.length; i < cnt; i++) {
 				date.push(val[format.parts[i]]);
 			}
 			return date.join(format.separator);

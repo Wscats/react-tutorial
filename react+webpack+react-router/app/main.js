@@ -1,5 +1,5 @@
-var React = require('react');
-var ReactDom = require('react-dom');
+const React = require('react');
+const ReactDom = require('react-dom');
 //import { Router, Route, Switch } from 'react-router'
 import {
 	BrowserRouter as Router,
@@ -7,10 +7,10 @@ import {
 	Link
 } from 'react-router-dom'
 
-var AppComponent = require('./components/productBox.jsx');
-var Wscats = require('./components/wscats.jsx');
-var IndexA = require('./components/index/indexA.jsx');
-var IndexB = require('./components/index/indexB.jsx');
+const AppComponent = require('./components/productBox.jsx');
+const Wscats = require('./components/wscats.jsx');
+const IndexA = require('./components/index/indexA.jsx');
+const IndexB = require('./components/index/indexB.jsx');
 /*ReactDom.render(
 		<AppComponent /> 
 	, document.getElementById('content')

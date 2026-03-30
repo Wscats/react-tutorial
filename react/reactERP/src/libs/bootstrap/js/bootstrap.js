@@ -31,9 +31,9 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // ============================================================
 
   function transitionEnd() {
-    var el = document.createElement('bootstrap')
+    let el = document.createElement('bootstrap')
 
-    var transEndEventNames = {
+    const transEndEventNames = {
       'WebkitTransition' : 'webkitTransitionEnd'
     , 'MozTransition'    : 'transitionend'
     , 'OTransition'      : 'oTransitionEnd otransitionend'
@@ -49,9 +49,9 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
   // http://blog.alexmaccaw.com/css-transitions
   $.fn.emulateTransitionEnd = function (duration) {
-    var called = false, $el = this
+    let called = false, $el = this
     $(this).one($.support.transition.end, function () { called = true })
-    var callback = function () { if (!called) $($el).trigger($.support.transition.end) }
+    const callback = function () { if (!called) $($el).trigger($.support.transition.end) }
     setTimeout(callback, duration)
     return this
   }
@@ -87,14 +87,14 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // ALERT CLASS DEFINITION
   // ======================
 
-  var dismiss = '[data-dismiss="alert"]'
-  var Alert   = function (el) {
+  let dismiss = '[data-dismiss="alert"]'
+  const Alert   = function (el) {
     $(el).on('click', dismiss, this.close)
   }
 
   Alert.prototype.close = function (e) {
     var $this    = $(this)
-    var selector = $this.attr('data-target')
+    let selector = $this.attr('data-target')
 
     if (!selector) {
       selector = $this.attr('href')
@@ -130,15 +130,15 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // ALERT PLUGIN DEFINITION
   // =======================
 
-  var old = $.fn.alert
+  let old = $.fn.alert
 
   $.fn.alert = function (option) {
     return this.each(function () {
       var $this = $(this)
-      var data  = $this.data('bs.alert')
+      let data  = $this.data('bs.alert')
 
       if (!data) $this.data('bs.alert', (data = new Alert(this)))
-      if (typeof option == 'string') data[option].call($this)
+      if (typeof option === 'string') data[option].call($this)
     })
   }
 
@@ -186,7 +186,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // BUTTON PUBLIC CLASS DEFINITION
   // ==============================
 
-  var Button = function (element, options) {
+  const Button = function (element, options) {
     this.$element = $(element)
     this.options  = $.extend({}, Button.DEFAULTS, options)
   }
@@ -196,10 +196,10 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   }
 
   Button.prototype.setState = function (state) {
-    var d    = 'disabled'
+    const d    = 'disabled'
     var $el  = this.$element
-    var val  = $el.is('input') ? 'val' : 'html'
-    var data = $el.data()
+    const val  = $el.is('input') ? 'val' : 'html'
+    let data = $el.data()
 
     state = state + 'Text'
 
@@ -209,7 +209,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
     // push to event loop to allow forms to submit
     setTimeout(function () {
-      state == 'loadingText' ?
+      state === 'loadingText' ?
         $el.addClass(d).attr(d, d) :
         $el.removeClass(d).removeAttr(d);
     }, 0)
@@ -232,17 +232,17 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // BUTTON PLUGIN DEFINITION
   // ========================
 
-  var old = $.fn.button
+  let old = $.fn.button
 
   $.fn.button = function (option) {
     return this.each(function () {
       var $this   = $(this)
-      var data    = $this.data('bs.button')
-      var options = typeof option == 'object' && option
+      let data    = $this.data('bs.button')
+      let options = typeof option === 'object' && option
 
       if (!data) $this.data('bs.button', (data = new Button(this, options)))
 
-      if (option == 'toggle') data.toggle()
+      if (option === 'toggle') data.toggle()
       else if (option) data.setState(option)
     })
   }
@@ -296,7 +296,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // CAROUSEL CLASS DEFINITION
   // =========================
 
-  var Carousel = function (element, options) {
+  const Carousel = function (element, options) {
     this.$element    = $(element)
     this.$indicators = this.$element.find('.carousel-indicators')
     this.options     = options
@@ -306,7 +306,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     this.$active     =
     this.$items      = null
 
-    this.options.pause == 'hover' && this.$element
+    this.options.pause === 'hover' && this.$element
       .on('mouseenter', $.proxy(this.pause, this))
       .on('mouseleave', $.proxy(this.cycle, this))
   }
@@ -337,13 +337,13 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   }
 
   Carousel.prototype.to = function (pos) {
-    var that        = this
-    var activeIndex = this.getActiveIndex()
+    let that        = this
+    const activeIndex = this.getActiveIndex()
 
     if (pos > (this.$items.length - 1) || pos < 0) return
 
     if (this.sliding)       return this.$element.one('slid', function () { that.to(pos) })
-    if (activeIndex == pos) return this.pause().cycle()
+    if (activeIndex === pos) return this.pause().cycle()
 
     return this.slide(pos > activeIndex ? 'next' : 'prev', $(this.$items[pos]))
   }
@@ -374,10 +374,10 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   Carousel.prototype.slide = function (type, next) {
     var $active   = this.$element.find('.item.active')
     var $next     = next || $active[type]()
-    var isCycling = this.interval
-    var direction = type == 'next' ? 'left' : 'right'
-    var fallback  = type == 'next' ? 'first' : 'last'
-    var that      = this
+    const isCycling = this.interval
+    const direction = type === 'next' ? 'left' : 'right'
+    const fallback  = type === 'next' ? 'first' : 'last'
+    let that      = this
 
     if (!$next.length) {
       if (!this.options.wrap) return
@@ -388,7 +388,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
     isCycling && this.pause()
 
-    var e = $.Event('slide.bs.carousel', { relatedTarget: $next[0], direction: direction })
+    let e = $.Event('slide.bs.carousel', { relatedTarget: $next[0], direction: direction })
 
     if ($next.hasClass('active')) return
 
@@ -433,17 +433,17 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // CAROUSEL PLUGIN DEFINITION
   // ==========================
 
-  var old = $.fn.carousel
+  let old = $.fn.carousel
 
   $.fn.carousel = function (option) {
     return this.each(function () {
       var $this   = $(this)
-      var data    = $this.data('bs.carousel')
-      var options = $.extend({}, Carousel.DEFAULTS, $this.data(), typeof option == 'object' && option)
-      var action  = typeof option == 'string' ? option : options.slide
+      let data    = $this.data('bs.carousel')
+      let options = $.extend({}, Carousel.DEFAULTS, $this.data(), typeof option === 'object' && option)
+      const action  = typeof option === 'string' ? option : options.slide
 
       if (!data) $this.data('bs.carousel', (data = new Carousel(this, options)))
-      if (typeof option == 'number') data.to(option)
+      if (typeof option === 'number') data.to(option)
       else if (action) data[action]()
       else if (options.interval) data.pause().cycle()
     })
@@ -467,8 +467,8 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   $(document).on('click.bs.carousel.data-api', '[data-slide], [data-slide-to]', function (e) {
     var $this   = $(this), href
     var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
-    var options = $.extend({}, $target.data(), $this.data())
-    var slideIndex = $this.attr('data-slide-to')
+    let options = $.extend({}, $target.data(), $this.data())
+    let slideIndex = $this.attr('data-slide-to')
     if (slideIndex) options.interval = false
 
     $target.carousel(options)
@@ -514,7 +514,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // COLLAPSE PUBLIC CLASS DEFINITION
   // ================================
 
-  var Collapse = function (element, options) {
+  const Collapse = function (element, options) {
     this.$element      = $(element)
     this.options       = $.extend({}, Collapse.DEFAULTS, options)
     this.transitioning = null
@@ -528,27 +528,27 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   }
 
   Collapse.prototype.dimension = function () {
-    var hasWidth = this.$element.hasClass('width')
+    const hasWidth = this.$element.hasClass('width')
     return hasWidth ? 'width' : 'height'
   }
 
   Collapse.prototype.show = function () {
     if (this.transitioning || this.$element.hasClass('in')) return
 
-    var startEvent = $.Event('show.bs.collapse')
+    let startEvent = $.Event('show.bs.collapse')
     this.$element.trigger(startEvent)
     if (startEvent.isDefaultPrevented()) return
 
-    var actives = this.$parent && this.$parent.find('> .panel > .in')
+    const actives = this.$parent && this.$parent.find('> .panel > .in')
 
     if (actives && actives.length) {
-      var hasData = actives.data('bs.collapse')
+      const hasData = actives.data('bs.collapse')
       if (hasData && hasData.transitioning) return
       actives.collapse('hide')
       hasData || actives.data('bs.collapse', null)
     }
 
-    var dimension = this.dimension()
+    let dimension = this.dimension()
 
     this.$element
       .removeClass('collapse')
@@ -557,7 +557,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
     this.transitioning = 1
 
-    var complete = function () {
+    let complete = function () {
       this.$element
         .removeClass('collapsing')
         .addClass('in')
@@ -568,7 +568,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
     if (!$.support.transition) return complete.call(this)
 
-    var scrollSize = $.camelCase(['scroll', dimension].join('-'))
+    const scrollSize = $.camelCase(['scroll', dimension].join('-'))
 
     this.$element
       .one($.support.transition.end, $.proxy(complete, this))
@@ -579,11 +579,11 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   Collapse.prototype.hide = function () {
     if (this.transitioning || !this.$element.hasClass('in')) return
 
-    var startEvent = $.Event('hide.bs.collapse')
+    const startEvent = $.Event('hide.bs.collapse')
     this.$element.trigger(startEvent)
     if (startEvent.isDefaultPrevented()) return
 
-    var dimension = this.dimension()
+    const dimension = this.dimension()
 
     this.$element
       [dimension](this.$element[dimension]())
@@ -596,7 +596,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
     this.transitioning = 1
 
-    var complete = function () {
+    const complete = function () {
       this.transitioning = 0
       this.$element
         .trigger('hidden.bs.collapse')
@@ -620,16 +620,16 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // COLLAPSE PLUGIN DEFINITION
   // ==========================
 
-  var old = $.fn.collapse
+  let old = $.fn.collapse
 
   $.fn.collapse = function (option) {
     return this.each(function () {
       var $this   = $(this)
-      var data    = $this.data('bs.collapse')
-      var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
+      let data    = $this.data('bs.collapse')
+      let options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option === 'object' && option)
 
       if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
-      if (typeof option == 'string') data[option]()
+      if (typeof option === 'string') data[option]()
     })
   }
 
@@ -650,13 +650,13 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
   $(document).on('click.bs.collapse.data-api', '[data-toggle=collapse]', function (e) {
     var $this   = $(this), href
-    var target  = $this.attr('data-target')
+    let target  = $this.attr('data-target')
         || e.preventDefault()
         || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') //strip for ie7
     var $target = $(target)
-    var data    = $target.data('bs.collapse')
-    var option  = data ? 'toggle' : $this.data()
-    var parent  = $this.attr('data-parent')
+    let data    = $target.data('bs.collapse')
+    let option  = data ? 'toggle' : $this.data()
+    let parent  = $this.attr('data-parent')
     var $parent = parent && $(parent)
 
     if (!data || !data.transitioning) {
@@ -694,9 +694,9 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // DROPDOWN CLASS DEFINITION
   // =========================
 
-  var backdrop = '.dropdown-backdrop'
-  var toggle   = '[data-toggle=dropdown]'
-  var Dropdown = function (element) {
+  let backdrop = '.dropdown-backdrop'
+  let toggle   = '[data-toggle=dropdown]'
+  const Dropdown = function (element) {
     var $el = $(element).on('click.bs.dropdown', this.toggle)
   }
 
@@ -706,7 +706,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     if ($this.is('.disabled, :disabled')) return
 
     var $parent  = getParent($this)
-    var isActive = $parent.hasClass('open')
+    let isActive = $parent.hasClass('open')
 
     clearMenus()
 
@@ -741,10 +741,10 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     if ($this.is('.disabled, :disabled')) return
 
     var $parent  = getParent($this)
-    var isActive = $parent.hasClass('open')
+    const isActive = $parent.hasClass('open')
 
-    if (!isActive || (isActive && e.keyCode == 27)) {
-      if (e.which == 27) $parent.find(toggle).focus()
+    if (!isActive || (isActive && e.keyCode === 27)) {
+      if (e.which === 27) $parent.find(toggle).focus()
       return $this.click()
     }
 
@@ -752,10 +752,10 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
     if (!$items.length) return
 
-    var index = $items.index($items.filter(':focus'))
+    let index = $items.index($items.filter(':focus'))
 
-    if (e.keyCode == 38 && index > 0)                 index--                        // up
-    if (e.keyCode == 40 && index < $items.length - 1) index++                        // down
+    if (e.keyCode === 38 && index > 0)                 index--                        // up
+    if (e.keyCode === 40 && index < $items.length - 1) index++                        // down
     if (!~index)                                      index=0
 
     $items.eq(index).focus()
@@ -773,7 +773,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   }
 
   function getParent($this) {
-    var selector = $this.attr('data-target')
+    let selector = $this.attr('data-target')
 
     if (!selector) {
       selector = $this.attr('href')
@@ -789,15 +789,15 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // DROPDOWN PLUGIN DEFINITION
   // ==========================
 
-  var old = $.fn.dropdown
+  let old = $.fn.dropdown
 
   $.fn.dropdown = function (option) {
     return this.each(function () {
       var $this = $(this)
-      var data  = $this.data('dropdown')
+      let data  = $this.data('dropdown')
 
       if (!data) $this.data('dropdown', (data = new Dropdown(this)))
-      if (typeof option == 'string') data[option].call($this)
+      if (typeof option === 'string') data[option].call($this)
     })
   }
 
@@ -849,7 +849,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // MODAL CLASS DEFINITION
   // ======================
 
-  var Modal = function (element, options) {
+  const Modal = function (element, options) {
     this.options   = options
     this.$element  = $(element)
     this.$backdrop =
@@ -869,8 +869,8 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   }
 
   Modal.prototype.show = function (_relatedTarget) {
-    var that = this
-    var e    = $.Event('show.bs.modal', { relatedTarget: _relatedTarget })
+    let that = this
+    let e    = $.Event('show.bs.modal', { relatedTarget: _relatedTarget })
 
     this.$element.trigger(e)
 
@@ -883,7 +883,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     this.$element.on('click.dismiss.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
 
     this.backdrop(function () {
-      var transition = $.support.transition && that.$element.hasClass('fade')
+      let transition = $.support.transition && that.$element.hasClass('fade')
 
       if (!that.$element.parent().length) {
         that.$element.appendTo(document.body) // don't move modals dom position
@@ -901,7 +901,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
       that.enforceFocus()
 
-      var e = $.Event('shown.bs.modal', { relatedTarget: _relatedTarget })
+      let e = $.Event('shown.bs.modal', { relatedTarget: _relatedTarget })
 
       transition ?
         that.$element.find('.modal-dialog') // wait for modal to slide in
@@ -953,7 +953,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   Modal.prototype.escape = function () {
     if (this.isShown && this.options.keyboard) {
       this.$element.on('keyup.dismiss.bs.modal', $.proxy(function (e) {
-        e.which == 27 && this.hide()
+        e.which === 27 && this.hide()
       }, this))
     } else if (!this.isShown) {
       this.$element.off('keyup.dismiss.bs.modal')
@@ -961,7 +961,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   }
 
   Modal.prototype.hideModal = function () {
-    var that = this
+    let that = this
     this.$element.hide()
     this.backdrop(function () {
       that.removeBackdrop()
@@ -975,18 +975,18 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   }
 
   Modal.prototype.backdrop = function (callback) {
-    var that    = this
-    var animate = this.$element.hasClass('fade') ? 'fade' : ''
+    let that    = this
+    const animate = this.$element.hasClass('fade') ? 'fade' : ''
 
     if (this.isShown && this.options.backdrop) {
-      var doAnimate = $.support.transition && animate
+      const doAnimate = $.support.transition && animate
 
       this.$backdrop = $('<div class="modal-backdrop ' + animate + '" />')
         .appendTo(document.body)
 
       this.$element.on('click.dismiss.modal', $.proxy(function (e) {
         if (e.target !== e.currentTarget) return
-        this.options.backdrop == 'static'
+        this.options.backdrop === 'static'
           ? this.$element[0].focus.call(this.$element[0])
           : this.hide.call(this)
       }, this))
@@ -1021,16 +1021,16 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // MODAL PLUGIN DEFINITION
   // =======================
 
-  var old = $.fn.modal
+  let old = $.fn.modal
 
   $.fn.modal = function (option, _relatedTarget) {
     return this.each(function () {
       var $this   = $(this)
-      var data    = $this.data('bs.modal')
-      var options = $.extend({}, Modal.DEFAULTS, $this.data(), typeof option == 'object' && option)
+      let data    = $this.data('bs.modal')
+      let options = $.extend({}, Modal.DEFAULTS, $this.data(), typeof option === 'object' && option)
 
       if (!data) $this.data('bs.modal', (data = new Modal(this, options)))
-      if (typeof option == 'string') data[option](_relatedTarget)
+      if (typeof option === 'string') data[option](_relatedTarget)
       else if (options.show) data.show(_relatedTarget)
     })
   }
@@ -1052,9 +1052,9 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
   $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
     var $this   = $(this)
-    var href    = $this.attr('href')
+    let href    = $this.attr('href')
     var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) //strip for ie7
-    var option  = $target.data('modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
+    const option  = $target.data('modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
 
     e.preventDefault()
 
@@ -1097,7 +1097,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // TOOLTIP PUBLIC CLASS DEFINITION
   // ===============================
 
-  var Tooltip = function (element, options) {
+  const Tooltip = function (element, options) {
     this.type       =
     this.options    =
     this.enabled    =
@@ -1126,16 +1126,16 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     this.$element = $(element)
     this.options  = this.getOptions(options)
 
-    var triggers = this.options.trigger.split(' ')
+    const triggers = this.options.trigger.split(' ')
 
-    for (var i = triggers.length; i--;) {
-      var trigger = triggers[i]
+    for (let i = triggers.length; i--;) {
+      const trigger = triggers[i]
 
-      if (trigger == 'click') {
+      if (trigger === 'click') {
         this.$element.on('click.' + this.type, this.options.selector, $.proxy(this.toggle, this))
-      } else if (trigger != 'manual') {
-        var eventIn  = trigger == 'hover' ? 'mouseenter' : 'focus'
-        var eventOut = trigger == 'hover' ? 'mouseleave' : 'blur'
+      } else if (trigger !== 'manual') {
+        const eventIn  = trigger === 'hover' ? 'mouseenter' : 'focus'
+        const eventOut = trigger === 'hover' ? 'mouseleave' : 'blur'
 
         this.$element.on(eventIn  + '.' + this.type, this.options.selector, $.proxy(this.enter, this))
         this.$element.on(eventOut + '.' + this.type, this.options.selector, $.proxy(this.leave, this))
@@ -1154,7 +1154,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   Tooltip.prototype.getOptions = function (options) {
     options = $.extend({}, this.getDefaults(), this.$element.data(), options)
 
-    if (options.delay && typeof options.delay == 'number') {
+    if (options.delay && typeof options.delay === 'number') {
       options.delay = {
         show: options.delay
       , hide: options.delay
@@ -1165,18 +1165,18 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   }
 
   Tooltip.prototype.getDelegateOptions = function () {
-    var options  = {}
-    var defaults = this.getDefaults()
+    let options  = {}
+    const defaults = this.getDefaults()
 
     this._options && $.each(this._options, function (key, value) {
-      if (defaults[key] != value) options[key] = value
+      if (defaults[key] !== value) options[key] = value
     })
 
     return options
   }
 
   Tooltip.prototype.enter = function (obj) {
-    var self = obj instanceof this.constructor ?
+    let self = obj instanceof this.constructor ?
       obj : $(obj.currentTarget)[this.type](this.getDelegateOptions()).data('bs.' + this.type)
 
     clearTimeout(self.timeout)
@@ -1186,12 +1186,12 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     if (!self.options.delay || !self.options.delay.show) return self.show()
 
     self.timeout = setTimeout(function () {
-      if (self.hoverState == 'in') self.show()
+      if (self.hoverState === 'in') self.show()
     }, self.options.delay.show)
   }
 
   Tooltip.prototype.leave = function (obj) {
-    var self = obj instanceof this.constructor ?
+    let self = obj instanceof this.constructor ?
       obj : $(obj.currentTarget)[this.type](this.getDelegateOptions()).data('bs.' + this.type)
 
     clearTimeout(self.timeout)
@@ -1201,12 +1201,12 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     if (!self.options.delay || !self.options.delay.hide) return self.hide()
 
     self.timeout = setTimeout(function () {
-      if (self.hoverState == 'out') self.hide()
+      if (self.hoverState === 'out') self.hide()
     }, self.options.delay.hide)
   }
 
   Tooltip.prototype.show = function () {
-    var e = $.Event('show.bs.'+ this.type)
+    let e = $.Event('show.bs.'+ this.type)
 
     if (this.hasContent() && this.enabled) {
       this.$element.trigger(e)
@@ -1219,12 +1219,12 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
       if (this.options.animation) $tip.addClass('fade')
 
-      var placement = typeof this.options.placement == 'function' ?
+      let placement = typeof this.options.placement === 'function' ?
         this.options.placement.call(this, $tip[0], this.$element[0]) :
         this.options.placement
 
-      var autoToken = /\s?auto?\s?/i
-      var autoPlace = autoToken.test(placement)
+      const autoToken = /\s?auto?\s?/i
+      const autoPlace = autoToken.test(placement)
       if (autoPlace) placement = placement.replace(autoToken, '') || 'top'
 
       $tip
@@ -1234,23 +1234,23 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
       this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element)
 
-      var pos          = this.getPosition()
-      var actualWidth  = $tip[0].offsetWidth
-      var actualHeight = $tip[0].offsetHeight
+      const pos          = this.getPosition()
+      let actualWidth  = $tip[0].offsetWidth
+      let actualHeight = $tip[0].offsetHeight
 
       if (autoPlace) {
         var $parent = this.$element.parent()
 
-        var orgPlacement = placement
-        var docScroll    = document.documentElement.scrollTop || document.body.scrollTop
-        var parentWidth  = this.options.container == 'body' ? window.innerWidth  : $parent.outerWidth()
-        var parentHeight = this.options.container == 'body' ? window.innerHeight : $parent.outerHeight()
-        var parentLeft   = this.options.container == 'body' ? 0 : $parent.offset().left
+        const orgPlacement = placement
+        const docScroll    = document.documentElement.scrollTop || document.body.scrollTop
+        const parentWidth  = this.options.container === 'body' ? window.innerWidth  : $parent.outerWidth()
+        const parentHeight = this.options.container === 'body' ? window.innerHeight : $parent.outerHeight()
+        const parentLeft   = this.options.container === 'body' ? 0 : $parent.offset().left
 
-        placement = placement == 'bottom' && pos.top   + pos.height  + actualHeight - docScroll > parentHeight  ? 'top'    :
-                    placement == 'top'    && pos.top   - docScroll   - actualHeight < 0                         ? 'bottom' :
-                    placement == 'right'  && pos.right + actualWidth > parentWidth                              ? 'left'   :
-                    placement == 'left'   && pos.left  - actualWidth < parentLeft                               ? 'right'  :
+        placement = placement === 'bottom' && pos.top   + pos.height  + actualHeight - docScroll > parentHeight  ? 'top'    :
+                    placement === 'top'    && pos.top   - docScroll   - actualHeight < 0                         ? 'bottom' :
+                    placement === 'right'  && pos.right + actualWidth > parentWidth                              ? 'left'   :
+                    placement === 'left'   && pos.left  - actualWidth < parentLeft                               ? 'right'  :
                     placement
 
         $tip
@@ -1258,7 +1258,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
           .addClass(placement)
       }
 
-      var calculatedOffset = this.getCalculatedOffset(placement, pos, actualWidth, actualHeight)
+      const calculatedOffset = this.getCalculatedOffset(placement, pos, actualWidth, actualHeight)
 
       this.applyPlacement(calculatedOffset, placement)
       this.$element.trigger('shown.bs.' + this.type)
@@ -1268,12 +1268,12 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   Tooltip.prototype.applyPlacement = function(offset, placement) {
     var replace
     var $tip   = this.tip()
-    var width  = $tip[0].offsetWidth
-    var height = $tip[0].offsetHeight
+    const width  = $tip[0].offsetWidth
+    const height = $tip[0].offsetHeight
 
     // manually read margins because getBoundingClientRect includes difference
-    var marginTop = parseInt($tip.css('margin-top'), 10)
-    var marginLeft = parseInt($tip.css('margin-left'), 10)
+    let marginTop = parseInt($tip.css('margin-top'), 10)
+    let marginLeft = parseInt($tip.css('margin-left'), 10)
 
     // we must check for NaN for ie 8/9
     if (isNaN(marginTop))  marginTop  = 0
@@ -1287,16 +1287,16 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
       .addClass('in')
 
     // check to see if placing tip in new offset caused the tip to resize itself
-    var actualWidth  = $tip[0].offsetWidth
-    var actualHeight = $tip[0].offsetHeight
+    let actualWidth  = $tip[0].offsetWidth
+    let actualHeight = $tip[0].offsetHeight
 
-    if (placement == 'top' && actualHeight != height) {
+    if (placement === 'top' && actualHeight !== height) {
       replace = true
       offset.top = offset.top + height - actualHeight
     }
 
     if (/bottom|top/.test(placement)) {
-      var delta = 0
+      let delta = 0
 
       if (offset.left < 0) {
         delta       = offset.left * -2
@@ -1322,19 +1322,19 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
   Tooltip.prototype.setContent = function () {
     var $tip  = this.tip()
-    var title = this.getTitle()
+    let title = this.getTitle()
 
     $tip.find('.tooltip-inner')[this.options.html ? 'html' : 'text'](title)
     $tip.removeClass('fade in top bottom left right')
   }
 
   Tooltip.prototype.hide = function () {
-    var that = this
+    const that = this
     var $tip = this.tip()
-    var e    = $.Event('hide.bs.' + this.type)
+    let e    = $.Event('hide.bs.' + this.type)
 
     function complete() {
-      if (that.hoverState != 'in') $tip.detach()
+      if (that.hoverState !== 'in') $tip.detach()
     }
 
     this.$element.trigger(e)
@@ -1356,7 +1356,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
   Tooltip.prototype.fixTitle = function () {
     var $e = this.$element
-    if ($e.attr('title') || typeof($e.attr('data-original-title')) != 'string') {
+    if ($e.attr('title') || typeof($e.attr('data-original-title')) !== 'string') {
       $e.attr('data-original-title', $e.attr('title') || '').attr('title', '')
     }
   }
@@ -1366,27 +1366,27 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   }
 
   Tooltip.prototype.getPosition = function () {
-    var el = this.$element[0]
-    return $.extend({}, (typeof el.getBoundingClientRect == 'function') ? el.getBoundingClientRect() : {
+    let el = this.$element[0]
+    return $.extend({}, (typeof el.getBoundingClientRect === 'function') ? el.getBoundingClientRect() : {
       width: el.offsetWidth
     , height: el.offsetHeight
     }, this.$element.offset())
   }
 
   Tooltip.prototype.getCalculatedOffset = function (placement, pos, actualWidth, actualHeight) {
-    return placement == 'bottom' ? { top: pos.top + pos.height,   left: pos.left + pos.width / 2 - actualWidth / 2  } :
-           placement == 'top'    ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2  } :
-           placement == 'left'   ? { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } :
-        /* placement == 'right' */ { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width   }
+    return placement === 'bottom' ? { top: pos.top + pos.height,   left: pos.left + pos.width / 2 - actualWidth / 2  } :
+           placement === 'top'    ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2  } :
+           placement === 'left'   ? { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } :
+        /* placement === 'right' */ { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width   }
   }
 
   Tooltip.prototype.getTitle = function () {
     var title
     var $e = this.$element
-    var o  = this.options
+    let o  = this.options
 
     title = $e.attr('data-original-title')
-      || (typeof o.title == 'function' ? o.title.call($e[0]) :  o.title)
+      || (typeof o.title === 'function' ? o.title.call($e[0]) :  o.title)
 
     return title
   }
@@ -1420,7 +1420,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   }
 
   Tooltip.prototype.toggle = function (e) {
-    var self = e ? $(e.currentTarget)[this.type](this.getDelegateOptions()).data('bs.' + this.type) : this
+    let self = e ? $(e.currentTarget)[this.type](this.getDelegateOptions()).data('bs.' + this.type) : this
     self.tip().hasClass('in') ? self.leave(self) : self.enter(self)
   }
 
@@ -1432,16 +1432,16 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // TOOLTIP PLUGIN DEFINITION
   // =========================
 
-  var old = $.fn.tooltip
+  let old = $.fn.tooltip
 
   $.fn.tooltip = function (option) {
     return this.each(function () {
       var $this   = $(this)
-      var data    = $this.data('bs.tooltip')
-      var options = typeof option == 'object' && option
+      let data    = $this.data('bs.tooltip')
+      let options = typeof option === 'object' && option
 
       if (!data) $this.data('bs.tooltip', (data = new Tooltip(this, options)))
-      if (typeof option == 'string') data[option]()
+      if (typeof option === 'string') data[option]()
     })
   }
 
@@ -1483,7 +1483,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // POPOVER PUBLIC CLASS DEFINITION
   // ===============================
 
-  var Popover = function (element, options) {
+  const Popover = function (element, options) {
     this.init('popover', element, options)
   }
 
@@ -1510,8 +1510,8 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
   Popover.prototype.setContent = function () {
     var $tip    = this.tip()
-    var title   = this.getTitle()
-    var content = this.getContent()
+    const title   = this.getTitle()
+    const content = this.getContent()
 
     $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
     $tip.find('.popover-content')[this.options.html ? 'html' : 'text'](content)
@@ -1529,10 +1529,10 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
   Popover.prototype.getContent = function () {
     var $e = this.$element
-    var o  = this.options
+    const o  = this.options
 
     return $e.attr('data-content')
-      || (typeof o.content == 'function' ?
+      || (typeof o.content === 'function' ?
             o.content.call($e[0]) :
             o.content)
   }
@@ -1550,16 +1550,16 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // POPOVER PLUGIN DEFINITION
   // =========================
 
-  var old = $.fn.popover
+  let old = $.fn.popover
 
   $.fn.popover = function (option) {
     return this.each(function () {
       var $this   = $(this)
-      var data    = $this.data('bs.popover')
-      var options = typeof option == 'object' && option
+      let data    = $this.data('bs.popover')
+      let options = typeof option === 'object' && option
 
       if (!data) $this.data('bs.popover', (data = new Popover(this, options)))
-      if (typeof option == 'string') data[option]()
+      if (typeof option === 'string') data[option]()
     })
   }
 
@@ -1603,7 +1603,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
   function ScrollSpy(element, options) {
     var href
-    var process  = $.proxy(this.process, this)
+    let process  = $.proxy(this.process, this)
 
     this.$element       = $(element).is('body') ? $(window) : $(element)
     this.$body          = $('body')
@@ -1625,17 +1625,17 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   }
 
   ScrollSpy.prototype.refresh = function () {
-    var offsetMethod = this.$element[0] == window ? 'offset' : 'position'
+    const offsetMethod = this.$element[0] === window ? 'offset' : 'position'
 
     this.offsets = $([])
     this.targets = $([])
 
-    var self     = this
+    const self     = this
     var $targets = this.$body
       .find(this.selector)
       .map(function () {
         var $el   = $(this)
-        var href  = $el.data('target') || $el.attr('href')
+        let href  = $el.data('target') || $el.attr('href')
         var $href = /^#\w/.test(href) && $(href)
 
         return ($href
@@ -1650,20 +1650,20 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   }
 
   ScrollSpy.prototype.process = function () {
-    var scrollTop    = this.$scrollElement.scrollTop() + this.options.offset
-    var scrollHeight = this.$scrollElement[0].scrollHeight || this.$body[0].scrollHeight
-    var maxScroll    = scrollHeight - this.$scrollElement.height()
-    var offsets      = this.offsets
-    var targets      = this.targets
-    var activeTarget = this.activeTarget
+    let scrollTop    = this.$scrollElement.scrollTop() + this.options.offset
+    let scrollHeight = this.$scrollElement[0].scrollHeight || this.$body[0].scrollHeight
+    const maxScroll    = scrollHeight - this.$scrollElement.height()
+    const offsets      = this.offsets
+    const targets      = this.targets
+    let activeTarget = this.activeTarget
     var i
 
     if (scrollTop >= maxScroll) {
-      return activeTarget != (i = targets.last()[0]) && this.activate(i)
+      return activeTarget !== (i = targets.last()[0]) && this.activate(i)
     }
 
     for (i = offsets.length; i--;) {
-      activeTarget != targets[i]
+      activeTarget !== targets[i]
         && scrollTop >= offsets[i]
         && (!offsets[i + 1] || scrollTop <= offsets[i + 1])
         && this.activate( targets[i] )
@@ -1677,11 +1677,11 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
       .parents('.active')
       .removeClass('active')
 
-    var selector = this.selector
+    let selector = this.selector
       + '[data-target="' + target + '"],'
       + this.selector + '[href="' + target + '"]'
 
-    var active = $(selector)
+    let active = $(selector)
       .parents('li')
       .addClass('active')
 
@@ -1698,16 +1698,16 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // SCROLLSPY PLUGIN DEFINITION
   // ===========================
 
-  var old = $.fn.scrollspy
+  let old = $.fn.scrollspy
 
   $.fn.scrollspy = function (option) {
     return this.each(function () {
       var $this   = $(this)
-      var data    = $this.data('bs.scrollspy')
-      var options = typeof option == 'object' && option
+      let data    = $this.data('bs.scrollspy')
+      let options = typeof option === 'object' && option
 
       if (!data) $this.data('bs.scrollspy', (data = new ScrollSpy(this, options)))
-      if (typeof option == 'string') data[option]()
+      if (typeof option === 'string') data[option]()
     })
   }
 
@@ -1760,14 +1760,14 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // TAB CLASS DEFINITION
   // ====================
 
-  var Tab = function (element) {
+  const Tab = function (element) {
     this.element = $(element)
   }
 
   Tab.prototype.show = function () {
     var $this    = this.element
     var $ul      = $this.closest('ul:not(.dropdown-menu)')
-    var selector = $this.attr('data-target')
+    let selector = $this.attr('data-target')
 
     if (!selector) {
       selector = $this.attr('href')
@@ -1776,8 +1776,8 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
     if ($this.parent('li').hasClass('active')) return
 
-    var previous = $ul.find('.active:last a')[0]
-    var e        = $.Event('show.bs.tab', {
+    const previous = $ul.find('.active:last a')[0]
+    const e        = $.Event('show.bs.tab', {
       relatedTarget: previous
     })
 
@@ -1798,7 +1798,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
   Tab.prototype.activate = function (element, container, callback) {
     var $active    = container.find('> .active')
-    var transition = callback
+    const transition = callback
       && $.support.transition
       && $active.hasClass('fade')
 
@@ -1837,15 +1837,15 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // TAB PLUGIN DEFINITION
   // =====================
 
-  var old = $.fn.tab
+  let old = $.fn.tab
 
   $.fn.tab = function ( option ) {
     return this.each(function () {
       var $this = $(this)
-      var data  = $this.data('bs.tab')
+      let data  = $this.data('bs.tab')
 
       if (!data) $this.data('bs.tab', (data = new Tab(this)))
-      if (typeof option == 'string') data[option]()
+      if (typeof option === 'string') data[option]()
     })
   }
 
@@ -1896,7 +1896,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // AFFIX CLASS DEFINITION
   // ======================
 
-  var Affix = function (element, options) {
+  const Affix = function (element, options) {
     this.options = $.extend({}, Affix.DEFAULTS, options)
     this.$window = $(window)
       .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
@@ -1922,30 +1922,30 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   Affix.prototype.checkPosition = function () {
     if (!this.$element.is(':visible')) return
 
-    var scrollHeight = $(document).height()
-    var scrollTop    = this.$window.scrollTop()
-    var position     = this.$element.offset()
-    var offset       = this.options.offset
-    var offsetTop    = offset.top
-    var offsetBottom = offset.bottom
+    const scrollHeight = $(document).height()
+    const scrollTop    = this.$window.scrollTop()
+    const position     = this.$element.offset()
+    let offset       = this.options.offset
+    let offsetTop    = offset.top
+    let offsetBottom = offset.bottom
 
-    if (typeof offset != 'object')         offsetBottom = offsetTop = offset
-    if (typeof offsetTop == 'function')    offsetTop    = offset.top()
-    if (typeof offsetBottom == 'function') offsetBottom = offset.bottom()
+    if (typeof offset !== 'object')         offsetBottom = offsetTop = offset
+    if (typeof offsetTop === 'function')    offsetTop    = offset.top()
+    if (typeof offsetBottom === 'function') offsetBottom = offset.bottom()
 
-    var affix = this.unpin   != null && (scrollTop + this.unpin <= position.top) ? false :
-                offsetBottom != null && (position.top + this.$element.height() >= scrollHeight - offsetBottom) ? 'bottom' :
-                offsetTop    != null && (scrollTop <= offsetTop) ? 'top' : false
+    let affix = this.unpin   !== null && (scrollTop + this.unpin <= position.top) ? false :
+                offsetBottom !== null && (position.top + this.$element.height() >= scrollHeight - offsetBottom) ? 'bottom' :
+                offsetTop    !== null && (scrollTop <= offsetTop) ? 'top' : false
 
     if (this.affixed === affix) return
     if (this.unpin) this.$element.css('top', '')
 
     this.affixed = affix
-    this.unpin   = affix == 'bottom' ? position.top - scrollTop : null
+    this.unpin   = affix === 'bottom' ? position.top - scrollTop : null
 
     this.$element.removeClass(Affix.RESET).addClass('affix' + (affix ? '-' + affix : ''))
 
-    if (affix == 'bottom') {
+    if (affix === 'bottom') {
       this.$element.offset({ top: document.body.offsetHeight - offsetBottom - this.$element.height() })
     }
   }
@@ -1954,16 +1954,16 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   // AFFIX PLUGIN DEFINITION
   // =======================
 
-  var old = $.fn.affix
+  const old = $.fn.affix
 
   $.fn.affix = function (option) {
     return this.each(function () {
       var $this   = $(this)
-      var data    = $this.data('bs.affix')
-      var options = typeof option == 'object' && option
+      let data    = $this.data('bs.affix')
+      const options = typeof option === 'object' && option
 
       if (!data) $this.data('bs.affix', (data = new Affix(this, options)))
-      if (typeof option == 'string') data[option]()
+      if (typeof option === 'string') data[option]()
     })
   }
 
@@ -1985,7 +1985,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   $(window).on('load', function () {
     $('[data-spy="affix"]').each(function () {
       var $spy = $(this)
-      var data = $spy.data()
+      const data = $spy.data()
 
       data.offset = data.offset || {}
 

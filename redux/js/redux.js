@@ -10,7 +10,7 @@
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/ 	const installedModules = {};
 
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -20,7 +20,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 			return installedModules[moduleId].exports;
 
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
+/******/ 		const module = installedModules[moduleId] = {
 /******/ 			exports: {},
 /******/ 			id: moduleId,
 /******/ 			loaded: false
@@ -59,29 +59,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports.compose = exports.applyMiddleware = exports.bindActionCreators = exports.combineReducers = exports.createStore = undefined;
 
-	var _createStore = __webpack_require__(2);
+	let _createStore = __webpack_require__(2);
 
-	var _createStore2 = _interopRequireDefault(_createStore);
+	const _createStore2 = _interopRequireDefault(_createStore);
 
-	var _combineReducers = __webpack_require__(7);
+	const _combineReducers = __webpack_require__(7);
 
-	var _combineReducers2 = _interopRequireDefault(_combineReducers);
+	const _combineReducers2 = _interopRequireDefault(_combineReducers);
 
-	var _bindActionCreators = __webpack_require__(6);
+	const _bindActionCreators = __webpack_require__(6);
 
-	var _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
+	const _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
 
-	var _applyMiddleware = __webpack_require__(5);
+	const _applyMiddleware = __webpack_require__(5);
 
-	var _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
+	const _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
 
-	var _compose = __webpack_require__(1);
+	let _compose = __webpack_require__(1);
 
-	var _compose2 = _interopRequireDefault(_compose);
+	let _compose2 = _interopRequireDefault(_compose);
 
-	var _warning = __webpack_require__(3);
+	let _warning = __webpack_require__(3);
 
-	var _warning2 = _interopRequireDefault(_warning);
+	let _warning2 = _interopRequireDefault(_warning);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -121,7 +121,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 
 	function compose() {
-	  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key < _len; _key++) {
+	  for (let _len = arguments.length, funcs = Array(_len), _key = 0; _key < _len; _key++) {
 	    funcs[_key] = arguments[_key];
 	  }
 
@@ -135,8 +135,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return funcs[0];
 	  }
 
-	  var last = funcs[funcs.length - 1];
-	  var rest = funcs.slice(0, -1);
+	  const last = funcs[funcs.length - 1];
+	  const rest = funcs.slice(0, -1);
 	  return function () {
 	    return rest.reduceRight(function (composed, f) {
 	      return f(composed);
@@ -154,13 +154,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.ActionTypes = undefined;
 	exports['default'] = createStore;
 
-	var _isPlainObject = __webpack_require__(4);
+	let _isPlainObject = __webpack_require__(4);
 
-	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+	let _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _symbolObservable = __webpack_require__(12);
+	const _symbolObservable = __webpack_require__(12);
 
-	var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
+	const _symbolObservable2 = _interopRequireDefault(_symbolObservable);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -170,7 +170,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * If the current state is undefined, you must return the initial state.
 	 * Do not reference these action types directly in your code.
 	 */
-	var ActionTypes = exports.ActionTypes = {
+	let ActionTypes = exports.ActionTypes = {
 	  INIT: '@@redux/INIT'
 	};
 
@@ -219,11 +219,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    throw new Error('Expected the reducer to be a function.');
 	  }
 
-	  var currentReducer = reducer;
-	  var currentState = preloadedState;
-	  var currentListeners = [];
-	  var nextListeners = currentListeners;
-	  var isDispatching = false;
+	  let currentReducer = reducer;
+	  let currentState = preloadedState;
+	  let currentListeners = [];
+	  let nextListeners = currentListeners;
+	  let isDispatching = false;
 
 	  function ensureCanMutateNextListeners() {
 	    if (nextListeners === currentListeners) {
@@ -268,7 +268,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      throw new Error('Expected listener to be a function.');
 	    }
 
-	    var isSubscribed = true;
+	    let isSubscribed = true;
 
 	    ensureCanMutateNextListeners();
 	    nextListeners.push(listener);
@@ -281,7 +281,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      isSubscribed = false;
 
 	      ensureCanMutateNextListeners();
-	      var index = nextListeners.indexOf(listener);
+	      const index = nextListeners.indexOf(listener);
 	      nextListeners.splice(index, 1);
 	    };
 	  }
@@ -331,8 +331,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      isDispatching = false;
 	    }
 
-	    var listeners = currentListeners = nextListeners;
-	    for (var i = 0; i < listeners.length; i++) {
+	    const listeners = currentListeners = nextListeners;
+	    for (let i = 0; i < listeners.length; i++) {
 	      listeners[i]();
 	    }
 
@@ -367,7 +367,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function observable() {
 	    var _ref;
 
-	    var outerSubscribe = subscribe;
+	    const outerSubscribe = subscribe;
 	    return _ref = {
 	      /**
 	       * The minimal observable subscription method.
@@ -389,7 +389,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 
 	        observeState();
-	        var unsubscribe = outerSubscribe(observeState);
+	        const unsubscribe = outerSubscribe(observeState);
 	        return { unsubscribe: unsubscribe };
 	      }
 	    }, _ref[_symbolObservable2['default']] = function () {
@@ -444,32 +444,32 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(8),
+	let getPrototype = __webpack_require__(8),
 	    isHostObject = __webpack_require__(9),
 	    isObjectLike = __webpack_require__(11);
 
 	/** `Object#toString` result references. */
-	var objectTag = '[object Object]';
+	const objectTag = '[object Object]';
 
 	/** Used for built-in method references. */
-	var funcProto = Function.prototype,
+	const funcProto = Function.prototype,
 	    objectProto = Object.prototype;
 
 	/** Used to resolve the decompiled source of functions. */
-	var funcToString = funcProto.toString;
+	const funcToString = funcProto.toString;
 
 	/** Used to check objects for own properties. */
-	var hasOwnProperty = objectProto.hasOwnProperty;
+	const hasOwnProperty = objectProto.hasOwnProperty;
 
 	/** Used to infer the `Object` constructor. */
-	var objectCtorString = funcToString.call(Object);
+	const objectCtorString = funcToString.call(Object);
 
 	/**
 	 * Used to resolve the
 	 * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
 	 * of values.
 	 */
-	var objectToString = objectProto.toString;
+	const objectToString = objectProto.toString;
 
 	/**
 	 * Checks if `value` is a plain object, that is, an object created by the
@@ -501,16 +501,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	function isPlainObject(value) {
 	  if (!isObjectLike(value) ||
-	      objectToString.call(value) != objectTag || isHostObject(value)) {
+	      objectToString.call(value) !== objectTag || isHostObject(value)) {
 	    return false;
 	  }
-	  var proto = getPrototype(value);
+	  const proto = getPrototype(value);
 	  if (proto === null) {
 	    return true;
 	  }
-	  var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
-	  return (typeof Ctor == 'function' &&
-	    Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString);
+	  const Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+	  return (typeof Ctor === 'function' &&
+	    Ctor instanceof Ctor && funcToString.call(Ctor) === objectCtorString);
 	}
 
 	module.exports = isPlainObject;
@@ -524,13 +524,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	const _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { const source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	exports['default'] = applyMiddleware;
 
-	var _compose = __webpack_require__(1);
+	const _compose = __webpack_require__(1);
 
-	var _compose2 = _interopRequireDefault(_compose);
+	const _compose2 = _interopRequireDefault(_compose);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -551,17 +551,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @returns {Function} A store enhancer applying the middleware.
 	 */
 	function applyMiddleware() {
-	  for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key < _len; _key++) {
+	  for (const _len = arguments.length, middlewares = Array(_len), _key = 0; _key < _len; _key++) {
 	    middlewares[_key] = arguments[_key];
 	  }
 
 	  return function (createStore) {
 	    return function (reducer, preloadedState, enhancer) {
-	      var store = createStore(reducer, preloadedState, enhancer);
-	      var _dispatch = store.dispatch;
-	      var chain = [];
+	      const store = createStore(reducer, preloadedState, enhancer);
+	      let _dispatch = store.dispatch;
+	      let chain = [];
 
-	      var middlewareAPI = {
+	      const middlewareAPI = {
 	        getState: store.getState,
 	        dispatch: function dispatch(action) {
 	          return _dispatch(action);
@@ -623,11 +623,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    throw new Error('bindActionCreators expected an object or a function, instead received ' + (actionCreators === null ? 'null' : typeof actionCreators) + '. ' + 'Did you write "import ActionCreators from" instead of "import * as ActionCreators from"?');
 	  }
 
-	  var keys = Object.keys(actionCreators);
-	  var boundActionCreators = {};
-	  for (var i = 0; i < keys.length; i++) {
-	    var key = keys[i];
-	    var actionCreator = actionCreators[key];
+	  const keys = Object.keys(actionCreators);
+	  const boundActionCreators = {};
+	  for (let i = 0; i < keys.length; i++) {
+	    let key = keys[i];
+	    const actionCreator = actionCreators[key];
 	    if (typeof actionCreator === 'function') {
 	      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
 	    }
@@ -644,28 +644,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports['default'] = combineReducers;
 
-	var _createStore = __webpack_require__(2);
+	const _createStore = __webpack_require__(2);
 
-	var _isPlainObject = __webpack_require__(4);
+	const _isPlainObject = __webpack_require__(4);
 
-	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+	const _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _warning = __webpack_require__(3);
+	const _warning = __webpack_require__(3);
 
-	var _warning2 = _interopRequireDefault(_warning);
+	const _warning2 = _interopRequireDefault(_warning);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 	function getUndefinedStateErrorMessage(key, action) {
-	  var actionType = action && action.type;
-	  var actionName = actionType && '"' + actionType.toString() + '"' || 'an action';
+	  const actionType = action && action.type;
+	  const actionName = actionType && '"' + actionType.toString() + '"' || 'an action';
 
 	  return 'Given action ' + actionName + ', reducer "' + key + '" returned undefined. ' + 'To ignore an action, you must explicitly return the previous state.';
 	}
 
 	function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
-	  var reducerKeys = Object.keys(reducers);
-	  var argumentName = action && action.type === _createStore.ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
+	  let reducerKeys = Object.keys(reducers);
+	  const argumentName = action && action.type === _createStore.ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
 
 	  if (reducerKeys.length === 0) {
 	    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';
@@ -675,7 +675,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return 'The ' + argumentName + ' has unexpected type of "' + {}.toString.call(inputState).match(/\s([a-z|A-Z]+)/)[1] + '". Expected argument to be an object with the following ' + ('keys: "' + reducerKeys.join('", "') + '"');
 	  }
 
-	  var unexpectedKeys = Object.keys(inputState).filter(function (key) {
+	  const unexpectedKeys = Object.keys(inputState).filter(function (key) {
 	    return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];
 	  });
 
@@ -690,14 +690,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function assertReducerSanity(reducers) {
 	  Object.keys(reducers).forEach(function (key) {
-	    var reducer = reducers[key];
-	    var initialState = reducer(undefined, { type: _createStore.ActionTypes.INIT });
+	    let reducer = reducers[key];
+	    const initialState = reducer(undefined, { type: _createStore.ActionTypes.INIT });
 
 	    if (typeof initialState === 'undefined') {
 	      throw new Error('Reducer "' + key + '" returned undefined during initialization. ' + 'If the state passed to the reducer is undefined, you must ' + 'explicitly return the initial state. The initial state may ' + 'not be undefined.');
 	    }
 
-	    var type = '@@redux/PROBE_UNKNOWN_ACTION_' + Math.random().toString(36).substring(7).split('').join('.');
+	    const type = '@@redux/PROBE_UNKNOWN_ACTION_' + Math.random().toString(36).substring(7).split('').join('.');
 	    if (typeof reducer(undefined, { type: type }) === 'undefined') {
 	      throw new Error('Reducer "' + key + '" returned undefined when probed with a random type. ' + ('Don\'t try to handle ' + _createStore.ActionTypes.INIT + ' or other actions in "redux/*" ') + 'namespace. They are considered private. Instead, you must return the ' + 'current state for any unknown actions, unless it is undefined, ' + 'in which case you must return the initial state, regardless of the ' + 'action type. The initial state may not be undefined.');
 	    }
@@ -721,10 +721,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * passed object, and builds a state object with the same shape.
 	 */
 	function combineReducers(reducers) {
-	  var reducerKeys = Object.keys(reducers);
-	  var finalReducers = {};
-	  for (var i = 0; i < reducerKeys.length; i++) {
-	    var key = reducerKeys[i];
+	  const reducerKeys = Object.keys(reducers);
+	  const finalReducers = {};
+	  for (let i = 0; i < reducerKeys.length; i++) {
+	    let key = reducerKeys[i];
 
 	    if (true) {
 	      if (typeof reducers[key] === 'undefined') {
@@ -736,10 +736,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      finalReducers[key] = reducers[key];
 	    }
 	  }
-	  var finalReducerKeys = Object.keys(finalReducers);
+	  const finalReducerKeys = Object.keys(finalReducers);
 
 	  if (true) {
-	    var unexpectedKeyCache = {};
+	    const unexpectedKeyCache = {};
 	  }
 
 	  var sanityError;
@@ -750,29 +750,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  return function combination() {
-	    var state = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-	    var action = arguments[1];
+	    const state = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	    const action = arguments[1];
 
 	    if (sanityError) {
 	      throw sanityError;
 	    }
 
 	    if (true) {
-	      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
+	      const warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
 	      if (warningMessage) {
 	        (0, _warning2['default'])(warningMessage);
 	      }
 	    }
 
-	    var hasChanged = false;
-	    var nextState = {};
-	    for (var i = 0; i < finalReducerKeys.length; i++) {
-	      var key = finalReducerKeys[i];
-	      var reducer = finalReducers[key];
-	      var previousStateForKey = state[key];
-	      var nextStateForKey = reducer(previousStateForKey, action);
+	    let hasChanged = false;
+	    const nextState = {};
+	    for (let i = 0; i < finalReducerKeys.length; i++) {
+	      const key = finalReducerKeys[i];
+	      const reducer = finalReducers[key];
+	      const previousStateForKey = state[key];
+	      const nextStateForKey = reducer(previousStateForKey, action);
 	      if (typeof nextStateForKey === 'undefined') {
-	        var errorMessage = getUndefinedStateErrorMessage(key, action);
+	        const errorMessage = getUndefinedStateErrorMessage(key, action);
 	        throw new Error(errorMessage);
 	      }
 	      nextState[key] = nextStateForKey;
@@ -786,10 +786,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var overArg = __webpack_require__(10);
+	const overArg = __webpack_require__(10);
 
 	/** Built-in value references. */
-	var getPrototype = overArg(Object.getPrototypeOf, Object);
+	const getPrototype = overArg(Object.getPrototypeOf, Object);
 
 	module.exports = getPrototype;
 
@@ -808,8 +808,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	function isHostObject(value) {
 	  // Many host objects are `Object` objects that can coerce to strings
 	  // despite having improperly defined `toString` methods.
-	  var result = false;
-	  if (value != null && typeof value.toString != 'function') {
+	  let result = false;
+	  if (value !== null && typeof value.toString !== 'function') {
 	    try {
 	      result = !!(value + '');
 	    } catch (e) {}
@@ -870,7 +870,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * // => false
 	 */
 	function isObjectLike(value) {
-	  return !!value && typeof value == 'object';
+	  return !!value && typeof value === 'object';
 	}
 
 	module.exports = isObjectLike;
@@ -893,13 +893,13 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 
-	var _ponyfill = __webpack_require__(14);
+	const _ponyfill = __webpack_require__(14);
 
-	var _ponyfill2 = _interopRequireDefault(_ponyfill);
+	const _ponyfill2 = _interopRequireDefault(_ponyfill);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var root = undefined; /* global window */
+	let root = undefined; /* global window */
 
 	if (typeof global !== 'undefined') {
 		root = global;
@@ -907,7 +907,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		root = window;
 	}
 
-	var result = (0, _ponyfill2['default'])(root);
+	let result = (0, _ponyfill2['default'])(root);
 	exports['default'] = result;
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
@@ -923,7 +923,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports['default'] = symbolObservablePonyfill;
 	function symbolObservablePonyfill(root) {
 		var result;
-		var _Symbol = root.Symbol;
+		const _Symbol = root.Symbol;
 
 		if (typeof _Symbol === 'function') {
 			if (_Symbol.observable) {
