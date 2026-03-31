@@ -4,7 +4,6 @@ import './login.scss'
 
 class LoginComponent extends Component{
     login(){
-        console.log(this)
         this.props.router.push({pathname: '/home/cnode'})
     }
     render(){

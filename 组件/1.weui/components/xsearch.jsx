@@ -4,7 +4,6 @@ let Xsearch = React.createClass({
   },
   focusing() {
     this.setState({bool: true})
-    console.log(this.refs.input)
     this.refs.input.focus()
   },
   cancelFocusing() {

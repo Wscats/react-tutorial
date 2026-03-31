@@ -13,12 +13,11 @@ function getUrl(path) {
 }
 
 const errorHandler = (err) => {
-    const str = err.response.status
+    let str = err.response.status
     str += ' - '
     str += err.response.statusText
-    str += '<br/>请求路径：<br/>'
+    str += '<br/>Request path:<br/>'
     str += err.response.error.url
-    console.log(str);
 }
 
 const HttpClient = {

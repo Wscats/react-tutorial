@@ -12,7 +12,6 @@ let Xpanel = React.createClass({
     let self = this;
     xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        console.log(JSON.parse(xmlhttp.responseText));
         setTimeout(() => {
           self.setState({
             news: JSON.parse(xmlhttp.responseText)
@@ -32,7 +31,6 @@ let Xpanel = React.createClass({
             let html;
             if (self.state.news) {
               html = self.state.news.newslist.map((item) => {
-                console.log(item);
                 return (
                   <a key={item.id} href="javascript:void(0);" className="weui-media-box weui-media-box_appmsg">
                     <div className="weui-media-box__hd">

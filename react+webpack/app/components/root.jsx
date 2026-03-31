@@ -1,4 +1,3 @@
-//var React = require('react');
 import React, { Component } from 'react';
 import {
 	BrowserRouter as Router,
@@ -6,8 +5,8 @@ import {
 	Link
 } from 'react-router-dom';
 import { matchRoutes, renderRoutes } from 'react-router-config';
-//新版本的写法 推荐
-//class Wscats extends React.Component {
+
+/** Root component: renders top-level navigation and child routes. */
 class Wscats extends Component {
 	render() {
 		return( 
@@ -16,7 +15,6 @@ class Wscats extends Component {
 					<Link to="/">home</Link> <Link to="/index">index</Link>
 					{/* child routes won't render without this */}
 					{renderRoutes(this.props.route.routes)}
-					{console.log(this)}
 			</div>
 		)
 	}

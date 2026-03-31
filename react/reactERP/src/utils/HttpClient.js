@@ -13,20 +13,15 @@ function getUrl(path) {
 }
 
 const errorHandler = (err) => {
-    const str = err.response.status
+    let str = err.response.status
     str += ' - '
     str += err.response.statusText
-    str += '<br/>请求路径：<br/>'
+    str += '<br/>Request path:<br/>'
     str += err.response.error.url
-    console.log(str);
 }
 
 const HttpClient = {
     get: (path, query) => new Promise((resolve, reject) => {
-        // if(!window.localStorage.getItem('access_token')){
-        //     router.push({name: 'login'});
-        //     return false;
-        // }
         const req = request
             .get(getUrl(path))
             .query(query)
@@ -42,10 +37,6 @@ const HttpClient = {
     }),
 
     post: (path, formdata, query) => new Promise((resolve, reject) => {
-        // if(path.indexOf('login/index') < 0 && !window.localStorage.getItem('access_token')){
-        //     router.push({name: 'login'});
-        //     return false;            
-        // }
         request
             .post(getUrl(path))
             .set('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')

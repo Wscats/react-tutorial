@@ -1,6 +1,5 @@
 const React = require('react');
 const ReactDom = require('react-dom');
-//npm install --save react-router-config
 import { matchRoutes, renderRoutes } from 'react-router-config'
 import {
 	BrowserRouter as Router,
@@ -8,11 +7,9 @@ import {
 	Link
 } from 'react-router-dom'
 
-
 const routes = require("./routes.js");
 matchRoutes(routes, '/index');
-console.log(routes)
-//默认路由
+// Default route
 const branch = matchRoutes(routes, '/index')
 ReactDom.render((
 		<Router>
